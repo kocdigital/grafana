@@ -1,0 +1,412 @@
+{
+  "id": null,
+  "uid": "node-exporter-main",
+  "title": "Node Exporter Basic",
+  "tags": ["node-exporter", "prometheus"],
+  "timezone": "browser",
+  "schemaVersion": 38,
+  "version": 1,
+  "refresh": "",
+  "graphTooltip": 1,
+  "time": { "from": "now-1h", "to": "now" },
+  "timepicker": {},
+  "fiscalYearStartMonth": 0,
+  "annotations": { "list": [] },
+  "links": [],
+  "templating": {
+    "list": [
+      {
+        "type": "datasource",
+        "name": "datasource",
+        "label": "Datasource",
+        "pluginId": "prometheus",
+        "query": "prometheus",
+        "current": {},
+        "hide": 0,
+        "includeAll": false,
+        "multi": false,
+        "options": [],
+        "refresh": 1
+      },
+      {
+        "type": "query",
+        "name": "job",
+        "label": "Job",
+        "datasource": { "type": "prometheus", "uid": "${datasource}" },
+        "query": {
+          "query": "label_values(node_uname_info, job)",
+          "refId": "StandardVariableQuery"
+        },
+        "sort": 1,
+        "includeAll": false,
+        "multi": false,
+        "refresh": 2,
+        "hide": 0,
+        "options": [],
+        "current": {}
+      },
+      {
+        "type": "query",
+        "name": "instance",
+        "label": "Instance",
+        "datasource": { "type": "prometheus", "uid": "${datasource}" },
+        "query": {
+          "query": "label_values(node_uname_info{job=\"$job\"}, instance)",
+          "refId": "StandardVariableQuery"
+        },
+        "sort": 1,
+        "includeAll": true,
+        "allValue": ".*",
+        "multi": true,
+        "refresh": 2,
+        "hide": 0,
+        "options": [],
+        "current": { "selected": true, "text": "All", "value": "$__all" }
+      },
+      {
+        "type": "query",
+        "name": "mountpoint",
+        "label": "Mountpoint",
+        "datasource": { "type": "prometheus", "uid": "${datasource}" },
+        "query": {
+          "query": "label_values(node_filesystem_size_bytes{job=\"$job\",instance=~\"$instance\"}, mountpoint)",
+          "refId": "StandardVariableQuery"
+        },
+        "sort": 1,
+        "includeAll": true,
+        "allValue": ".*",
+        "multi": true,
+        "refresh": 2,
+        "hide": 0,
+        "options": [],
+        "current": { "selected": true, "text": "/data", "value": "/data" }
+      }
+    ]
+  },
+  "panels": [
+    {
+      "id": 1,
+      "type": "row",
+      "title": "$instance",
+      "repeat": "instance",
+      "repeatDirection": "v",
+      "collapsed": false,
+      "panels": [],
+      "gridPos": { "x": 0, "y": 0, "w": 24, "h": 1 }
+    },
+    {
+      "id": 6,
+      "type": "stat",
+      "title": "",
+      "datasource": { "type": "prometheus", "uid": "${datasource}" },
+      "gridPos": { "x": 0, "y": 5, "w": 3, "h": 2 },
+      "targets": [
+        {
+          "refId": "A",
+          "datasource": { "type": "prometheus", "uid": "${datasource}" },
+          "expr": "node_uname_info{instance=~\"$instance\",job=\"$job\"}",
+          "legendFormat": "{{nodename}}",
+          "instant": true
+        }
+      ],
+      "fieldConfig": {
+        "defaults": {
+          "color": { "mode": "fixed", "fixedColor": "text" },
+          "mappings": [],
+          "thresholds": { "mode": "absolute", "steps": [{ "value": null, "color": "text" }] }
+        },
+        "overrides": []
+      },
+      "options": {
+        "reduceOptions": { "calcs": ["last"], "fields": "", "values": false },
+        "textMode": "name",
+        "colorMode": "none",
+        "graphMode": "none",
+        "justifyMode": "center",
+        "orientation": "auto",
+        "text": {}
+      }
+    },
+    {
+      "id": 7,
+      "type": "stat",
+      "title": "",
+      "datasource": { "type": "prometheus", "uid": "${datasource}" },
+      "gridPos": { "x": 0, "y": 3, "w": 3, "h": 2 },
+      "targets": [
+        {
+          "refId": "A",
+          "datasource": { "type": "prometheus", "uid": "${datasource}" },
+          "expr": "node_uname_info{instance=~\"$instance\",job=\"$job\"}",
+          "legendFormat": "{{instance}}",
+          "instant": true
+        }
+      ],
+      "fieldConfig": {
+        "defaults": {
+          "color": { "mode": "fixed", "fixedColor": "text" },
+          "mappings": [],
+          "thresholds": { "mode": "absolute", "steps": [{ "value": null, "color": "text" }] }
+        },
+        "overrides": []
+      },
+      "options": {
+        "reduceOptions": { "calcs": ["last"], "fields": "", "values": false },
+        "textMode": "name",
+        "colorMode": "none",
+        "graphMode": "none",
+        "justifyMode": "center",
+        "orientation": "auto",
+        "text": {}
+      }
+    },
+    {
+      "id": 8,
+      "type": "stat",
+      "title": "",
+      "datasource": { "type": "prometheus", "uid": "${datasource}" },
+      "gridPos": { "x": 0, "y": 1, "w": 3, "h": 2 },
+      "targets": [
+        {
+          "refId": "A",
+          "datasource": { "type": "prometheus", "uid": "${datasource}" },
+          "expr": "up{instance=~\"$instance\",job=\"$job\"}",
+          "legendFormat": "",
+          "instant": true
+        }
+      ],
+      "fieldConfig": {
+        "defaults": {
+          "mappings": [
+            {
+              "type": "value",
+              "options": {
+                "0": { "text": "DOWN", "color": "red", "index": 0 },
+                "1": { "text": "UP",   "color": "green", "index": 1 }
+              }
+            }
+          ],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              { "value": null, "color": "red" },
+              { "value": 1,    "color": "green" }
+            ]
+          },
+          "color": { "mode": "thresholds" }
+        },
+        "overrides": []
+      },
+      "options": {
+        "reduceOptions": { "calcs": ["last"], "fields": "", "values": false },
+        "textMode": "value",
+        "colorMode": "background",
+        "graphMode": "none",
+        "justifyMode": "center",
+        "orientation": "auto",
+        "text": {}
+      }
+    },
+    {
+      "id": 2,
+      "type": "timeseries",
+      "title": "CPU Usage",
+      "datasource": { "type": "prometheus", "uid": "${datasource}" },
+      "gridPos": { "x": 3, "y": 1, "w": 9, "h": 8 },
+      "targets": [
+        {
+          "refId": "A",
+          "datasource": { "type": "prometheus", "uid": "${datasource}" },
+          "expr": "(1 - avg by(instance)(rate(node_cpu_seconds_total{mode=\"idle\",instance=~\"$instance\",job=\"$job\"}[5m]))) * count by(instance)(node_cpu_seconds_total{mode=\"idle\",instance=~\"$instance\",job=\"$job\"})",
+          "legendFormat": "Used Cores",
+          "interval": ""
+        },
+        {
+          "refId": "B",
+          "datasource": { "type": "prometheus", "uid": "${datasource}" },
+          "expr": "count by(instance)(node_cpu_seconds_total{mode=\"idle\",instance=~\"$instance\",job=\"$job\"})",
+          "legendFormat": "Total Cores",
+          "interval": ""
+        }
+      ],
+      "fieldConfig": {
+        "defaults": {
+          "unit": "short",
+          "min": 0,
+          "color": { "mode": "palette-classic" },
+          "custom": {
+            "lineWidth": 1,
+            "fillOpacity": 10,
+            "spanNulls": false
+          }
+        },
+        "overrides": [
+          {
+            "matcher": { "id": "byName", "options": "Total Cores" },
+            "properties": [
+              { "id": "custom.lineStyle", "value": { "fill": "dash", "dash": [8, 4] } },
+              { "id": "custom.fillOpacity", "value": 0 }
+            ]
+          }
+        ]
+      },
+      "options": {
+        "tooltip": { "mode": "multi", "sort": "none" },
+        "legend": { "displayMode": "list", "placement": "bottom", "showLegend": true }
+      }
+    },
+    {
+      "id": 3,
+      "type": "timeseries",
+      "title": "Memory Usage",
+      "datasource": { "type": "prometheus", "uid": "${datasource}" },
+      "gridPos": { "x": 12, "y": 1, "w": 12, "h": 8 },
+      "targets": [
+        {
+          "refId": "A",
+          "datasource": { "type": "prometheus", "uid": "${datasource}" },
+          "expr": "node_memory_MemTotal_bytes{instance=~\"$instance\",job=\"$job\"} - node_memory_MemAvailable_bytes{instance=~\"$instance\",job=\"$job\"}",
+          "legendFormat": "Used",
+          "interval": ""
+        },
+        {
+          "refId": "B",
+          "datasource": { "type": "prometheus", "uid": "${datasource}" },
+          "expr": "node_memory_MemTotal_bytes{instance=~\"$instance\",job=\"$job\"}",
+          "legendFormat": "Total",
+          "interval": ""
+        }
+      ],
+      "fieldConfig": {
+        "defaults": {
+          "unit": "decbytes",
+          "min": 0,
+          "color": { "mode": "palette-classic" },
+          "custom": {
+            "lineWidth": 1,
+            "fillOpacity": 10,
+            "spanNulls": false
+          }
+        },
+        "overrides": [
+          {
+            "matcher": { "id": "byName", "options": "Total" },
+            "properties": [
+              { "id": "custom.lineStyle", "value": { "fill": "dash", "dash": [8, 4] } },
+              { "id": "custom.fillOpacity", "value": 0 }
+            ]
+          }
+        ]
+      },
+      "options": {
+        "tooltip": { "mode": "multi", "sort": "none" },
+        "legend": { "displayMode": "list", "placement": "bottom", "showLegend": true }
+      }
+    },
+    {
+      "id": 4,
+      "type": "timeseries",
+      "title": "CPU Load",
+      "datasource": { "type": "prometheus", "uid": "${datasource}" },
+      "gridPos": { "x": 0, "y": 9, "w": 12, "h": 8 },
+      "targets": [
+        {
+          "refId": "A",
+          "datasource": { "type": "prometheus", "uid": "${datasource}" },
+          "expr": "node_load1{instance=~\"$instance\",job=\"$job\"}",
+          "legendFormat": "1m load",
+          "interval": ""
+        },
+        {
+          "refId": "B",
+          "datasource": { "type": "prometheus", "uid": "${datasource}" },
+          "expr": "node_load5{instance=~\"$instance\",job=\"$job\"}",
+          "legendFormat": "5m load",
+          "interval": ""
+        },
+        {
+          "refId": "C",
+          "datasource": { "type": "prometheus", "uid": "${datasource}" },
+          "expr": "node_load15{instance=~\"$instance\",job=\"$job\"}",
+          "legendFormat": "15m load",
+          "interval": ""
+        }
+      ],
+      "fieldConfig": {
+        "defaults": {
+          "unit": "short",
+          "color": { "mode": "palette-classic" },
+          "custom": {
+            "lineWidth": 1,
+            "fillOpacity": 10,
+            "spanNulls": false
+          }
+        },
+        "overrides": []
+      },
+      "options": {
+        "tooltip": { "mode": "multi", "sort": "none" },
+        "legend": { "displayMode": "list", "placement": "bottom", "showLegend": true }
+      }
+    },
+    {
+      "id": 9,
+      "type": "text",
+      "title": "",
+      "gridPos": { "x": 0, "y": 7, "w": 3, "h": 2 },
+      "options": {
+        "mode": "markdown",
+        "content": "edit me",
+        "code": { "language": "plaintext", "showLineNumbers": false, "showMiniMap": false }
+      }
+    },
+    {
+      "id": 5,
+      "type": "timeseries",
+      "title": "Disk Usage",
+      "datasource": { "type": "prometheus", "uid": "${datasource}" },
+      "gridPos": { "x": 12, "y": 9, "w": 12, "h": 8 },
+      "targets": [
+        {
+          "refId": "A",
+          "datasource": { "type": "prometheus", "uid": "${datasource}" },
+          "expr": "node_filesystem_size_bytes{instance=~\"$instance\",job=\"$job\",mountpoint=~\"$mountpoint\",fstype!~\"tmpfs|overlay|devtmpfs\"} - node_filesystem_avail_bytes{instance=~\"$instance\",job=\"$job\",mountpoint=~\"$mountpoint\",fstype!~\"tmpfs|overlay|devtmpfs\"}",
+          "legendFormat": "{{mountpoint}} used",
+          "interval": ""
+        },
+        {
+          "refId": "B",
+          "datasource": { "type": "prometheus", "uid": "${datasource}" },
+          "expr": "node_filesystem_size_bytes{instance=~\"$instance\",job=\"$job\",mountpoint=~\"$mountpoint\",fstype!~\"tmpfs|overlay|devtmpfs\"}",
+          "legendFormat": "{{mountpoint}} total",
+          "interval": ""
+        }
+      ],
+      "fieldConfig": {
+        "defaults": {
+          "unit": "decbytes",
+          "min": 0,
+          "color": { "mode": "palette-classic" },
+          "custom": {
+            "lineWidth": 1,
+            "fillOpacity": 10,
+            "spanNulls": false
+          }
+        },
+        "overrides": [
+          {
+            "matcher": { "id": "byRegexp", "options": ".* total$" },
+            "properties": [
+              { "id": "custom.lineStyle", "value": { "fill": "dash", "dash": [8, 4] } },
+              { "id": "custom.fillOpacity", "value": 0 }
+            ]
+          }
+        ]
+      },
+      "options": {
+        "tooltip": { "mode": "multi", "sort": "none" },
+        "legend": { "displayMode": "table", "placement": "bottom", "showLegend": true }
+      }
+    }
+  ]
+}
