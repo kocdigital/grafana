@@ -2,7 +2,7 @@ name: Grafana Dashboard Pull
 
 on:
   schedule:
-    - cron: '*/30 * * * *'  # Her 30 dakikada bir
+    - cron: '*/1 * * * *'  # Her 30 dakikada bir
   workflow_dispatch:
 
 jobs:
