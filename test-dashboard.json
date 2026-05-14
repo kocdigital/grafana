@@ -1,0 +1,26 @@
+{
+  "apiVersion": "dashboard.grafana.app/v0alpha1",
+  "kind": "Dashboard",
+  "metadata": {
+    "name": "test-dashboard"
+  },
+  "spec": {
+    "title": "🚀 Test Dashboard - Auto Sync",
+    "tags": ["test", "auto-sync"],
+    "schemaVersion": 36,
+    "version": 1,
+    "refresh": "30s",
+    "panels": [
+      {
+        "id": 1,
+        "type": "text",
+        "title": "GitHub Actions Auto Sync Test",
+        "gridPos": { "h": 8, "w": 24, "x": 0, "y": 0 },
+        "options": {
+          "mode": "markdown",
+          "content": "# ✅ Auto Sync Çalışıyor!\n\nBu dashboard GitHub Actions tarafından otomatik olarak yüklendi."
+        }
+      }
+    ]
+  }
+}
