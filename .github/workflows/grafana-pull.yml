@@ -2,7 +2,7 @@ name: Grafana Dashboard Pull
 
 on:
   schedule:
-    - cron: '*/1 * * * *'  # Her 30 dakikada bir
+    - cron: '*/1 * * * *'
   workflow_dispatch:
 
 jobs:
@@ -33,29 +33,42 @@ jobs:
           # Tüm dashboard uid'lerini al
           UIDS=$(kubectl exec -n my-grafana $POD -- \
             curl -s -H "Authorization: Bearer ${{ secrets.GRAFANA_TOKEN_DEV }}" \
-            http://localhost:3000/api/search?type=dash-db | \
+            "http://localhost:3000/api/search?type=dash-db" | \
             jq -r '.[].uid')
 
           for uid in $UIDS; do
             echo "📥 Çekiliyor: $uid"
-            
+
             # Dashboard içeriğini al
             RESPONSE=$(kubectl exec -n my-grafana $POD -- \
               curl -s -H "Authorization: Bearer ${{ secrets.GRAFANA_TOKEN_DEV }}" \
-              http://localhost:3000/api/dashboards/uid/$uid)
-            
-            TITLE=$(echo $RESPONSE | jq -r '.dashboard.title')
-            SLUG=$(echo $RESPONSE | jq -r '.meta.slug')
-            
-            # CRD formatına wrap et
-            echo $RESPONSE | jq '{
+              "http://localhost:3000/api/dashboards/uid/$uid")
+
+            TITLE=$(echo "$RESPONSE" | jq -r '.dashboard.title')
+            SLUG=$(echo "$RESPONSE" | jq -r '.meta.slug')
+
+            # Repo'da uid içeren mevcut dosyayı bul
+            EXISTING=$(grep -rl "\"uid\": \"$uid\"" *.json 2>/dev/null | head -1)
+
+            if [ -n "$EXISTING" ]; then
+              # Mevcut dosyayı güncelle
+              TARGET="$EXISTING"
+              echo "  🔄 Mevcut dosya güncelleniyor: $TARGET"
+            else
+              # Yeni dosya oluştur (slug ile)
+              TARGET="${SLUG}.json"
+              echo "  🆕 Yeni dosya: $TARGET"
+            fi
+
+            # CRD formatına wrap et ve kaydet
+            echo "$RESPONSE" | jq '{
               apiVersion: "dashboard.grafana.app/v0alpha1",
               kind: "Dashboard",
               metadata: {name: .meta.slug},
               spec: .dashboard
-            }' > "${SLUG}.json"
-            
-            echo "  ✅ $TITLE → ${SLUG}.json"
+            }' > "$TARGET"
+
+            echo "  ✅ $TITLE → $TARGET"
           done
 
       - name: Commit changes
