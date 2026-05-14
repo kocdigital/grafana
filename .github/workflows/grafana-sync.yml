@@ -26,32 +26,23 @@ jobs:
           echo "${{ secrets.KUBECONFIG_DEV }}" > $HOME/.kube/config
           chmod 600 $HOME/.kube/config
 
-      - name: Port-forward Grafana
-        run: |
-          kubectl port-forward svc/grafana 3000:3000 -n my-grafana &
-          echo "⏳ Port-forward hazır olana kadar bekleniyor..."
-          for i in {1..30}; do
-            if curl -s http://localhost:3000/api/health > /dev/null 2>&1; then
-              echo "✅ Grafana hazır!"
-              break
-            fi
-            echo "  Deneme $i/30..."
-            sleep 2
-          done
-
       - name: Push Dashboards via Grafana API
         run: |
+          POD=$(kubectl get pod -n my-grafana -l app=grafana -o jsonpath='{.items[0].metadata.name}')
+          echo "📦 Pod: $POD"
+
           for file in *.json; do
             echo "📊 Yükleniyor: $file"
-            payload=$(cat "$file" | jq '{dashboard: ., overwrite: true, folderId: 0}')
-            response=$(curl -s -o /tmp/response.json -w "%{http_code}" \
+            kubectl cp "$file" my-grafana/$POD:/tmp/"$file"
+            response=$(kubectl exec -n my-grafana $POD -- \
+              curl -s -o /tmp/response.json -w "%{http_code}" \
               -X POST \
               -H "Content-Type: application/json" \
-              -u "admin:${{ secrets.GRAFANA_ADMIN_PASSWORD }}" \
-              -d "$payload" \
-              http://localhost:3000/api/dashboards/db)
+              -H "Authorization: Bearer ${{ secrets.GRAFANA_TOKEN_DEV }}" \
+              -d @/tmp/"$file" \
+              http://localhost:3000/api/dashboards/import)
             echo "  → HTTP $response"
-            cat /tmp/response.json
+            kubectl exec -n my-grafana $POD -- cat /tmp/response.json
             echo ""
           done
           echo "✅ Tüm dashboardlar yüklendi"
