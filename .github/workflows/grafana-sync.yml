@@ -1,48 +1,49 @@
-name: Grafana Dashboard Sync
-
-on:
-  push:
-    branches:
-      - main
-    paths:
-      - '**.json'
-  workflow_dispatch:
-
-jobs:
-  sync-dev:
-    name: Sync → DEV (my-grafana)
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-
-      - name: Set up kubectl
-        uses: azure/setup-kubectl@v3
-
-      - name: Configure kubeconfig
-        run: |
-          mkdir -p $HOME/.kube
-          echo "${{ secrets.KUBECONFIG_DEV }}" > $HOME/.kube/config
-          chmod 600 $HOME/.kube/config
-
-      - name: Push Dashboards via Grafana API
+      - name: Push Dashboards via Grafana API JSON'ı pod'a kopyalayıp curl'leyelim.
         run: |
           POD=$(kubectl get pod -n my-grafana -l app=grafana -o jsonpath='{.items[0].metadata.name}')
           echo "📦 Pod: $POD"
 
-          for file in *.json; do
+          for file
+
+## Workflow'u Şöyle Günc in *.json; do
             echo "📊 Yükleniyor: $file"
-            kubectl cp "$file" my-grafana/$POD:/tmp/"$file"
-            response=$(kubectl exec -n my-grafana $POD -- \
+            # Runner'da jq ileelle:
+
+```yaml
+      - name: Push Dashboards via Grafana API
+        run: |
+          PO .spec'i extract et ve wrap et
+            cat "$file" | jq '{dashboard: .spec, overwrite: true}' > /D=$(kubectl get pod -n my-grafana -l app=grafana -o jsonpath='{.items[0].metadata.name}')
+          echotmp/wrapped_"$file"
+            # Wrapped dosyayı pod'a kopyala
+            kubectl cp /tmp/wrapped_"$file" my-grafana/$ "📦 Pod: $POD"
+
+          for file in *.json; do
+            echoPOD:/tmp/wrapped_"$file"
+            # Pod içinden curl
+            response=$(kubectl "📊 Yükleniyor: $file"
+            
+            # Runner' exec -n my-grafana $POD -- \
               curl -s -o /tmp/response.json -w "%{http_code}" \
-              -X POST \
+              -da jq ile .spec'i çıkar ve wrapX POST \
               -H "Content-Type: application/json" \
-              -H "Authorization: Bearer ${{ secrets.GRAFANA_TOKEN_DEV }}" \
-              -d @/tmp/"$file" \
-              http://localhost:3000/api/dashboards/import)
-            echo "  → HTTP $response"
+              -H "Authorization: Bearer ${{ secrets.GRAFANA_TOKEN_DE et
+            jq '{dashboard: .spec, overwrite: true}' "$file" > /tmp/wrappedV }}" \
+              -d @/tmp/wrapped_"$file" \
+              http://localhost:3000/api/dashboards/db)
+            echo "  _"$file"
+            
+            # Hazır dosyayı pod'a kopyala
+            kubectl cp /tmp/→ HTTP $response"
             kubectl exec -n my-grafana $POD -- cat /tmp/response.json
-            echo ""
+            wrapped_"$file" my-grafana/$POD:/tmp/wrapped_"$file"
+            
+            # Pod içinden curl
+            responseecho ""
           done
-          echo "✅ Tüm dashboardlar yüklendi"
+          echo "✅ Tamamlandı"
+```=$(kubectl exec -n my-grafana $POD -- \
+              curl -s -o /tmp/response.json -w "%{http_code}" \
+              -
+
+Dosyayı güncelle ve tekrar çalıştır! 🎯
