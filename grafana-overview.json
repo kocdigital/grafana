@@ -2,7 +2,7 @@
   "apiVersion": "dashboard.grafana.app/v0alpha1",
   "kind": "Dashboard",
   "metadata": {
-    "name": "6be0s85Mk"
+    "name": "grafana-overview"
   },
   "spec": {
     "annotations": {
@@ -16,7 +16,7 @@
           "enable": true,
           "hide": true,
           "iconColor": "rgba(0, 211, 255, 1)",
-          "name": "Annotations \u0026 Alerts",
+          "name": "Annotations & Alerts",
           "target": {
             "limit": 100,
             "matchAny": false,
@@ -30,6 +30,7 @@
     "editable": true,
     "fiscalYearStartMonth": 0,
     "graphTooltip": 0,
+    "id": 1277872011935744,
     "links": [],
     "panels": [
       {
@@ -445,7 +446,7 @@
               "uid": "$datasource"
             },
             "exemplar": true,
-            "expr": "histogram_quantile(0.99, sum(irate(grafana_http_request_duration_seconds_bucket{instance=~\"$instance\", job=~\"$job\"}[$__rate_interval])) by (le)) * 1",
+            "expr": "histogram_quantile(0.99, sum(irate(grafana_http_request_duration_seconds_bucket{instance=~\"$instance\", job=~\"$job\"}[$__rate_interval])) by (le)) README.md alertmanager-overview.json asd audit-logs.json coredns.json custom etcd.json grafana-overview.json kubernetes-api-server.json kubernetes-compute-resources-cluster.json kubernetes-compute-resources-multi-cluster.json kubernetes-compute-resources-namespace-pods.json kubernetes-compute-resources-namespace-workloads.json kubernetes-compute-resources-node-pods.json kubernetes-compute-resources-pod.json kubernetes-compute-resources-workload.json kubernetes-controller-manager.json kubernetes-kubelet.json kubernetes-networking-cluster.json kubernetes-networking-namespace-pods.json kubernetes-networking-namespace-workload.json kubernetes-networking-pod.json kubernetes-networking-workload.json kubernetes-persistent-volumes.json kubernetes-proxy.json kubernetes-scheduler.json node-exporter-aix.json node-exporter-macos.json node-exporter-nodes.json node-exporter-use-method-cluster.json node-exporter-use-method-node.json prometheus-overview.json tekirdag-prod test-dashboard.json 1",
             "interval": "1m",
             "legendFormat": "99th Percentile",
             "refId": "A"
@@ -455,7 +456,7 @@
               "uid": "$datasource"
             },
             "exemplar": true,
-            "expr": "histogram_quantile(0.50, sum(irate(grafana_http_request_duration_seconds_bucket{instance=~\"$instance\", job=~\"$job\"}[$__rate_interval])) by (le)) * 1",
+            "expr": "histogram_quantile(0.50, sum(irate(grafana_http_request_duration_seconds_bucket{instance=~\"$instance\", job=~\"$job\"}[$__rate_interval])) by (le)) README.md alertmanager-overview.json asd audit-logs.json coredns.json custom etcd.json grafana-overview.json kubernetes-api-server.json kubernetes-compute-resources-cluster.json kubernetes-compute-resources-multi-cluster.json kubernetes-compute-resources-namespace-pods.json kubernetes-compute-resources-namespace-workloads.json kubernetes-compute-resources-node-pods.json kubernetes-compute-resources-pod.json kubernetes-compute-resources-workload.json kubernetes-controller-manager.json kubernetes-kubelet.json kubernetes-networking-cluster.json kubernetes-networking-namespace-pods.json kubernetes-networking-namespace-workload.json kubernetes-networking-pod.json kubernetes-networking-workload.json kubernetes-persistent-volumes.json kubernetes-proxy.json kubernetes-scheduler.json node-exporter-aix.json node-exporter-macos.json node-exporter-nodes.json node-exporter-use-method-cluster.json node-exporter-use-method-node.json prometheus-overview.json tekirdag-prod test-dashboard.json 1",
             "interval": "1m",
             "legendFormat": "50th Percentile",
             "refId": "B"
@@ -465,7 +466,7 @@
               "uid": "$datasource"
             },
             "exemplar": true,
-            "expr": "sum(irate(grafana_http_request_duration_seconds_sum{instance=~\"$instance\", job=~\"$job\"}[$__rate_interval])) * 1 / sum(irate(grafana_http_request_duration_seconds_count{instance=~\"$instance\", job=~\"$job\"}[$__rate_interval]))",
+            "expr": "sum(irate(grafana_http_request_duration_seconds_sum{instance=~\"$instance\", job=~\"$job\"}[$__rate_interval])) README.md alertmanager-overview.json asd audit-logs.json coredns.json custom etcd.json grafana-overview.json kubernetes-api-server.json kubernetes-compute-resources-cluster.json kubernetes-compute-resources-multi-cluster.json kubernetes-compute-resources-namespace-pods.json kubernetes-compute-resources-namespace-workloads.json kubernetes-compute-resources-node-pods.json kubernetes-compute-resources-pod.json kubernetes-compute-resources-workload.json kubernetes-controller-manager.json kubernetes-kubelet.json kubernetes-networking-cluster.json kubernetes-networking-namespace-pods.json kubernetes-networking-namespace-workload.json kubernetes-networking-pod.json kubernetes-networking-workload.json kubernetes-persistent-volumes.json kubernetes-proxy.json kubernetes-scheduler.json node-exporter-aix.json node-exporter-macos.json node-exporter-nodes.json node-exporter-use-method-cluster.json node-exporter-use-method-node.json prometheus-overview.json tekirdag-prod test-dashboard.json 1 / sum(irate(grafana_http_request_duration_seconds_count{instance=~\"$instance\", job=~\"$job\"}[$__rate_interval]))",
             "interval": "1m",
             "legendFormat": "Average",
             "refId": "C"
@@ -556,6 +557,8 @@
       ]
     },
     "timezone": "Europe/Istanbul",
-    "title": "Grafana Overview"
+    "title": "Grafana Overview",
+    "uid": "245ad2e1-0078-49ea-99b0-f883be749459",
+    "version": 1
   }
 }

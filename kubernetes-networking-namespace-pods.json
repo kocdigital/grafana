@@ -2,10 +2,11 @@
   "apiVersion": "dashboard.grafana.app/v0alpha1",
   "kind": "Dashboard",
   "metadata": {
-    "name": "8b7a8b326d7a6f1f04244066368c67af"
+    "name": "kubernetes-networking-namespace-pods"
   },
   "spec": {
     "editable": true,
+    "id": 1276016758030336,
     "links": [
       {
         "asDropdown": true,
@@ -67,7 +68,7 @@
               "type": "prometheus",
               "uid": "${datasource}"
             },
-            "expr": "sum (\n    rate(container_network_receive_bytes_total{cluster=\"$cluster\",namespace=~\"$namespace\"}[$__rate_interval])\n  * on (cluster,namespace,pod) group_left ()\n    topk by (cluster,namespace,pod) (\n      1,\n      max by (cluster,namespace,pod) (kube_pod_info{host_network=\"false\"})\n    )\n)\n",
+            "expr": "sum (\n rate(container_network_receive_bytes_total{cluster=\"$cluster\",namespace=~\"$namespace\"}[$__rate_interval])\n README.md alertmanager-overview.json asd audit-logs.json coredns.json custom etcd.json grafana-overview.json kubernetes-api-server.json kubernetes-compute-resources-cluster.json kubernetes-compute-resources-multi-cluster.json kubernetes-compute-resources-namespace-pods.json kubernetes-compute-resources-namespace-workloads.json kubernetes-compute-resources-node-pods.json kubernetes-compute-resources-pod.json kubernetes-compute-resources-workload.json kubernetes-controller-manager.json kubernetes-kubelet.json kubernetes-networking-cluster.json kubernetes-networking-namespace-pods.json kubernetes-networking-namespace-workload.json kubernetes-networking-pod.json kubernetes-networking-workload.json kubernetes-persistent-volumes.json kubernetes-proxy.json kubernetes-scheduler.json node-exporter-aix.json node-exporter-macos.json node-exporter-nodes.json node-exporter-use-method-cluster.json node-exporter-use-method-node.json prometheus-overview.json tekirdag-prod test-dashboard.json on (cluster,namespace,pod) group_left ()\n topk by (cluster,namespace,pod) (\n 1,\n max by (cluster,namespace,pod) (kube_pod_info{host_network=\"false\"})\n )\n)\n",
             "legendFormat": "__auto"
           }
         ],
@@ -121,7 +122,7 @@
               "type": "prometheus",
               "uid": "${datasource}"
             },
-            "expr": "sum (\n    rate(container_network_transmit_bytes_total{cluster=\"$cluster\",namespace=~\"$namespace\"}[$__rate_interval])\n  * on (cluster,namespace,pod) group_left ()\n    topk by (cluster,namespace,pod) (\n      1,\n      max by (cluster,namespace,pod) (kube_pod_info{host_network=\"false\"})\n    )\n)\n",
+            "expr": "sum (\n rate(container_network_transmit_bytes_total{cluster=\"$cluster\",namespace=~\"$namespace\"}[$__rate_interval])\n README.md alertmanager-overview.json asd audit-logs.json coredns.json custom etcd.json grafana-overview.json kubernetes-api-server.json kubernetes-compute-resources-cluster.json kubernetes-compute-resources-multi-cluster.json kubernetes-compute-resources-namespace-pods.json kubernetes-compute-resources-namespace-workloads.json kubernetes-compute-resources-node-pods.json kubernetes-compute-resources-pod.json kubernetes-compute-resources-workload.json kubernetes-controller-manager.json kubernetes-kubelet.json kubernetes-networking-cluster.json kubernetes-networking-namespace-pods.json kubernetes-networking-namespace-workload.json kubernetes-networking-pod.json kubernetes-networking-workload.json kubernetes-persistent-volumes.json kubernetes-proxy.json kubernetes-scheduler.json node-exporter-aix.json node-exporter-macos.json node-exporter-nodes.json node-exporter-use-method-cluster.json node-exporter-use-method-node.json prometheus-overview.json tekirdag-prod test-dashboard.json on (cluster,namespace,pod) group_left ()\n topk by (cluster,namespace,pod) (\n 1,\n max by (cluster,namespace,pod) (kube_pod_info{host_network=\"false\"})\n )\n)\n",
             "legendFormat": "__auto"
           }
         ],
@@ -170,7 +171,7 @@
                   "value": [
                     {
                       "title": "Drill down",
-                      "url": "/d/7a18067ce943a40ae25454675c19ff5c/kubernetes-networking-pod?${datasource:queryparam}\u0026var-cluster=${cluster}\u0026var-namespace=${namespace}\u0026var-pod=${__data.fields.Pod}"
+                      "url": "/d/7a18067ce943a40ae25454675c19ff5c/kubernetes-networking-pod?${datasource:queryparam}&var-cluster=${cluster}&var-namespace=${namespace}&var-pod=${__data.fields.Pod}"
                     }
                   ]
                 }
@@ -192,7 +193,7 @@
               "type": "prometheus",
               "uid": "${datasource}"
             },
-            "expr": "sum by (pod) (\n    rate(container_network_receive_bytes_total{cluster=\"$cluster\",namespace=~\"$namespace\"}[$__rate_interval])\n  * on (cluster,namespace,pod) group_left ()\n    topk by (cluster,namespace,pod) (\n      1,\n      max by (cluster,namespace,pod) (kube_pod_info{host_network=\"false\"})\n    )\n)\n",
+            "expr": "sum by (pod) (\n rate(container_network_receive_bytes_total{cluster=\"$cluster\",namespace=~\"$namespace\"}[$__rate_interval])\n README.md alertmanager-overview.json asd audit-logs.json coredns.json custom etcd.json grafana-overview.json kubernetes-api-server.json kubernetes-compute-resources-cluster.json kubernetes-compute-resources-multi-cluster.json kubernetes-compute-resources-namespace-pods.json kubernetes-compute-resources-namespace-workloads.json kubernetes-compute-resources-node-pods.json kubernetes-compute-resources-pod.json kubernetes-compute-resources-workload.json kubernetes-controller-manager.json kubernetes-kubelet.json kubernetes-networking-cluster.json kubernetes-networking-namespace-pods.json kubernetes-networking-namespace-workload.json kubernetes-networking-pod.json kubernetes-networking-workload.json kubernetes-persistent-volumes.json kubernetes-proxy.json kubernetes-scheduler.json node-exporter-aix.json node-exporter-macos.json node-exporter-nodes.json node-exporter-use-method-cluster.json node-exporter-use-method-node.json prometheus-overview.json tekirdag-prod test-dashboard.json on (cluster,namespace,pod) group_left ()\n topk by (cluster,namespace,pod) (\n 1,\n max by (cluster,namespace,pod) (kube_pod_info{host_network=\"false\"})\n )\n)\n",
             "format": "table",
             "instant": true
           },
@@ -201,7 +202,7 @@
               "type": "prometheus",
               "uid": "${datasource}"
             },
-            "expr": "sum by (pod) (\n    rate(container_network_transmit_bytes_total{cluster=\"$cluster\",namespace=~\"$namespace\"}[$__rate_interval])\n  * on (cluster,namespace,pod) group_left ()\n    topk by (cluster,namespace,pod) (\n      1,\n      max by (cluster,namespace,pod) (kube_pod_info{host_network=\"false\"})\n    )\n)\n",
+            "expr": "sum by (pod) (\n rate(container_network_transmit_bytes_total{cluster=\"$cluster\",namespace=~\"$namespace\"}[$__rate_interval])\n README.md alertmanager-overview.json asd audit-logs.json coredns.json custom etcd.json grafana-overview.json kubernetes-api-server.json kubernetes-compute-resources-cluster.json kubernetes-compute-resources-multi-cluster.json kubernetes-compute-resources-namespace-pods.json kubernetes-compute-resources-namespace-workloads.json kubernetes-compute-resources-node-pods.json kubernetes-compute-resources-pod.json kubernetes-compute-resources-workload.json kubernetes-controller-manager.json kubernetes-kubelet.json kubernetes-networking-cluster.json kubernetes-networking-namespace-pods.json kubernetes-networking-namespace-workload.json kubernetes-networking-pod.json kubernetes-networking-workload.json kubernetes-persistent-volumes.json kubernetes-proxy.json kubernetes-scheduler.json node-exporter-aix.json node-exporter-macos.json node-exporter-nodes.json node-exporter-use-method-cluster.json node-exporter-use-method-node.json prometheus-overview.json tekirdag-prod test-dashboard.json on (cluster,namespace,pod) group_left ()\n topk by (cluster,namespace,pod) (\n 1,\n max by (cluster,namespace,pod) (kube_pod_info{host_network=\"false\"})\n )\n)\n",
             "format": "table",
             "instant": true
           },
@@ -210,7 +211,7 @@
               "type": "prometheus",
               "uid": "${datasource}"
             },
-            "expr": "sum by (pod) (\n    rate(container_network_receive_packets_total{cluster=\"$cluster\",namespace=~\"$namespace\"}[$__rate_interval])\n  * on (cluster,namespace,pod) group_left ()\n    topk by (cluster,namespace,pod) (\n      1,\n      max by (cluster,namespace,pod) (kube_pod_info{host_network=\"false\"})\n    )\n)\n",
+            "expr": "sum by (pod) (\n rate(container_network_receive_packets_total{cluster=\"$cluster\",namespace=~\"$namespace\"}[$__rate_interval])\n README.md alertmanager-overview.json asd audit-logs.json coredns.json custom etcd.json grafana-overview.json kubernetes-api-server.json kubernetes-compute-resources-cluster.json kubernetes-compute-resources-multi-cluster.json kubernetes-compute-resources-namespace-pods.json kubernetes-compute-resources-namespace-workloads.json kubernetes-compute-resources-node-pods.json kubernetes-compute-resources-pod.json kubernetes-compute-resources-workload.json kubernetes-controller-manager.json kubernetes-kubelet.json kubernetes-networking-cluster.json kubernetes-networking-namespace-pods.json kubernetes-networking-namespace-workload.json kubernetes-networking-pod.json kubernetes-networking-workload.json kubernetes-persistent-volumes.json kubernetes-proxy.json kubernetes-scheduler.json node-exporter-aix.json node-exporter-macos.json node-exporter-nodes.json node-exporter-use-method-cluster.json node-exporter-use-method-node.json prometheus-overview.json tekirdag-prod test-dashboard.json on (cluster,namespace,pod) group_left ()\n topk by (cluster,namespace,pod) (\n 1,\n max by (cluster,namespace,pod) (kube_pod_info{host_network=\"false\"})\n )\n)\n",
             "format": "table",
             "instant": true
           },
@@ -219,7 +220,7 @@
               "type": "prometheus",
               "uid": "${datasource}"
             },
-            "expr": "sum by (pod) (\n    rate(container_network_transmit_packets_total{cluster=\"$cluster\",namespace=~\"$namespace\"}[$__rate_interval])\n  * on (cluster,namespace,pod) group_left ()\n    topk by (cluster,namespace,pod) (\n      1,\n      max by (cluster,namespace,pod) (kube_pod_info{host_network=\"false\"})\n    )\n)\n",
+            "expr": "sum by (pod) (\n rate(container_network_transmit_packets_total{cluster=\"$cluster\",namespace=~\"$namespace\"}[$__rate_interval])\n README.md alertmanager-overview.json asd audit-logs.json coredns.json custom etcd.json grafana-overview.json kubernetes-api-server.json kubernetes-compute-resources-cluster.json kubernetes-compute-resources-multi-cluster.json kubernetes-compute-resources-namespace-pods.json kubernetes-compute-resources-namespace-workloads.json kubernetes-compute-resources-node-pods.json kubernetes-compute-resources-pod.json kubernetes-compute-resources-workload.json kubernetes-controller-manager.json kubernetes-kubelet.json kubernetes-networking-cluster.json kubernetes-networking-namespace-pods.json kubernetes-networking-namespace-workload.json kubernetes-networking-pod.json kubernetes-networking-workload.json kubernetes-persistent-volumes.json kubernetes-proxy.json kubernetes-scheduler.json node-exporter-aix.json node-exporter-macos.json node-exporter-nodes.json node-exporter-use-method-cluster.json node-exporter-use-method-node.json prometheus-overview.json tekirdag-prod test-dashboard.json on (cluster,namespace,pod) group_left ()\n topk by (cluster,namespace,pod) (\n 1,\n max by (cluster,namespace,pod) (kube_pod_info{host_network=\"false\"})\n )\n)\n",
             "format": "table",
             "instant": true
           },
@@ -228,7 +229,7 @@
               "type": "prometheus",
               "uid": "${datasource}"
             },
-            "expr": "sum by (pod) (\n    rate(container_network_receive_packets_dropped_total{cluster=\"$cluster\",namespace=~\"$namespace\"}[$__rate_interval])\n  * on (cluster,namespace,pod) group_left ()\n    topk by (cluster,namespace,pod) (\n      1,\n      max by (cluster,namespace,pod) (kube_pod_info{host_network=\"false\"})\n    )\n)\n",
+            "expr": "sum by (pod) (\n rate(container_network_receive_packets_dropped_total{cluster=\"$cluster\",namespace=~\"$namespace\"}[$__rate_interval])\n README.md alertmanager-overview.json asd audit-logs.json coredns.json custom etcd.json grafana-overview.json kubernetes-api-server.json kubernetes-compute-resources-cluster.json kubernetes-compute-resources-multi-cluster.json kubernetes-compute-resources-namespace-pods.json kubernetes-compute-resources-namespace-workloads.json kubernetes-compute-resources-node-pods.json kubernetes-compute-resources-pod.json kubernetes-compute-resources-workload.json kubernetes-controller-manager.json kubernetes-kubelet.json kubernetes-networking-cluster.json kubernetes-networking-namespace-pods.json kubernetes-networking-namespace-workload.json kubernetes-networking-pod.json kubernetes-networking-workload.json kubernetes-persistent-volumes.json kubernetes-proxy.json kubernetes-scheduler.json node-exporter-aix.json node-exporter-macos.json node-exporter-nodes.json node-exporter-use-method-cluster.json node-exporter-use-method-node.json prometheus-overview.json tekirdag-prod test-dashboard.json on (cluster,namespace,pod) group_left ()\n topk by (cluster,namespace,pod) (\n 1,\n max by (cluster,namespace,pod) (kube_pod_info{host_network=\"false\"})\n )\n)\n",
             "format": "table",
             "instant": true
           },
@@ -237,7 +238,7 @@
               "type": "prometheus",
               "uid": "${datasource}"
             },
-            "expr": "sum by (pod) (\n    rate(container_network_transmit_packets_dropped_total{cluster=\"$cluster\",namespace=~\"$namespace\"}[$__rate_interval])\n  * on (cluster,namespace,pod) group_left ()\n    topk by (cluster,namespace,pod) (\n      1,\n      max by (cluster,namespace,pod) (kube_pod_info{host_network=\"false\"})\n    )\n)\n",
+            "expr": "sum by (pod) (\n rate(container_network_transmit_packets_dropped_total{cluster=\"$cluster\",namespace=~\"$namespace\"}[$__rate_interval])\n README.md alertmanager-overview.json asd audit-logs.json coredns.json custom etcd.json grafana-overview.json kubernetes-api-server.json kubernetes-compute-resources-cluster.json kubernetes-compute-resources-multi-cluster.json kubernetes-compute-resources-namespace-pods.json kubernetes-compute-resources-namespace-workloads.json kubernetes-compute-resources-node-pods.json kubernetes-compute-resources-pod.json kubernetes-compute-resources-workload.json kubernetes-controller-manager.json kubernetes-kubelet.json kubernetes-networking-cluster.json kubernetes-networking-namespace-pods.json kubernetes-networking-namespace-workload.json kubernetes-networking-pod.json kubernetes-networking-workload.json kubernetes-persistent-volumes.json kubernetes-proxy.json kubernetes-scheduler.json node-exporter-aix.json node-exporter-macos.json node-exporter-nodes.json node-exporter-use-method-cluster.json node-exporter-use-method-node.json prometheus-overview.json tekirdag-prod test-dashboard.json on (cluster,namespace,pod) group_left ()\n topk by (cluster,namespace,pod) (\n 1,\n max by (cluster,namespace,pod) (kube_pod_info{host_network=\"false\"})\n )\n)\n",
             "format": "table",
             "instant": true
           }
@@ -331,7 +332,7 @@
               "type": "prometheus",
               "uid": "${datasource}"
             },
-            "expr": "sum by (pod) (\n    rate(container_network_receive_bytes_total{cluster=\"$cluster\",namespace=~\"$namespace\"}[$__rate_interval])\n  * on (cluster,namespace,pod) group_left ()\n    topk by (cluster,namespace,pod) (\n      1,\n      max by (cluster,namespace,pod) (kube_pod_info{host_network=\"false\"})\n    )\n)\n",
+            "expr": "sum by (pod) (\n rate(container_network_receive_bytes_total{cluster=\"$cluster\",namespace=~\"$namespace\"}[$__rate_interval])\n README.md alertmanager-overview.json asd audit-logs.json coredns.json custom etcd.json grafana-overview.json kubernetes-api-server.json kubernetes-compute-resources-cluster.json kubernetes-compute-resources-multi-cluster.json kubernetes-compute-resources-namespace-pods.json kubernetes-compute-resources-namespace-workloads.json kubernetes-compute-resources-node-pods.json kubernetes-compute-resources-pod.json kubernetes-compute-resources-workload.json kubernetes-controller-manager.json kubernetes-kubelet.json kubernetes-networking-cluster.json kubernetes-networking-namespace-pods.json kubernetes-networking-namespace-workload.json kubernetes-networking-pod.json kubernetes-networking-workload.json kubernetes-persistent-volumes.json kubernetes-proxy.json kubernetes-scheduler.json node-exporter-aix.json node-exporter-macos.json node-exporter-nodes.json node-exporter-use-method-cluster.json node-exporter-use-method-node.json prometheus-overview.json tekirdag-prod test-dashboard.json on (cluster,namespace,pod) group_left ()\n topk by (cluster,namespace,pod) (\n 1,\n max by (cluster,namespace,pod) (kube_pod_info{host_network=\"false\"})\n )\n)\n",
             "legendFormat": "__auto"
           }
         ],
@@ -377,7 +378,7 @@
               "type": "prometheus",
               "uid": "${datasource}"
             },
-            "expr": "sum by (pod) (\n    rate(container_network_transmit_bytes_total{cluster=\"$cluster\",namespace=~\"$namespace\"}[$__rate_interval])\n  * on (cluster,namespace,pod) group_left ()\n    topk by (cluster,namespace,pod) (\n      1,\n      max by (cluster,namespace,pod) (kube_pod_info{host_network=\"false\"})\n    )\n)\n",
+            "expr": "sum by (pod) (\n rate(container_network_transmit_bytes_total{cluster=\"$cluster\",namespace=~\"$namespace\"}[$__rate_interval])\n README.md alertmanager-overview.json asd audit-logs.json coredns.json custom etcd.json grafana-overview.json kubernetes-api-server.json kubernetes-compute-resources-cluster.json kubernetes-compute-resources-multi-cluster.json kubernetes-compute-resources-namespace-pods.json kubernetes-compute-resources-namespace-workloads.json kubernetes-compute-resources-node-pods.json kubernetes-compute-resources-pod.json kubernetes-compute-resources-workload.json kubernetes-controller-manager.json kubernetes-kubelet.json kubernetes-networking-cluster.json kubernetes-networking-namespace-pods.json kubernetes-networking-namespace-workload.json kubernetes-networking-pod.json kubernetes-networking-workload.json kubernetes-persistent-volumes.json kubernetes-proxy.json kubernetes-scheduler.json node-exporter-aix.json node-exporter-macos.json node-exporter-nodes.json node-exporter-use-method-cluster.json node-exporter-use-method-node.json prometheus-overview.json tekirdag-prod test-dashboard.json on (cluster,namespace,pod) group_left ()\n topk by (cluster,namespace,pod) (\n 1,\n max by (cluster,namespace,pod) (kube_pod_info{host_network=\"false\"})\n )\n)\n",
             "legendFormat": "__auto"
           }
         ],
@@ -423,7 +424,7 @@
               "type": "prometheus",
               "uid": "${datasource}"
             },
-            "expr": "sum by (pod) (\n    rate(container_network_receive_packets_total{cluster=\"$cluster\",namespace=~\"$namespace\"}[$__rate_interval])\n  * on (cluster,namespace,pod) group_left ()\n    topk by (cluster,namespace,pod) (\n      1,\n      max by (cluster,namespace,pod) (kube_pod_info{host_network=\"false\"})\n    )\n)\n",
+            "expr": "sum by (pod) (\n rate(container_network_receive_packets_total{cluster=\"$cluster\",namespace=~\"$namespace\"}[$__rate_interval])\n README.md alertmanager-overview.json asd audit-logs.json coredns.json custom etcd.json grafana-overview.json kubernetes-api-server.json kubernetes-compute-resources-cluster.json kubernetes-compute-resources-multi-cluster.json kubernetes-compute-resources-namespace-pods.json kubernetes-compute-resources-namespace-workloads.json kubernetes-compute-resources-node-pods.json kubernetes-compute-resources-pod.json kubernetes-compute-resources-workload.json kubernetes-controller-manager.json kubernetes-kubelet.json kubernetes-networking-cluster.json kubernetes-networking-namespace-pods.json kubernetes-networking-namespace-workload.json kubernetes-networking-pod.json kubernetes-networking-workload.json kubernetes-persistent-volumes.json kubernetes-proxy.json kubernetes-scheduler.json node-exporter-aix.json node-exporter-macos.json node-exporter-nodes.json node-exporter-use-method-cluster.json node-exporter-use-method-node.json prometheus-overview.json tekirdag-prod test-dashboard.json on (cluster,namespace,pod) group_left ()\n topk by (cluster,namespace,pod) (\n 1,\n max by (cluster,namespace,pod) (kube_pod_info{host_network=\"false\"})\n )\n)\n",
             "legendFormat": "__auto"
           }
         ],
@@ -469,7 +470,7 @@
               "type": "prometheus",
               "uid": "${datasource}"
             },
-            "expr": "sum by (pod) (\n    rate(container_network_transmit_packets_total{cluster=\"$cluster\",namespace=~\"$namespace\"}[$__rate_interval])\n  * on (cluster,namespace,pod) group_left ()\n    topk by (cluster,namespace,pod) (\n      1,\n      max by (cluster,namespace,pod) (kube_pod_info{host_network=\"false\"})\n    )\n)\n",
+            "expr": "sum by (pod) (\n rate(container_network_transmit_packets_total{cluster=\"$cluster\",namespace=~\"$namespace\"}[$__rate_interval])\n README.md alertmanager-overview.json asd audit-logs.json coredns.json custom etcd.json grafana-overview.json kubernetes-api-server.json kubernetes-compute-resources-cluster.json kubernetes-compute-resources-multi-cluster.json kubernetes-compute-resources-namespace-pods.json kubernetes-compute-resources-namespace-workloads.json kubernetes-compute-resources-node-pods.json kubernetes-compute-resources-pod.json kubernetes-compute-resources-workload.json kubernetes-controller-manager.json kubernetes-kubelet.json kubernetes-networking-cluster.json kubernetes-networking-namespace-pods.json kubernetes-networking-namespace-workload.json kubernetes-networking-pod.json kubernetes-networking-workload.json kubernetes-persistent-volumes.json kubernetes-proxy.json kubernetes-scheduler.json node-exporter-aix.json node-exporter-macos.json node-exporter-nodes.json node-exporter-use-method-cluster.json node-exporter-use-method-node.json prometheus-overview.json tekirdag-prod test-dashboard.json on (cluster,namespace,pod) group_left ()\n topk by (cluster,namespace,pod) (\n 1,\n max by (cluster,namespace,pod) (kube_pod_info{host_network=\"false\"})\n )\n)\n",
             "legendFormat": "__auto"
           }
         ],
@@ -515,7 +516,7 @@
               "type": "prometheus",
               "uid": "${datasource}"
             },
-            "expr": "sum by (pod) (\n    rate(container_network_receive_packets_dropped_total{cluster=\"$cluster\",namespace!=\"\"}[$__rate_interval])\n  * on (cluster,namespace,pod) group_left ()\n    topk by (cluster,namespace,pod) (\n      1,\n      max by (cluster,namespace,pod) (kube_pod_info{host_network=\"false\"})\n    )\n)\n",
+            "expr": "sum by (pod) (\n rate(container_network_receive_packets_dropped_total{cluster=\"$cluster\",namespace!=\"\"}[$__rate_interval])\n README.md alertmanager-overview.json asd audit-logs.json coredns.json custom etcd.json grafana-overview.json kubernetes-api-server.json kubernetes-compute-resources-cluster.json kubernetes-compute-resources-multi-cluster.json kubernetes-compute-resources-namespace-pods.json kubernetes-compute-resources-namespace-workloads.json kubernetes-compute-resources-node-pods.json kubernetes-compute-resources-pod.json kubernetes-compute-resources-workload.json kubernetes-controller-manager.json kubernetes-kubelet.json kubernetes-networking-cluster.json kubernetes-networking-namespace-pods.json kubernetes-networking-namespace-workload.json kubernetes-networking-pod.json kubernetes-networking-workload.json kubernetes-persistent-volumes.json kubernetes-proxy.json kubernetes-scheduler.json node-exporter-aix.json node-exporter-macos.json node-exporter-nodes.json node-exporter-use-method-cluster.json node-exporter-use-method-node.json prometheus-overview.json tekirdag-prod test-dashboard.json on (cluster,namespace,pod) group_left ()\n topk by (cluster,namespace,pod) (\n 1,\n max by (cluster,namespace,pod) (kube_pod_info{host_network=\"false\"})\n )\n)\n",
             "legendFormat": "__auto"
           }
         ],
@@ -561,7 +562,7 @@
               "type": "prometheus",
               "uid": "${datasource}"
             },
-            "expr": "sum by (pod) (\n    rate(container_network_transmit_packets_dropped_total{cluster=\"$cluster\",namespace=~\"$namespace\"}[$__rate_interval])\n  * on (cluster,namespace,pod) group_left ()\n    topk by (cluster,namespace,pod) (\n      1,\n      max by (cluster,namespace,pod) (kube_pod_info{host_network=\"false\"})\n    )\n)\n",
+            "expr": "sum by (pod) (\n rate(container_network_transmit_packets_dropped_total{cluster=\"$cluster\",namespace=~\"$namespace\"}[$__rate_interval])\n README.md alertmanager-overview.json asd audit-logs.json coredns.json custom etcd.json grafana-overview.json kubernetes-api-server.json kubernetes-compute-resources-cluster.json kubernetes-compute-resources-multi-cluster.json kubernetes-compute-resources-namespace-pods.json kubernetes-compute-resources-namespace-workloads.json kubernetes-compute-resources-node-pods.json kubernetes-compute-resources-pod.json kubernetes-compute-resources-workload.json kubernetes-controller-manager.json kubernetes-kubelet.json kubernetes-networking-cluster.json kubernetes-networking-namespace-pods.json kubernetes-networking-namespace-workload.json kubernetes-networking-pod.json kubernetes-networking-workload.json kubernetes-persistent-volumes.json kubernetes-proxy.json kubernetes-scheduler.json node-exporter-aix.json node-exporter-macos.json node-exporter-nodes.json node-exporter-use-method-cluster.json node-exporter-use-method-node.json prometheus-overview.json tekirdag-prod test-dashboard.json on (cluster,namespace,pod) group_left ()\n topk by (cluster,namespace,pod) (\n 1,\n max by (cluster,namespace,pod) (kube_pod_info{host_network=\"false\"})\n )\n)\n",
             "legendFormat": "__auto"
           }
         ],
@@ -630,6 +631,8 @@
       "to": "now"
     },
     "timezone": "Europe/Istanbul",
-    "title": "Kubernetes / Networking / Namespace (Pods)"
+    "title": "Kubernetes / Networking / Namespace (Pods)",
+    "uid": "d4eafded-3566-45b3-ab37-a7c953e30358",
+    "version": 1
   }
 }

@@ -2,10 +2,11 @@
   "apiVersion": "dashboard.grafana.app/v0alpha1",
   "kind": "Dashboard",
   "metadata": {
-    "name": "85a562078cdf77779eaa1add43ccec1e"
+    "name": "kubernetes-compute-resources-namespace-pods"
   },
   "spec": {
     "editable": true,
+    "id": 1275889200857088,
     "links": [
       {
         "asDropdown": true,
@@ -308,7 +309,7 @@
                   "value": [
                     {
                       "title": "Drill down to pods",
-                      "url": "/d/6581e46e4e5c7ba40a07646395ef7b23/k8s-resources-pod?${datasource:queryparam}\u0026var-cluster=$cluster\u0026var-namespace=$namespace\u0026var-pod=${__data.fields.Pod}"
+                      "url": "/d/6581e46e4e5c7ba40a07646395ef7b23/k8s-resources-pod?${datasource:queryparam}&var-cluster=$cluster&var-namespace=$namespace&var-pod=${__data.fields.Pod}"
                     }
                   ]
                 }
@@ -569,7 +570,7 @@
                   "value": [
                     {
                       "title": "Drill down to pods",
-                      "url": "/d/6581e46e4e5c7ba40a07646395ef7b23/k8s-resources-pod?${datasource:queryparam}\u0026var-cluster=$cluster\u0026var-namespace=$namespace\u0026var-pod=${__data.fields.Pod}"
+                      "url": "/d/6581e46e4e5c7ba40a07646395ef7b23/k8s-resources-pod?${datasource:queryparam}&var-cluster=$cluster&var-namespace=$namespace&var-pod=${__data.fields.Pod}"
                     }
                   ]
                 }
@@ -759,7 +760,7 @@
                   "value": [
                     {
                       "title": "Drill down to pods",
-                      "url": "/d/6581e46e4e5c7ba40a07646395ef7b23/k8s-resources-pod?${datasource:queryparam}\u0026var-cluster=$cluster\u0026var-namespace=$namespace\u0026var-pod=${__data.fields.Pod}"
+                      "url": "/d/6581e46e4e5c7ba40a07646395ef7b23/k8s-resources-pod?${datasource:queryparam}&var-cluster=$cluster&var-namespace=$namespace&var-pod=${__data.fields.Pod}"
                     }
                   ]
                 }
@@ -1331,7 +1332,7 @@
                   "value": [
                     {
                       "title": "Drill down to pods",
-                      "url": "/d/6581e46e4e5c7ba40a07646395ef7b23/k8s-resources-pod?${datasource:queryparam}\u0026var-cluster=$cluster\u0026var-namespace=$namespace\u0026var-pod=${__data.fields.Pod}"
+                      "url": "/d/6581e46e4e5c7ba40a07646395ef7b23/k8s-resources-pod?${datasource:queryparam}&var-cluster=$cluster&var-namespace=$namespace&var-pod=${__data.fields.Pod}"
                     }
                   ]
                 }
@@ -1508,6 +1509,8 @@
       "to": "now"
     },
     "timezone": "Europe/Istanbul",
-    "title": "Kubernetes / Compute Resources / Namespace (Pods)"
+    "title": "Kubernetes / Compute Resources / Namespace (Pods)",
+    "uid": "ad4ded9e-b0ed-4776-9933-39dba798a672",
+    "version": 1
   }
 }

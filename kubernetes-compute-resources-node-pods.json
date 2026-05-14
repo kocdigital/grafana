@@ -2,10 +2,11 @@
   "apiVersion": "dashboard.grafana.app/v0alpha1",
   "kind": "Dashboard",
   "metadata": {
-    "name": "200ac8fdbfbb74b39aff88118e4d1c2c"
+    "name": "kubernetes-compute-resources-node-pods"
   },
   "spec": {
     "editable": true,
+    "id": 1277967814033408,
     "links": [
       {
         "asDropdown": true,
@@ -152,7 +153,7 @@
                   "value": [
                     {
                       "title": "Drill down to pods",
-                      "url": "/d/6581e46e4e5c7ba40a07646395ef7b23/k8s-resources-pod?${datasource:queryparam}\u0026var-cluster=$cluster\u0026var-namespace=$namespace\u0026var-pod=${__data.fields.Pod}"
+                      "url": "/d/6581e46e4e5c7ba40a07646395ef7b23/k8s-resources-pod?${datasource:queryparam}&var-cluster=$cluster&var-namespace=$namespace&var-pod=${__data.fields.Pod}"
                     }
                   ]
                 }
@@ -487,7 +488,7 @@
                   "value": [
                     {
                       "title": "Drill down to pods",
-                      "url": "/d/6581e46e4e5c7ba40a07646395ef7b23/k8s-resources-pod?${datasource:queryparam}\u0026var-cluster=$cluster\u0026var-namespace=$namespace\u0026var-pod=${__data.fields.Pod}"
+                      "url": "/d/6581e46e4e5c7ba40a07646395ef7b23/k8s-resources-pod?${datasource:queryparam}&var-cluster=$cluster&var-namespace=$namespace&var-pod=${__data.fields.Pod}"
                     }
                   ]
                 }
@@ -671,6 +672,8 @@
       "to": "now"
     },
     "timezone": "Europe/Istanbul",
-    "title": "Kubernetes / Compute Resources / Node (Pods)"
+    "title": "Kubernetes / Compute Resources / Node (Pods)",
+    "uid": "5ae8b47a-e2d0-4800-b68f-82d00834ca8d",
+    "version": 1
   }
 }

@@ -2,10 +2,11 @@
   "apiVersion": "dashboard.grafana.app/v0alpha1",
   "kind": "Dashboard",
   "metadata": {
-    "name": "2e6b6a3b4bddf1427b3a55aa1311c656"
+    "name": "kubernetes-scheduler"
   },
   "spec": {
     "editable": true,
+    "id": 1276109162741760,
     "links": [
       {
         "asDropdown": true,
@@ -591,6 +592,8 @@
       "to": "now"
     },
     "timezone": "Europe/Istanbul",
-    "title": "Kubernetes / Scheduler"
+    "title": "Kubernetes / Scheduler",
+    "uid": "f74a5c9d-2a57-46fc-9a39-c11ac681415f",
+    "version": 1
   }
 }

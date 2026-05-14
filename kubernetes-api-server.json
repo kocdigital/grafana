@@ -2,10 +2,11 @@
   "apiVersion": "dashboard.grafana.app/v0alpha1",
   "kind": "Dashboard",
   "metadata": {
-    "name": "09ec8aa1e996d6ffcd6817bbaff4db1b"
+    "name": "kubernetes-api-server"
   },
   "spec": {
     "editable": true,
+    "id": 1277887556026368,
     "links": [
       {
         "asDropdown": true,
@@ -70,7 +71,7 @@
             "expr": "apiserver_request:availability30d{verb=\"all\", cluster=\"$cluster\"}"
           }
         ],
-        "title": "Availability (30d) \u003e 99.000%",
+        "title": "Availability (30d) > 99.000%",
         "type": "stat"
       },
       {
@@ -113,11 +114,11 @@
               "type": "prometheus",
               "uid": "${datasource}"
             },
-            "expr": "100 * (apiserver_request:availability30d{verb=\"all\", cluster=\"$cluster\"} - 0.990000)",
+            "expr": "100 README.md alertmanager-overview.json asd audit-logs.json coredns.json custom etcd.json grafana-overview.json kubernetes-api-server.json kubernetes-compute-resources-cluster.json kubernetes-compute-resources-multi-cluster.json kubernetes-compute-resources-namespace-pods.json kubernetes-compute-resources-namespace-workloads.json kubernetes-compute-resources-node-pods.json kubernetes-compute-resources-pod.json kubernetes-compute-resources-workload.json kubernetes-controller-manager.json kubernetes-kubelet.json kubernetes-networking-cluster.json kubernetes-networking-namespace-pods.json kubernetes-networking-namespace-workload.json kubernetes-networking-pod.json kubernetes-networking-workload.json kubernetes-persistent-volumes.json kubernetes-proxy.json kubernetes-scheduler.json node-exporter-aix.json node-exporter-macos.json node-exporter-nodes.json node-exporter-use-method-cluster.json node-exporter-use-method-node.json prometheus-overview.json tekirdag-prod test-dashboard.json (apiserver_request:availability30d{verb=\"all\", cluster=\"$cluster\"} - 0.990000)",
             "legendFormat": "errorbudget"
           }
         ],
-        "title": "ErrorBudget (30d) \u003e 99.000%",
+        "title": "ErrorBudget (30d) > 99.000%",
         "type": "timeseries"
       },
       {
@@ -872,6 +873,8 @@
       "to": "now"
     },
     "timezone": "Europe/Istanbul",
-    "title": "Kubernetes / API server"
+    "title": "Kubernetes / API server",
+    "uid": "090fd98d-8d04-4efe-b96a-3b3cd637a8c2",
+    "version": 1
   }
 }

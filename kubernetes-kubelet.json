@@ -2,10 +2,11 @@
   "apiVersion": "dashboard.grafana.app/v0alpha1",
   "kind": "Dashboard",
   "metadata": {
-    "name": "3138fa155d5915769fbded898ac09fd9"
+    "name": "kubernetes-kubelet"
   },
   "spec": {
     "editable": true,
+    "id": 1275986114445312,
     "links": [
       {
         "asDropdown": true,
@@ -1243,6 +1244,8 @@
       "to": "now"
     },
     "timezone": "Europe/Istanbul",
-    "title": "Kubernetes / Kubelet"
+    "title": "Kubernetes / Kubelet",
+    "uid": "93d993c5-1322-4501-ad8e-3834455f81ad",
+    "version": 1
   }
 }

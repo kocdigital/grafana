@@ -2,10 +2,11 @@
   "apiVersion": "dashboard.grafana.app/v0alpha1",
   "kind": "Dashboard",
   "metadata": {
-    "name": "629701ea43bf69291922ea45f4a87d37"
+    "name": "node-exporter-macos"
   },
   "spec": {
     "graphTooltip": 1,
+    "id": 1276139890212864,
     "panels": [
       {
         "collapsed": false,
@@ -58,7 +59,7 @@
               "type": "prometheus",
               "uid": "$datasource"
             },
-            "expr": "(\n  (1 - sum without (mode) (rate(node_cpu_seconds_total{job=\"node-exporter\", mode=~\"idle|iowait|steal\", instance=\"$instance\", cluster=\"$cluster\"}[$__rate_interval])))\n/ ignoring(cpu) group_left\n  count without (cpu, mode) (node_cpu_seconds_total{job=\"node-exporter\", mode=\"idle\", instance=\"$instance\", cluster=\"$cluster\"})\n)\n",
+            "expr": "(\n (1 - sum without (mode) (rate(node_cpu_seconds_total{job=\"node-exporter\", mode=~\"idle|iowait|steal\", instance=\"$instance\", cluster=\"$cluster\"}[$__rate_interval])))\n/ ignoring(cpu) group_left\n count without (cpu, mode) (node_cpu_seconds_total{job=\"node-exporter\", mode=\"idle\", instance=\"$instance\", cluster=\"$cluster\"})\n)\n",
             "intervalFactor": 5,
             "legendFormat": "{{cpu}}"
           }
@@ -188,7 +189,7 @@
               "type": "prometheus",
               "uid": "$datasource"
             },
-            "expr": "(\n    node_memory_internal_bytes{job=\"node-exporter\", instance=\"$instance\", cluster=\"$cluster\"} -\n    node_memory_purgeable_bytes{job=\"node-exporter\", instance=\"$instance\", cluster=\"$cluster\"} +\n    node_memory_wired_bytes{job=\"node-exporter\", instance=\"$instance\", cluster=\"$cluster\"} +\n    node_memory_compressed_bytes{job=\"node-exporter\", instance=\"$instance\", cluster=\"$cluster\"}\n)\n",
+            "expr": "(\n node_memory_internal_bytes{job=\"node-exporter\", instance=\"$instance\", cluster=\"$cluster\"} -\n node_memory_purgeable_bytes{job=\"node-exporter\", instance=\"$instance\", cluster=\"$cluster\"} +\n node_memory_wired_bytes{job=\"node-exporter\", instance=\"$instance\", cluster=\"$cluster\"} +\n node_memory_compressed_bytes{job=\"node-exporter\", instance=\"$instance\", cluster=\"$cluster\"}\n)\n",
             "legendFormat": "Memory Used"
           },
           {
@@ -196,7 +197,7 @@
               "type": "prometheus",
               "uid": "$datasource"
             },
-            "expr": "(\n    node_memory_internal_bytes{job=\"node-exporter\", instance=\"$instance\", cluster=\"$cluster\"} -\n    node_memory_purgeable_bytes{job=\"node-exporter\", instance=\"$instance\", cluster=\"$cluster\"}\n)\n",
+            "expr": "(\n node_memory_internal_bytes{job=\"node-exporter\", instance=\"$instance\", cluster=\"$cluster\"} -\n node_memory_purgeable_bytes{job=\"node-exporter\", instance=\"$instance\", cluster=\"$cluster\"}\n)\n",
             "legendFormat": "App Memory"
           },
           {
@@ -260,7 +261,7 @@
               "type": "prometheus",
               "uid": "$datasource"
             },
-            "expr": "(\n    (\n      avg(node_memory_internal_bytes{job=\"node-exporter\", instance=\"$instance\", cluster=\"$cluster\"}) -\n      avg(node_memory_purgeable_bytes{job=\"node-exporter\", instance=\"$instance\", cluster=\"$cluster\"}) +\n      avg(node_memory_wired_bytes{job=\"node-exporter\", instance=\"$instance\", cluster=\"$cluster\"}) +\n      avg(node_memory_compressed_bytes{job=\"node-exporter\", instance=\"$instance\", cluster=\"$cluster\"})\n    ) /\n    avg(node_memory_total_bytes{job=\"node-exporter\", instance=\"$instance\", cluster=\"$cluster\"})\n)\n*\n100\n"
+            "expr": "(\n (\n avg(node_memory_internal_bytes{job=\"node-exporter\", instance=\"$instance\", cluster=\"$cluster\"}) -\n avg(node_memory_purgeable_bytes{job=\"node-exporter\", instance=\"$instance\", cluster=\"$cluster\"}) +\n avg(node_memory_wired_bytes{job=\"node-exporter\", instance=\"$instance\", cluster=\"$cluster\"}) +\n avg(node_memory_compressed_bytes{job=\"node-exporter\", instance=\"$instance\", cluster=\"$cluster\"})\n ) /\n avg(node_memory_total_bytes{job=\"node-exporter\", instance=\"$instance\", cluster=\"$cluster\"})\n)\n*\n100\n"
           }
         ],
         "title": "Memory Usage",
@@ -629,7 +630,7 @@
               "type": "prometheus",
               "uid": "$datasource"
             },
-            "expr": "rate(node_network_receive_bytes_total{job=\"node-exporter\", instance=\"$instance\", cluster=\"$cluster\", device!=\"lo\"}[$__rate_interval]) * 8",
+            "expr": "rate(node_network_receive_bytes_total{job=\"node-exporter\", instance=\"$instance\", cluster=\"$cluster\", device!=\"lo\"}[$__rate_interval]) README.md alertmanager-overview.json asd audit-logs.json coredns.json custom etcd.json grafana-overview.json kubernetes-api-server.json kubernetes-compute-resources-cluster.json kubernetes-compute-resources-multi-cluster.json kubernetes-compute-resources-namespace-pods.json kubernetes-compute-resources-namespace-workloads.json kubernetes-compute-resources-node-pods.json kubernetes-compute-resources-pod.json kubernetes-compute-resources-workload.json kubernetes-controller-manager.json kubernetes-kubelet.json kubernetes-networking-cluster.json kubernetes-networking-namespace-pods.json kubernetes-networking-namespace-workload.json kubernetes-networking-pod.json kubernetes-networking-workload.json kubernetes-persistent-volumes.json kubernetes-proxy.json kubernetes-scheduler.json node-exporter-aix.json node-exporter-macos.json node-exporter-nodes.json node-exporter-use-method-cluster.json node-exporter-use-method-node.json prometheus-overview.json tekirdag-prod test-dashboard.json 8",
             "intervalFactor": 1,
             "legendFormat": "{{device}}"
           }
@@ -671,7 +672,7 @@
               "type": "prometheus",
               "uid": "$datasource"
             },
-            "expr": "rate(node_network_transmit_bytes_total{job=\"node-exporter\", instance=\"$instance\", cluster=\"$cluster\", device!=\"lo\"}[$__rate_interval]) * 8",
+            "expr": "rate(node_network_transmit_bytes_total{job=\"node-exporter\", instance=\"$instance\", cluster=\"$cluster\", device!=\"lo\"}[$__rate_interval]) README.md alertmanager-overview.json asd audit-logs.json coredns.json custom etcd.json grafana-overview.json kubernetes-api-server.json kubernetes-compute-resources-cluster.json kubernetes-compute-resources-multi-cluster.json kubernetes-compute-resources-namespace-pods.json kubernetes-compute-resources-namespace-workloads.json kubernetes-compute-resources-node-pods.json kubernetes-compute-resources-pod.json kubernetes-compute-resources-workload.json kubernetes-controller-manager.json kubernetes-kubelet.json kubernetes-networking-cluster.json kubernetes-networking-namespace-pods.json kubernetes-networking-namespace-workload.json kubernetes-networking-pod.json kubernetes-networking-workload.json kubernetes-persistent-volumes.json kubernetes-proxy.json kubernetes-scheduler.json node-exporter-aix.json node-exporter-macos.json node-exporter-nodes.json node-exporter-use-method-cluster.json node-exporter-use-method-node.json prometheus-overview.json tekirdag-prod test-dashboard.json 8",
             "intervalFactor": 1,
             "legendFormat": "{{device}}"
           }
@@ -701,7 +702,7 @@
           "hide": 2,
           "label": "Cluster",
           "name": "cluster",
-          "query": "label_values(node_uname_info{job=\"node-exporter\", sysname=\"Darwin\"},  cluster)",
+          "query": "label_values(node_uname_info{job=\"node-exporter\", sysname=\"Darwin\"}, cluster)",
           "refresh": 2,
           "type": "query"
         },
@@ -723,6 +724,8 @@
       "to": "now"
     },
     "timezone": "Europe/Istanbul",
-    "title": "Node Exporter / MacOS"
+    "title": "Node Exporter / MacOS",
+    "uid": "5b6526f4-0866-4c80-b098-f4cd1b6714de",
+    "version": 1
   }
 }

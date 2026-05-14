@@ -2,10 +2,11 @@
   "apiVersion": "dashboard.grafana.app/v0alpha1",
   "kind": "Dashboard",
   "metadata": {
-    "name": "7a18067ce943a40ae25454675c19ff5c"
+    "name": "kubernetes-networking-pod"
   },
   "spec": {
     "editable": true,
+    "id": 1278094100332544,
     "links": [
       {
         "asDropdown": true,
@@ -484,6 +485,8 @@
       "to": "now"
     },
     "timezone": "Europe/Istanbul",
-    "title": "Kubernetes / Networking / Pod"
+    "title": "Kubernetes / Networking / Pod",
+    "uid": "0e2cd35e-24eb-45a9-9bf9-886ebf57675b",
+    "version": 1
   }
 }

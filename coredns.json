@@ -2,7 +2,7 @@
   "apiVersion": "dashboard.grafana.app/v0alpha1",
   "kind": "Dashboard",
   "metadata": {
-    "name": "vkQ0UHxik"
+    "name": "coredns"
   },
   "spec": {
     "annotations": {
@@ -16,16 +16,17 @@
           "enable": true,
           "hide": true,
           "iconColor": "rgba(0, 211, 255, 1)",
-          "name": "Annotations \u0026 Alerts",
+          "name": "Annotations & Alerts",
           "type": "dashboard"
         }
       ]
     },
-    "description": "A dashboard for the CoreDNS DNS server with updated metrics for version 1.7.0+.  Based on the CoreDNS dashboard by buhay.",
+    "description": "A dashboard for the CoreDNS DNS server with updated metrics for version 1.7.0+. Based on the CoreDNS dashboard by buhay.",
     "editable": true,
     "fiscalYearStartMonth": 0,
     "gnetId": 12539,
     "graphTooltip": 0,
+    "id": 1277840374300672,
     "links": [
       {
         "icon": "external link",
@@ -1565,6 +1566,8 @@
     },
     "timezone": "Europe/Istanbul",
     "title": "CoreDNS",
+    "uid": "5c2bee71-b8b5-4f63-bbe3-cf971ee4ed2b",
+    "version": 1,
     "weekStart": ""
   }
 }

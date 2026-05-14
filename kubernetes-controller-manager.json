@@ -2,10 +2,11 @@
   "apiVersion": "dashboard.grafana.app/v0alpha1",
   "kind": "Dashboard",
   "metadata": {
-    "name": "72e0e05bef5099e5f049b05fdc429ed4"
+    "name": "kubernetes-controller-manager"
   },
   "spec": {
     "editable": true,
+    "id": 1275970847178752,
     "links": [
       {
         "asDropdown": true,
@@ -594,6 +595,8 @@
       "to": "now"
     },
     "timezone": "Europe/Istanbul",
-    "title": "Kubernetes / Controller Manager"
+    "title": "Kubernetes / Controller Manager",
+    "uid": "44a2ba91-a7f2-4563-9cce-ee5cb8a2611f",
+    "version": 1
   }
 }

@@ -2,10 +2,11 @@
   "apiVersion": "dashboard.grafana.app/v0alpha1",
   "kind": "Dashboard",
   "metadata": {
-    "name": "632e265de029684c40b21cb76bca4f94"
+    "name": "kubernetes-proxy"
   },
   "spec": {
     "editable": true,
+    "id": 1278140040544256,
     "links": [
       {
         "asDropdown": true,
@@ -645,6 +646,8 @@
       "to": "now"
     },
     "timezone": "Europe/Istanbul",
-    "title": "Kubernetes / Proxy"
+    "title": "Kubernetes / Proxy",
+    "uid": "29449138-ebeb-4263-9903-884f63330506",
+    "version": 1
   }
 }

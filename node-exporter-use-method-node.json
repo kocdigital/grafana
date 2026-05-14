@@ -2,10 +2,11 @@
   "apiVersion": "dashboard.grafana.app/v0alpha1",
   "kind": "Dashboard",
   "metadata": {
-    "name": "fac67cfbe174d3ef53eb473d73d9212f"
+    "name": "node-exporter-use-method-node"
   },
   "spec": {
     "graphTooltip": 1,
+    "id": 1276186270826496,
     "panels": [
       {
         "collapsed": false,
@@ -532,7 +533,7 @@
               "type": "prometheus",
               "uid": "$datasource"
             },
-            "expr": "sort_desc(1 -\n  (\n    max without (mountpoint, fstype) (node_filesystem_avail_bytes{job=\"node-exporter\", fstype!=\"\", instance=\"$instance\", cluster=\"$cluster\"})\n    /\n    max without (mountpoint, fstype) (node_filesystem_size_bytes{job=\"node-exporter\", fstype!=\"\", instance=\"$instance\", cluster=\"$cluster\"})\n  ) != 0\n)\n",
+            "expr": "sort_desc(1 -\n (\n max without (mountpoint, fstype) (node_filesystem_avail_bytes{job=\"node-exporter\", fstype!=\"\", instance=\"$instance\", cluster=\"$cluster\"})\n /\n max without (mountpoint, fstype) (node_filesystem_size_bytes{job=\"node-exporter\", fstype!=\"\", instance=\"$instance\", cluster=\"$cluster\"})\n ) != 0\n)\n",
             "legendFormat": "{{device}}"
           }
         ],
@@ -584,6 +585,8 @@
       "to": "now"
     },
     "timezone": "Europe/Istanbul",
-    "title": "Node Exporter / USE Method / Node"
+    "title": "Node Exporter / USE Method / Node",
+    "uid": "0834219f-80d0-4299-986a-8ceb80b860c0",
+    "version": 1
   }
 }

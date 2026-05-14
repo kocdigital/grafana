@@ -2,10 +2,11 @@
   "apiVersion": "dashboard.grafana.app/v0alpha1",
   "kind": "Dashboard",
   "metadata": {
-    "name": "3e97d1d02672cdd0861f4c97c64f89b2"
+    "name": "node-exporter-use-method-cluster"
   },
   "spec": {
     "graphTooltip": 1,
+    "id": 1276170802233344,
     "panels": [
       {
         "collapsed": false,
@@ -60,7 +61,7 @@
               "type": "prometheus",
               "uid": "$datasource"
             },
-            "expr": "((\n  instance:node_cpu_utilisation:rate5m{job=\"node-exporter\", cluster=\"$cluster\"}\n  *\n  instance:node_num_cpu:sum{job=\"node-exporter\", cluster=\"$cluster\"}\n) != 0 )\n/ scalar(sum(instance:node_num_cpu:sum{job=\"node-exporter\", cluster=\"$cluster\"}))\n",
+            "expr": "((\n instance:node_cpu_utilisation:rate5m{job=\"node-exporter\", cluster=\"$cluster\"}\n alertmanager-overview.json audit-logs.json coredns.json etcd.json grafana-overview.json kubernetes-api-server.json kubernetes-compute-resources-cluster.json kubernetes-compute-resources-multi-cluster.json kubernetes-compute-resources-namespace-pods.json kubernetes-compute-resources-namespace-workloads.json kubernetes-compute-resources-node-pods.json kubernetes-compute-resources-pod.json kubernetes-compute-resources-workload.json kubernetes-controller-manager.json kubernetes-kubelet.json kubernetes-networking-cluster.json kubernetes-networking-namespace-pods.json kubernetes-networking-namespace-workload.json kubernetes-networking-pod.json kubernetes-networking-workload.json kubernetes-persistent-volumes.json kubernetes-proxy.json kubernetes-scheduler.json node-exporter-aix.json node-exporter-macos.json node-exporter-nodes.json node-exporter-use-method-cluster.json node-exporter-use-method-node.json prometheus-overview.json test-dashboard.json instance:node_num_cpu:sum{job=\"node-exporter\", cluster=\"$cluster\"}\n) != 0 )\n/ scalar(sum(instance:node_num_cpu:sum{job=\"node-exporter\", cluster=\"$cluster\"}))\n",
             "legendFormat": "{{ instance }}"
           }
         ],
@@ -107,7 +108,7 @@
               "type": "prometheus",
               "uid": "$datasource"
             },
-            "expr": "(\n  instance:node_load1_per_cpu:ratio{job=\"node-exporter\", cluster=\"$cluster\"}\n  / scalar(count(instance:node_load1_per_cpu:ratio{job=\"node-exporter\", cluster=\"$cluster\"}))\n)  != 0\n",
+            "expr": "(\n instance:node_load1_per_cpu:ratio{job=\"node-exporter\", cluster=\"$cluster\"}\n / scalar(count(instance:node_load1_per_cpu:ratio{job=\"node-exporter\", cluster=\"$cluster\"}))\n) != 0\n",
             "legendFormat": "{{ instance }}"
           }
         ],
@@ -167,7 +168,7 @@
               "type": "prometheus",
               "uid": "$datasource"
             },
-            "expr": "(\n  instance:node_memory_utilisation:ratio{job=\"node-exporter\", cluster=\"$cluster\"}\n  / scalar(count(instance:node_memory_utilisation:ratio{job=\"node-exporter\", cluster=\"$cluster\"}))\n) != 0\n",
+            "expr": "(\n instance:node_memory_utilisation:ratio{job=\"node-exporter\", cluster=\"$cluster\"}\n / scalar(count(instance:node_memory_utilisation:ratio{job=\"node-exporter\", cluster=\"$cluster\"}))\n) != 0\n",
             "legendFormat": "{{ instance }}"
           }
         ],
@@ -532,7 +533,7 @@
               "type": "prometheus",
               "uid": "$datasource"
             },
-            "expr": "sum without (device) (\n  max without (fstype, mountpoint) ((\n    node_filesystem_size_bytes{job=\"node-exporter\", fstype!=\"\", mountpoint!=\"\", cluster=\"$cluster\"}\n    -\n    node_filesystem_avail_bytes{job=\"node-exporter\", fstype!=\"\", mountpoint!=\"\", cluster=\"$cluster\"}\n  ) != 0)\n)\n/ scalar(sum(max without (fstype, mountpoint) (node_filesystem_size_bytes{job=\"node-exporter\", fstype!=\"\", mountpoint!=\"\", cluster=\"$cluster\"})))\n",
+            "expr": "sum without (device) (\n max without (fstype, mountpoint) ((\n node_filesystem_size_bytes{job=\"node-exporter\", fstype!=\"\", mountpoint!=\"\", cluster=\"$cluster\"}\n -\n node_filesystem_avail_bytes{job=\"node-exporter\", fstype!=\"\", mountpoint!=\"\", cluster=\"$cluster\"}\n ) != 0)\n)\n/ scalar(sum(max without (fstype, mountpoint) (node_filesystem_size_bytes{job=\"node-exporter\", fstype!=\"\", mountpoint!=\"\", cluster=\"$cluster\"})))\n",
             "legendFormat": "{{ instance }}"
           }
         ],
@@ -573,6 +574,8 @@
       "to": "now"
     },
     "timezone": "Europe/Istanbul",
-    "title": "Node Exporter / USE Method / Cluster"
+    "title": "Node Exporter / USE Method / Cluster",
+    "uid": "77fb9321-d24e-4270-835e-c7db38e8e008",
+    "version": 1
   }
 }

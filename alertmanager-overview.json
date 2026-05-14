@@ -6,6 +6,7 @@
   },
   "spec": {
     "graphTooltip": 1,
+    "id": 1275771034730496,
     "panels": [
       {
         "collapsed": false,
@@ -237,7 +238,7 @@
               "type": "prometheus",
               "uid": "$datasource"
             },
-            "expr": "histogram_quantile(0.99,\n  sum(rate(alertmanager_notification_latency_seconds_bucket{namespace=~\"$namespace\",service=~\"$service\", integration=\"$integration\"}[$__rate_interval])) by (le,namespace,service,instance)\n)\n",
+            "expr": "histogram_quantile(0.99,\n sum(rate(alertmanager_notification_latency_seconds_bucket{namespace=~\"$namespace\",service=~\"$service\", integration=\"$integration\"}[$__rate_interval])) by (le,namespace,service,instance)\n)\n",
             "intervalFactor": 2,
             "legendFormat": "{{instance}} 99th Percentile"
           },
@@ -246,7 +247,7 @@
               "type": "prometheus",
               "uid": "$datasource"
             },
-            "expr": "histogram_quantile(0.50,\n  sum(rate(alertmanager_notification_latency_seconds_bucket{namespace=~\"$namespace\",service=~\"$service\", integration=\"$integration\"}[$__rate_interval])) by (le,namespace,service,instance)\n)\n",
+            "expr": "histogram_quantile(0.50,\n sum(rate(alertmanager_notification_latency_seconds_bucket{namespace=~\"$namespace\",service=~\"$service\", integration=\"$integration\"}[$__rate_interval])) by (le,namespace,service,instance)\n)\n",
             "intervalFactor": 2,
             "legendFormat": "{{instance}} Median"
           },
@@ -348,6 +349,8 @@
       ]
     },
     "timezone": "Europe/Istanbul",
-    "title": "Alertmanager / Overview"
+    "title": "Alertmanager / Overview",
+    "uid": "6ea0d768-df6b-4db5-90a0-8996c26dd2e9",
+    "version": 1
   }
 }
