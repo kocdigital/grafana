@@ -2,7 +2,7 @@
   "apiVersion": "dashboard.grafana.app/v0alpha1",
   "kind": "Dashboard",
   "metadata": {
-    "name": "f09f9a80-test-dashboard-auto-sync"
+    "name": "new-dashboard"
   },
   "spec": {
     "annotations": {
@@ -24,13 +24,14 @@
     "editable": true,
     "fiscalYearStartMonth": 0,
     "graphTooltip": 0,
-    "id": 1278264426823680,
+    "id": 1283862085525504,
     "liveNow": false,
     "panels": [
       {
+        "description": "merjsns",
         "gridPos": {
-          "h": 8,
-          "w": 24,
+          "h": 9,
+          "w": 8,
           "x": 0,
           "y": 0
         },
@@ -41,22 +42,18 @@
             "showLineNumbers": false,
             "showMiniMap": false
           },
-          "content": "# ✅ Auto Sync Çalışıyor!\n\nBu dashboard GitHub Actions tarafından otomatik olarak yüklendi.\n\nBu değişikliği de Grafanadan yapıyorum\n\nİkinci defa yaptım değişiklik\n\nÜçüncü defa yaptım değişiklik\n\ndördüncü test",
+          "content": "ghfvjhgjg\n",
           "mode": "markdown"
         },
         "pluginVersion": "13.0.1",
         "targets": [],
-        "title": "GitHub Actions Auto Sync Test",
+        "title": "yenşjişkşl",
         "type": "text"
       }
     ],
     "preload": false,
-    "refresh": "30s",
+    "refresh": "",
     "schemaVersion": 42,
-    "tags": [
-      "test",
-      "auto-sync"
-    ],
     "time": {
       "from": "now-6h",
       "to": "now"
@@ -76,8 +73,8 @@
       ]
     },
     "timezone": "browser",
-    "title": "🚀 Test Dashboard - Auto Sync",
-    "uid": "df62723c-92a8-4d80-8fcd-d95683a22709",
-    "version": 5
+    "title": "New dashboard",
+    "uid": "adgt9dx",
+    "version": 2
   }
 }
