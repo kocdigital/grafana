@@ -41,7 +41,7 @@
             "showLineNumbers": false,
             "showMiniMap": false
           },
-          "content": "# ✅ Auto Sync Çalışıyor!\n\nBu dashboard GitHub Actions tarafından otomatik olarak yüklendi.\n\nBu değişikliği de Grafanadan yapıyorum",
+          "content": "# ✅ Auto Sync Çalışıyor!\n\nBu dashboard GitHub Actions tarafından otomatik olarak yüklendi.\n\nBu değişikliği de Grafanadan yapıyorum\n\nİkinci defa yaptım değişiklik",
           "mode": "markdown"
         },
         "pluginVersion": "13.0.1",
@@ -78,6 +78,6 @@
     "timezone": "browser",
     "title": "🚀 Test Dashboard - Auto Sync",
     "uid": "df62723c-92a8-4d80-8fcd-d95683a22709",
-    "version": 2
+    "version": 3
   }
 }
