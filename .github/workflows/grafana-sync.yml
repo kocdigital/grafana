@@ -26,21 +26,23 @@ jobs:
           echo "${{ secrets.KUBECONFIG_DEV }}" > $HOME/.kube/config
           chmod 600 $HOME/.kube/config
 
-      - name: Verify connection
-        run: kubectl get nodes
-
-      - name: Update ConfigMap
+      - name: Port-forward Grafana
         run: |
-          kubectl create configmap dashboards-configmap \
-            --from-file=. \
-            --namespace my-grafana \
-            --dry-run=client -o yaml | kubectl apply -f -
+          kubectl port-forward -n my-grafana deployment/grafana 3000:3000 &
+          echo "⏳ Bağlantı bekleniyor..."
+          sleep 8
 
-      - name: Restart Grafana
+      - name: Push Dashboards via Grafana API
         run: |
-          kubectl rollout restart deployment/grafana \
-            --namespace my-grafana
-
-          kubectl rollout status deployment/grafana \
-            --namespace my-grafana \
-            --timeout=180s
+          for file in *.json; do
+            echo "📊 Yükleniyor: $file"
+            payload=$(cat "$file" | jq '{dashboard: ., overwrite: true, folderId: 0}')
+            response=$(curl -s -o /dev/null -w "%{http_code}" \
+              -X POST \
+              -H "Content-Type: application/json" \
+              -u "admin:${{ secrets.GRAFANA_ADMIN_PASSWORD }}" \
+              -d "$payload" \
+              http://localhost:3000/api/dashboards/db)
+            echo "  → HTTP $response"
+          done
+          echo "✅ Tüm dashboardlar yüklendi"
