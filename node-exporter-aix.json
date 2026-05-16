@@ -6,7 +6,7 @@
   },
   "spec": {
     "graphTooltip": 1,
-    "id": 1278170445053952,
+    "id": 1276124593586176,
     "panels": [
       {
         "collapsed": false,
@@ -701,7 +701,7 @@
     },
     "timezone": "Europe/Istanbul",
     "title": "Node Exporter / AIX",
-    "uid": "17734de6-0205-4a52-aa9e-a8d19ebcf16a",
+    "uid": "65f135de-8c17-40d2-acf9-0a57cfc5c8af",
     "version": 1
   }
 }

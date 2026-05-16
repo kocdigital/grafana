@@ -5,7 +5,7 @@
     "name": "prometheus-overview"
   },
   "spec": {
-    "id": 1276201710059520,
+    "id": 1278248819818496,
     "panels": [
       {
         "collapsed": false,
@@ -821,7 +821,7 @@
     },
     "timezone": "Europe/Istanbul",
     "title": "Prometheus / Overview",
-    "uid": "43a709f6-5a3e-40f9-bef9-e6585e39f8aa",
+    "uid": "31d87bdc-1e0e-496e-a86e-6587917bdd9b",
     "version": 1
   }
 }
