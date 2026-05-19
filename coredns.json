@@ -26,7 +26,7 @@
     "fiscalYearStartMonth": 0,
     "gnetId": 12539,
     "graphTooltip": 0,
-    "id": 1277840374300672,
+    "id": 1275790538244096,
     "links": [
       {
         "icon": "external link",
@@ -1566,7 +1566,7 @@
     },
     "timezone": "Europe/Istanbul",
     "title": "CoreDNS",
-    "uid": "5c2bee71-b8b5-4f63-bbe3-cf971ee4ed2b",
+    "uid": "a1078a9f-4230-437c-a897-d993a6da9df1",
     "version": 1,
     "weekStart": ""
   }

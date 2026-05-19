@@ -6,7 +6,7 @@
   },
   "spec": {
     "editable": true,
-    "id": 1276016758030336,
+    "id": 1278062915682304,
     "links": [
       {
         "asDropdown": true,
@@ -632,7 +632,7 @@
     },
     "timezone": "Europe/Istanbul",
     "title": "Kubernetes / Networking / Namespace (Pods)",
-    "uid": "d4eafded-3566-45b3-ab37-a7c953e30358",
+    "uid": "71fb6b91-f7e0-4855-9f17-cabffc5520b5",
     "version": 1
   }
 }
