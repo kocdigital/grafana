@@ -6,7 +6,7 @@
   },
   "spec": {
     "editable": true,
-    "id": 1275872549470208,
+    "id": 1277918719705088,
     "links": [
       {
         "asDropdown": true,
@@ -632,7 +632,7 @@
     },
     "timezone": "Europe/Istanbul",
     "title": "Kubernetes / Compute Resources /  Multi-Cluster",
-    "uid": "dfe22606-9418-4100-94ae-a208966299af",
+    "uid": "39d88f82-bbfe-41e0-9554-4ef7e574855e",
     "version": 1
   }
 }
