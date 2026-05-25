@@ -6,7 +6,7 @@
   },
   "spec": {
     "editable": true,
-    "id": 1277967814033408,
+    "id": 1275921081761792,
     "links": [
       {
         "asDropdown": true,
@@ -673,7 +673,7 @@
     },
     "timezone": "Europe/Istanbul",
     "title": "Kubernetes / Compute Resources / Node (Pods)",
-    "uid": "5ae8b47a-e2d0-4800-b68f-82d00834ca8d",
+    "uid": "219c8e3c-a709-4259-8f32-83f5b89bf4bf",
     "version": 1
   }
 }
