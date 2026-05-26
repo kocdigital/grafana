@@ -6,7 +6,7 @@
   },
   "spec": {
     "editable": true,
-    "id": 1276109162741760,
+    "id": 1278155236507648,
     "links": [
       {
         "asDropdown": true,
@@ -593,7 +593,7 @@
     },
     "timezone": "Europe/Istanbul",
     "title": "Kubernetes / Scheduler",
-    "uid": "f74a5c9d-2a57-46fc-9a39-c11ac681415f",
+    "uid": "31cf750f-9ddd-4537-8b7a-8f4d9614f8ea",
     "version": 1
   }
 }
