@@ -6,7 +6,7 @@
   },
   "spec": {
     "editable": true,
-    "id": 1278140040544256,
+    "id": 1276093333438464,
     "links": [
       {
         "asDropdown": true,
@@ -647,7 +647,7 @@
     },
     "timezone": "Europe/Istanbul",
     "title": "Kubernetes / Proxy",
-    "uid": "29449138-ebeb-4263-9903-884f63330506",
+    "uid": "c01a76f6-a228-4e16-931e-713d309046f7",
     "version": 1
   }
 }

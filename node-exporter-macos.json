@@ -6,7 +6,7 @@
   },
   "spec": {
     "graphTooltip": 1,
-    "id": 1276139890212864,
+    "id": 1278186601512960,
     "panels": [
       {
         "collapsed": false,
@@ -725,7 +725,7 @@
     },
     "timezone": "Europe/Istanbul",
     "title": "Node Exporter / MacOS",
-    "uid": "5b6526f4-0866-4c80-b098-f4cd1b6714de",
+    "uid": "b7575b91-1d18-4b9b-9b40-d18e1ddd374f",
     "version": 1
   }
 }
