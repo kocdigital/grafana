@@ -6,7 +6,7 @@
   },
   "spec": {
     "graphTooltip": 1,
-    "id": 1275771034730496,
+    "id": 1277824159121408,
     "panels": [
       {
         "collapsed": false,
@@ -350,7 +350,7 @@
     },
     "timezone": "Europe/Istanbul",
     "title": "Alertmanager / Overview",
-    "uid": "6ea0d768-df6b-4db5-90a0-8996c26dd2e9",
+    "uid": "eeda3c31-d820-49e7-944c-936109950c54",
     "version": 1
   }
 }

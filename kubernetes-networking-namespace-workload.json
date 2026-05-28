@@ -6,7 +6,7 @@
   },
   "spec": {
     "editable": true,
-    "id": 1278078254252032,
+    "id": 1276032486670336,
     "links": [
       {
         "asDropdown": true,
@@ -790,7 +790,7 @@
     },
     "timezone": "Europe/Istanbul",
     "title": "Kubernetes / Networking / Namespace (Workload)",
-    "uid": "6e5e0dad-5c12-47e2-aaf2-2da853747f67",
+    "uid": "3ffe8fbf-0797-4160-8857-0be184298afb",
     "version": 1
   }
 }
