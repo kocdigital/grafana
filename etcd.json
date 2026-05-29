@@ -6,7 +6,7 @@
   },
   "spec": {
     "description": "etcd sample Grafana dashboard with Prometheus",
-    "id": 1277855817728000,
+    "id": 1275807403540480,
     "panels": [
       {
         "datasource": {
@@ -544,7 +544,7 @@
     },
     "timezone": "Europe/Istanbul",
     "title": "etcd",
-    "uid": "3da571d8-492f-40d6-b907-2b3648fda622",
+    "uid": "1ba6b7dd-c4eb-4c78-bebc-3726589f563e",
     "version": 1
   }
 }
