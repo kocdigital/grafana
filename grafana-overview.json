@@ -30,7 +30,7 @@
     "editable": true,
     "fiscalYearStartMonth": 0,
     "graphTooltip": 0,
-    "id": 1277872011935744,
+    "id": 1275823367061504,
     "links": [],
     "panels": [
       {
@@ -558,7 +558,7 @@
     },
     "timezone": "Europe/Istanbul",
     "title": "Grafana Overview",
-    "uid": "245ad2e1-0078-49ea-99b0-f883be749459",
+    "uid": "99339d9b-0dee-4a8f-814f-b50c4e00155d",
     "version": 1
   }
 }

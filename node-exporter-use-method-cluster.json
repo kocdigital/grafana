@@ -6,7 +6,7 @@
   },
   "spec": {
     "graphTooltip": 1,
-    "id": 1278217786163200,
+    "id": 1276170802233344,
     "panels": [
       {
         "collapsed": false,
@@ -575,7 +575,7 @@
     },
     "timezone": "Europe/Istanbul",
     "title": "Node Exporter / USE Method / Cluster",
-    "uid": "57d36713-6fb8-4e1a-b5c2-60762166658a",
+    "uid": "77fb9321-d24e-4270-835e-c7db38e8e008",
     "version": 1
   }
 }
