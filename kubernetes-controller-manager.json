@@ -6,7 +6,7 @@
   },
   "spec": {
     "editable": true,
-    "id": 1275970847178752,
+    "id": 1278016262438912,
     "links": [
       {
         "asDropdown": true,
@@ -596,7 +596,7 @@
     },
     "timezone": "Europe/Istanbul",
     "title": "Kubernetes / Controller Manager",
-    "uid": "44a2ba91-a7f2-4563-9cce-ee5cb8a2611f",
+    "uid": "281b5222-21d4-42b1-b1b7-aec159d31d9b",
     "version": 1
   }
 }
