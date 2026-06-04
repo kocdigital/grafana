@@ -6,7 +6,7 @@
   },
   "spec": {
     "editable": true,
-    "id": 1278124882329600,
+    "id": 1276078074560512,
     "links": [
       {
         "asDropdown": true,
@@ -314,7 +314,7 @@
     },
     "timezone": "Europe/Istanbul",
     "title": "Kubernetes / Persistent Volumes",
-    "uid": "c1d82415-60b8-48bb-ad50-d331f546a31e",
+    "uid": "fb995542-c2d3-4fc4-8913-453748223600",
     "version": 1
   }
 }

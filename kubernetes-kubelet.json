@@ -6,7 +6,7 @@
   },
   "spec": {
     "editable": true,
-    "id": 1278031542288384,
+    "id": 1275986114445312,
     "links": [
       {
         "asDropdown": true,
@@ -1245,7 +1245,7 @@
     },
     "timezone": "Europe/Istanbul",
     "title": "Kubernetes / Kubelet",
-    "uid": "7bf7740c-eacb-4ba6-8743-b5af1c42138c",
+    "uid": "93d993c5-1322-4501-ad8e-3834455f81ad",
     "version": 1
   }
 }
