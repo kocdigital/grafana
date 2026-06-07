@@ -6,7 +6,7 @@
   },
   "spec": {
     "editable": true,
-    "id": 1277887556026368,
+    "id": 1275839523520512,
     "links": [
       {
         "asDropdown": true,
@@ -874,7 +874,7 @@
     },
     "timezone": "Europe/Istanbul",
     "title": "Kubernetes / API server",
-    "uid": "090fd98d-8d04-4efe-b96a-3b3cd637a8c2",
+    "uid": "7693bcf2-a4f5-448e-b238-9419b1bfb02e",
     "version": 1
   }
 }
