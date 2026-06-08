@@ -6,7 +6,7 @@
   },
   "spec": {
     "editable": true,
-    "id": 1275937296941056,
+    "id": 1277984331202560,
     "links": [
       {
         "asDropdown": true,
@@ -1376,7 +1376,7 @@
     },
     "timezone": "Europe/Istanbul",
     "title": "Kubernetes / Compute Resources / Pod",
-    "uid": "f53fa56a-79b4-4617-a09a-6fd50a16eb4a",
+    "uid": "78be4da9-298e-4c3c-9f0d-760f0928ba9c",
     "version": 1
   }
 }
