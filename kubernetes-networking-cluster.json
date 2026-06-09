@@ -6,7 +6,7 @@
   },
   "spec": {
     "editable": true,
-    "id": 1278047266734080,
+    "id": 1276001247494144,
     "links": [
       {
         "asDropdown": true,
@@ -806,7 +806,7 @@
     },
     "timezone": "Europe/Istanbul",
     "title": "Kubernetes / Networking / Cluster",
-    "uid": "31757086-62d8-487e-a70c-fac723c37605",
+    "uid": "fd5cf597-9923-4caa-813e-bbfa6f4f5239",
     "version": 1
   }
 }
