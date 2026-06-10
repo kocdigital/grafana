@@ -6,7 +6,7 @@
   },
   "spec": {
     "editable": true,
-    "id": 1278000542187520,
+    "id": 1275955445694464,
     "links": [
       {
         "asDropdown": true,
@@ -1059,7 +1059,7 @@
     },
     "timezone": "Europe/Istanbul",
     "title": "Kubernetes / Compute Resources / Workload",
-    "uid": "cf109ba6-a03c-4a15-8730-a1b1f55a0f2b",
+    "uid": "233b0659-627b-47e0-b634-e5437b3e3726",
     "version": 1
   }
 }
