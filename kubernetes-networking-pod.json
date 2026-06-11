@@ -6,7 +6,7 @@
   },
   "spec": {
     "editable": true,
-    "id": 1278094100332544,
+    "id": 1276047753936896,
     "links": [
       {
         "asDropdown": true,
@@ -486,7 +486,7 @@
     },
     "timezone": "Europe/Istanbul",
     "title": "Kubernetes / Networking / Pod",
-    "uid": "0e2cd35e-24eb-45a9-9bf9-886ebf57675b",
+    "uid": "cb1a2eaa-f095-4e35-8727-a916818bd247",
     "version": 1
   }
 }
