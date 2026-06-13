@@ -6,7 +6,7 @@
   },
   "spec": {
     "editable": true,
-    "id": 1275905374093312,
+    "id": 1277951812763648,
     "links": [
       {
         "asDropdown": true,
@@ -1255,7 +1255,7 @@
     },
     "timezone": "Europe/Istanbul",
     "title": "Kubernetes / Compute Resources / Namespace (Workloads)",
-    "uid": "dcef67c9-99ff-4814-917b-6a207e77eb5e",
+    "uid": "90e60d8c-865c-48c5-b7d4-5b37e4b07f27",
     "version": 1
   }
 }
