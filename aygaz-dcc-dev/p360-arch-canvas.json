@@ -1,0 +1,4703 @@
+{
+  "annotations": {
+    "list": [
+      {
+        "builtIn": 1,
+        "datasource": {
+          "type": "grafana",
+          "uid": "-- Grafana --"
+        },
+        "enable": true,
+        "hide": true,
+        "iconColor": "rgba(0, 211, 255, 1)",
+        "name": "Annotations & Alerts",
+        "type": "dashboard"
+      }
+    ]
+  },
+  "editable": true,
+  "fiscalYearStartMonth": 0,
+  "graphTooltip": 1,
+  "id": 0,
+  "links": [],
+  "panels": [
+    {
+      "datasource": {
+        "type": "prometheus",
+        "uid": "${datasource}"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "fieldMinMax": false,
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "transparent",
+                "value": 0
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 14,
+        "w": 20,
+        "x": 0,
+        "y": 0
+      },
+      "id": 1,
+      "options": {
+        "infinitePan": false,
+        "inlineEditing": true,
+        "panZoom": false,
+        "root": {
+          "background": {
+            "color": {
+              "fixed": "#00000000"
+            },
+            "image": {
+              "field": "",
+              "fixed": "",
+              "mode": "fixed"
+            },
+            "size": "cover"
+          },
+          "border": {
+            "color": {
+              "fixed": "dark-green"
+            },
+            "width": 0
+          },
+          "constraint": {
+            "horizontal": "left",
+            "vertical": "top"
+          },
+          "elements": [
+            {
+              "background": {
+                "color": {
+                  "fixed": "transparent"
+                }
+              },
+              "border": {
+                "color": {
+                  "fixed": "dark-blue"
+                },
+                "radius": 8,
+                "width": 3
+              },
+              "config": {
+                "align": "center",
+                "color": {
+                  "fixed": "#000000"
+                },
+                "valign": "middle"
+              },
+              "connections": [
+                {
+                  "color": {
+                    "fixed": "dark-yellow"
+                  },
+                  "direction": {
+                    "fixed": "both"
+                  },
+                  "lineStyle": {
+                    "animate": true,
+                    "style": "dotted"
+                  },
+                  "path": "straight",
+                  "size": {
+                    "fixed": 3,
+                    "max": 10,
+                    "min": 1
+                  },
+                  "source": {
+                    "x": -1,
+                    "y": -1
+                  },
+                  "sourceOriginal": {
+                    "x": 675,
+                    "y": 205
+                  },
+                  "target": {
+                    "x": 0.49,
+                    "y": 0.96
+                  },
+                  "targetName": "box_pg",
+                  "targetOriginal": {
+                    "x": 537,
+                    "y": 356
+                  }
+                },
+                {
+                  "color": {
+                    "fixed": "dark-yellow"
+                  },
+                  "direction": {
+                    "fixed": "both"
+                  },
+                  "lineStyle": {
+                    "animate": true,
+                    "style": "dotted"
+                  },
+                  "path": "straight",
+                  "size": {
+                    "fixed": 3,
+                    "max": 10,
+                    "min": 1
+                  },
+                  "source": {
+                    "x": 0,
+                    "y": -1
+                  },
+                  "sourceOriginal": {
+                    "x": 846,
+                    "y": 205
+                  },
+                  "target": {
+                    "x": 0.01,
+                    "y": 0.95
+                  },
+                  "targetName": "box_es",
+                  "targetOriginal": {
+                    "x": 853,
+                    "y": 356
+                  }
+                },
+                {
+                  "color": {
+                    "fixed": "dark-yellow"
+                  },
+                  "direction": {
+                    "fixed": "both"
+                  },
+                  "lineStyle": {
+                    "animate": true,
+                    "style": "dotted"
+                  },
+                  "path": "straight",
+                  "size": {
+                    "fixed": 3,
+                    "max": 10,
+                    "min": 1
+                  },
+                  "source": {
+                    "x": 1,
+                    "y": -1
+                  },
+                  "sourceOriginal": {
+                    "x": 1018,
+                    "y": 205
+                  },
+                  "target": {
+                    "x": -0.5,
+                    "y": 0.96
+                  },
+                  "targetName": "box_redis",
+                  "targetOriginal": {
+                    "x": 1151,
+                    "y": 352
+                  }
+                }
+              ],
+              "constraint": {
+                "horizontal": "left",
+                "vertical": "top"
+              },
+              "links": [],
+              "name": "box_k8s",
+              "placement": {
+                "height": 199.98959350585938,
+                "left": 400,
+                "top": 18,
+                "width": 369.9895935058594
+              },
+              "type": "rectangle"
+            },
+            {
+              "background": {
+                "color": {
+                  "fixed": "transparent"
+                }
+              },
+              "border": {
+                "color": {
+                  "fixed": "dark-orange"
+                },
+                "radius": 8,
+                "width": 3
+              },
+              "config": {
+                "align": "center",
+                "color": {
+                  "fixed": "#000000"
+                },
+                "valign": "middle"
+              },
+              "connections": [
+                {
+                  "color": {
+                    "fixed": "dark-yellow"
+                  },
+                  "direction": {
+                    "fixed": "both"
+                  },
+                  "lineStyle": {
+                    "animate": true,
+                    "style": "dotted"
+                  },
+                  "path": "straight",
+                  "size": {
+                    "fixed": 3,
+                    "max": 10,
+                    "min": 1
+                  },
+                  "source": {
+                    "x": -1,
+                    "y": 0
+                  },
+                  "sourceOriginal": {
+                    "x": 899,
+                    "y": 170
+                  },
+                  "target": {
+                    "x": 0.97,
+                    "y": -0.29
+                  },
+                  "targetName": "box_k8s",
+                  "targetOriginal": {
+                    "x": 820,
+                    "y": 150
+                  }
+                }
+              ],
+              "constraint": {
+                "horizontal": "left",
+                "vertical": "top"
+              },
+              "links": [],
+              "name": "box_rmq",
+              "placement": {
+                "height": 164,
+                "left": 843,
+                "top": 65,
+                "width": 299
+              },
+              "type": "rectangle"
+            },
+            {
+              "background": {
+                "color": {
+                  "fixed": "transparent"
+                }
+              },
+              "border": {
+                "color": {
+                  "fixed": "dark-yellow"
+                },
+                "radius": 8,
+                "width": 3
+              },
+              "config": {
+                "align": "center",
+                "color": {
+                  "fixed": "#000000"
+                },
+                "valign": "middle"
+              },
+              "connections": [
+                {
+                  "color": {
+                    "fixed": "dark-yellow"
+                  },
+                  "lineStyle": {
+                    "animate": true,
+                    "style": "dotted"
+                  },
+                  "path": "straight",
+                  "size": {
+                    "fixed": 3,
+                    "max": 10,
+                    "min": 1
+                  },
+                  "source": {
+                    "x": -1,
+                    "y": 0
+                  },
+                  "sourceOriginal": {
+                    "x": 1321,
+                    "y": 170
+                  },
+                  "target": {
+                    "x": 0.98,
+                    "y": 0.04
+                  },
+                  "targetName": "box_rmq",
+                  "targetOriginal": {
+                    "x": 1256,
+                    "y": 170
+                  }
+                }
+              ],
+              "constraint": {
+                "horizontal": "left",
+                "vertical": "top"
+              },
+              "links": [],
+              "name": "box_opc",
+              "placement": {
+                "height": 163.99305725097656,
+                "left": 1215,
+                "top": 63,
+                "width": 263.9930725097656
+              },
+              "type": "rectangle"
+            },
+            {
+              "background": {
+                "color": {
+                  "fixed": "transparent"
+                }
+              },
+              "border": {
+                "color": {
+                  "fixed": "light-blue"
+                },
+                "radius": 8,
+                "width": 3
+              },
+              "config": {
+                "align": "center",
+                "color": {
+                  "fixed": "#000000"
+                },
+                "valign": "middle"
+              },
+              "constraint": {
+                "horizontal": "left",
+                "vertical": "top"
+              },
+              "links": [],
+              "name": "box_pg",
+              "placement": {
+                "height": 157,
+                "left": 6,
+                "top": 292,
+                "width": 345
+              },
+              "type": "rectangle"
+            },
+            {
+              "background": {
+                "color": {
+                  "fixed": "transparent"
+                }
+              },
+              "border": {
+                "color": {
+                  "fixed": "dark-green"
+                },
+                "radius": 8,
+                "width": 3
+              },
+              "config": {
+                "align": "center",
+                "color": {
+                  "fixed": "#000000"
+                },
+                "valign": "middle"
+              },
+              "connections": [],
+              "constraint": {
+                "horizontal": "left",
+                "vertical": "top"
+              },
+              "links": [],
+              "name": "box_es",
+              "placement": {
+                "height": 157.998046875,
+                "left": 417,
+                "top": 290,
+                "width": 326.9922180175781
+              },
+              "type": "rectangle"
+            },
+            {
+              "background": {
+                "color": {
+                  "fixed": "transparent"
+                }
+              },
+              "border": {
+                "color": {
+                  "fixed": "dark-red"
+                },
+                "radius": 8,
+                "width": 3
+              },
+              "config": {
+                "align": "center",
+                "color": {
+                  "fixed": "#000000"
+                },
+                "valign": "middle"
+              },
+              "constraint": {
+                "horizontal": "left",
+                "vertical": "top"
+              },
+              "links": [],
+              "name": "box_redis",
+              "placement": {
+                "height": 157,
+                "left": 818,
+                "top": 291,
+                "width": 314
+              },
+              "type": "rectangle"
+            },
+            {
+              "background": {
+                "color": {
+                  "fixed": "#00000000"
+                }
+              },
+              "border": {
+                "color": {
+                  "fixed": "dark-green"
+                }
+              },
+              "config": {
+                "blinkRate": {
+                  "fixed": 0
+                },
+                "bulbColor": {
+                  "fixed": "semi-dark-green"
+                },
+                "statusColor": {
+                  "fixed": "transparent"
+                },
+                "type": "Stack"
+              },
+              "constraint": {
+                "horizontal": "left",
+                "vertical": "top"
+              },
+              "links": [],
+              "name": "srv_k8s",
+              "placement": {
+                "height": 100,
+                "left": 410,
+                "rotation": 0,
+                "top": 82,
+                "width": 100
+              },
+              "type": "server"
+            },
+            {
+              "background": {
+                "color": {
+                  "fixed": "transparent"
+                }
+              },
+              "border": {
+                "color": {
+                  "fixed": "dark-green"
+                }
+              },
+              "config": {
+                "blinkRate": {
+                  "fixed": 0
+                },
+                "statusColor": {
+                  "fixed": "transparent"
+                },
+                "type": "Database"
+              },
+              "constraint": {
+                "horizontal": "left",
+                "vertical": "top"
+              },
+              "links": [],
+              "name": "srv_rmq",
+              "placement": {
+                "height": 100,
+                "left": 858,
+                "rotation": 0,
+                "top": 117,
+                "width": 100
+              },
+              "type": "server"
+            },
+            {
+              "background": {
+                "color": {
+                  "fixed": "transparent"
+                }
+              },
+              "border": {
+                "color": {
+                  "fixed": "dark-green"
+                }
+              },
+              "config": {
+                "blinkRate": {
+                  "fixed": 0
+                },
+                "statusColor": {
+                  "fixed": "transparent"
+                },
+                "type": "Single"
+              },
+              "constraint": {
+                "horizontal": "left",
+                "vertical": "top"
+              },
+              "links": [],
+              "name": "srv_opc",
+              "placement": {
+                "height": 100,
+                "left": 1227,
+                "rotation": 0,
+                "top": 115,
+                "width": 100
+              },
+              "type": "server"
+            },
+            {
+              "background": {
+                "color": {
+                  "fixed": "transparent"
+                }
+              },
+              "border": {
+                "color": {
+                  "fixed": "dark-green"
+                }
+              },
+              "config": {
+                "blinkRate": {
+                  "fixed": 0
+                },
+                "statusColor": {
+                  "fixed": "transparent"
+                },
+                "type": "Database"
+              },
+              "constraint": {
+                "horizontal": "left",
+                "vertical": "top"
+              },
+              "links": [],
+              "name": "srv_pg",
+              "placement": {
+                "height": 100,
+                "left": 18,
+                "rotation": 0,
+                "top": 337,
+                "width": 100
+              },
+              "type": "server"
+            },
+            {
+              "background": {
+                "color": {
+                  "fixed": "transparent"
+                }
+              },
+              "border": {
+                "color": {
+                  "fixed": "dark-green"
+                }
+              },
+              "config": {
+                "blinkRate": {
+                  "fixed": 0
+                },
+                "statusColor": {
+                  "fixed": "transparent"
+                },
+                "type": "Database"
+              },
+              "constraint": {
+                "horizontal": "left",
+                "vertical": "top"
+              },
+              "links": [],
+              "name": "srv_es",
+              "placement": {
+                "height": 100,
+                "left": 429,
+                "rotation": 0,
+                "top": 335,
+                "width": 100
+              },
+              "type": "server"
+            },
+            {
+              "background": {
+                "color": {
+                  "fixed": "transparent"
+                }
+              },
+              "border": {
+                "color": {
+                  "fixed": "dark-green"
+                }
+              },
+              "config": {
+                "blinkRate": {
+                  "fixed": 0
+                },
+                "statusColor": {
+                  "fixed": "transparent"
+                },
+                "type": "Database"
+              },
+              "constraint": {
+                "horizontal": "left",
+                "vertical": "top"
+              },
+              "links": [],
+              "name": "srv_redis",
+              "placement": {
+                "height": 100,
+                "left": 830,
+                "rotation": 0,
+                "top": 336,
+                "width": 100
+              },
+              "type": "server"
+            },
+            {
+              "background": {
+                "color": {
+                  "fixed": "transparent"
+                },
+                "image": {
+                  "fixed": ""
+                }
+              },
+              "border": {
+                "color": {
+                  "fixed": "transparent"
+                }
+              },
+              "config": {
+                "align": "center",
+                "color": {
+                  "fixed": "rgb(204, 204, 220)"
+                },
+                "size": 16,
+                "text": {
+                  "fixed": "Kubernetes (x",
+                  "mode": "fixed"
+                },
+                "valign": "middle"
+              },
+              "constraint": {
+                "horizontal": "left",
+                "vertical": "top"
+              },
+              "links": [],
+              "name": "lbl_k8s_title",
+              "placement": {
+                "height": 35,
+                "left": 400,
+                "top": 18,
+                "width": 145
+              },
+              "type": "text"
+            },
+            {
+              "background": {
+                "color": {
+                  "field": "k8s_count",
+                  "fixed": "transparent"
+                },
+                "image": {
+                  "mode": "fixed"
+                }
+              },
+              "border": {
+                "color": {
+                  "fixed": "transparent"
+                }
+              },
+              "config": {
+                "align": "center",
+                "color": {
+                  "fixed": "rgb(204, 204, 220)"
+                },
+                "size": 16,
+                "text": {
+                  "field": "k8s_count",
+                  "fixed": "",
+                  "mode": "field"
+                },
+                "valign": "middle"
+              },
+              "constraint": {
+                "horizontal": "left",
+                "vertical": "top"
+              },
+              "links": [],
+              "name": "k8s_count_badge",
+              "placement": {
+                "height": 34.989585876464844,
+                "left": 501,
+                "top": 18,
+                "width": 60
+              },
+              "type": "metric-value"
+            },
+            {
+              "background": {
+                "color": {
+                  "fixed": "transparent"
+                },
+                "image": {
+                  "fixed": ""
+                }
+              },
+              "border": {
+                "color": {
+                  "fixed": "transparent"
+                }
+              },
+              "config": {
+                "align": "center",
+                "color": {
+                  "fixed": "rgb(204, 204, 220)"
+                },
+                "size": 16,
+                "text": {
+                  "fixed": "server)",
+                  "mode": "fixed"
+                },
+                "valign": "middle"
+              },
+              "connections": [],
+              "constraint": {
+                "horizontal": "left",
+                "vertical": "top"
+              },
+              "links": [],
+              "name": "lbl_k8s_suf",
+              "placement": {
+                "height": 34.989585876464844,
+                "left": 531,
+                "top": 18,
+                "width": 75
+              },
+              "type": "text"
+            },
+            {
+              "background": {
+                "color": {
+                  "fixed": "transparent"
+                }
+              },
+              "border": {
+                "color": {
+                  "fixed": "transparent"
+                }
+              },
+              "config": {
+                "align": "center",
+                "color": {
+                  "fixed": "rgb(204, 204, 220)"
+                },
+                "size": 14,
+                "text": {
+                  "fixed": "per node",
+                  "mode": "fixed"
+                },
+                "valign": "middle"
+              },
+              "constraint": {
+                "horizontal": "left",
+                "vertical": "top"
+              },
+              "links": [],
+              "name": "k8s_hdr_pn",
+              "placement": {
+                "height": 28,
+                "left": 577,
+                "top": 57,
+                "width": 75
+              },
+              "type": "text"
+            },
+            {
+              "background": {
+                "color": {
+                  "fixed": "transparent"
+                }
+              },
+              "border": {
+                "color": {
+                  "fixed": "transparent"
+                }
+              },
+              "config": {
+                "align": "center",
+                "color": {
+                  "fixed": "rgb(204, 204, 220)"
+                },
+                "size": 14,
+                "text": {
+                  "fixed": "total",
+                  "mode": "fixed"
+                },
+                "valign": "middle"
+              },
+              "constraint": {
+                "horizontal": "left",
+                "vertical": "top"
+              },
+              "links": [],
+              "name": "k8s_hdr_tot",
+              "placement": {
+                "height": 28,
+                "left": 667,
+                "top": 57,
+                "width": 75
+              },
+              "type": "text"
+            },
+            {
+              "background": {
+                "color": {
+                  "fixed": "transparent"
+                }
+              },
+              "border": {
+                "color": {
+                  "fixed": "transparent"
+                }
+              },
+              "config": {
+                "align": "center",
+                "color": {
+                  "fixed": "rgb(204, 204, 220)"
+                },
+                "size": 14,
+                "text": {
+                  "fixed": "CPU",
+                  "mode": "fixed"
+                },
+                "valign": "middle"
+              },
+              "constraint": {
+                "horizontal": "left",
+                "vertical": "top"
+              },
+              "links": [],
+              "name": "k8s_lbl_cpu",
+              "placement": {
+                "height": 28,
+                "left": 517,
+                "top": 87,
+                "width": 55
+              },
+              "type": "text"
+            },
+            {
+              "background": {
+                "color": {
+                  "field": "k8s_CPU",
+                  "fixed": "#D9D9D9"
+                }
+              },
+              "border": {
+                "color": {
+                  "fixed": "dark-green"
+                }
+              },
+              "config": {
+                "align": "center",
+                "color": {
+                  "fixed": "yellow"
+                },
+                "size": 18,
+                "text": {
+                  "field": "k8s_CPU",
+                  "fixed": "",
+                  "mode": "field"
+                },
+                "valign": "middle"
+              },
+              "constraint": {
+                "horizontal": "left",
+                "vertical": "top"
+              },
+              "links": [],
+              "name": "k8s_cpu_val",
+              "placement": {
+                "height": 28,
+                "left": 585,
+                "top": 87,
+                "width": 60
+              },
+              "type": "metric-value"
+            },
+            {
+              "background": {
+                "color": {
+                  "field": "k8s_CPU_total",
+                  "fixed": "#D9D9D9"
+                }
+              },
+              "border": {
+                "color": {
+                  "fixed": "dark-green"
+                }
+              },
+              "config": {
+                "align": "center",
+                "color": {
+                  "fixed": "#ffffff"
+                },
+                "size": 18,
+                "text": {
+                  "field": "k8s_CPU_total",
+                  "fixed": "",
+                  "mode": "field"
+                },
+                "valign": "middle"
+              },
+              "constraint": {
+                "horizontal": "left",
+                "vertical": "top"
+              },
+              "links": [],
+              "name": "k8s_cpu_total",
+              "placement": {
+                "height": 27.998046875,
+                "left": 675,
+                "rotation": 0,
+                "top": 87,
+                "width": 60
+              },
+              "type": "metric-value"
+            },
+            {
+              "background": {
+                "color": {
+                  "fixed": "transparent"
+                }
+              },
+              "border": {
+                "color": {
+                  "fixed": "transparent"
+                }
+              },
+              "config": {
+                "align": "center",
+                "color": {
+                  "fixed": "rgb(204, 204, 220)"
+                },
+                "size": 14,
+                "text": {
+                  "fixed": "RAM",
+                  "mode": "fixed"
+                },
+                "valign": "middle"
+              },
+              "connections": [],
+              "constraint": {
+                "horizontal": "left",
+                "vertical": "top"
+              },
+              "links": [],
+              "name": "k8s_lbl_ram",
+              "placement": {
+                "height": 28,
+                "left": 515,
+                "top": 119,
+                "width": 62
+              },
+              "type": "text"
+            },
+            {
+              "background": {
+                "color": {
+                  "field": "k8s_RAM",
+                  "fixed": "#D9D9D9"
+                }
+              },
+              "border": {
+                "color": {
+                  "fixed": "dark-green"
+                }
+              },
+              "config": {
+                "align": "center",
+                "color": {
+                  "fixed": "yellow"
+                },
+                "size": 18,
+                "text": {
+                  "field": "k8s_RAM",
+                  "fixed": "",
+                  "mode": "field"
+                },
+                "valign": "middle"
+              },
+              "constraint": {
+                "horizontal": "left",
+                "vertical": "top"
+              },
+              "links": [],
+              "name": "k8s_ram_val",
+              "placement": {
+                "height": 28,
+                "left": 585,
+                "top": 119,
+                "width": 60
+              },
+              "type": "metric-value"
+            },
+            {
+              "background": {
+                "color": {
+                  "field": "k8s_RAM_total",
+                  "fixed": "#D9D9D9"
+                }
+              },
+              "border": {
+                "color": {
+                  "fixed": "dark-green"
+                }
+              },
+              "config": {
+                "align": "center",
+                "color": {
+                  "fixed": "#ffffff"
+                },
+                "size": 18,
+                "text": {
+                  "field": "k8s_RAM_total",
+                  "fixed": "",
+                  "mode": "field"
+                },
+                "valign": "middle"
+              },
+              "constraint": {
+                "horizontal": "left",
+                "vertical": "top"
+              },
+              "links": [],
+              "name": "k8s_ram_total",
+              "placement": {
+                "height": 27.998046875,
+                "left": 675,
+                "rotation": 0,
+                "top": 119,
+                "width": 60
+              },
+              "type": "metric-value"
+            },
+            {
+              "background": {
+                "color": {
+                  "fixed": "transparent"
+                }
+              },
+              "border": {
+                "color": {
+                  "fixed": "transparent"
+                }
+              },
+              "config": {
+                "align": "center",
+                "color": {
+                  "fixed": "rgb(204, 204, 220)"
+                },
+                "size": 14,
+                "text": {
+                  "fixed": "Disk",
+                  "mode": "fixed"
+                },
+                "valign": "middle"
+              },
+              "constraint": {
+                "horizontal": "left",
+                "vertical": "top"
+              },
+              "links": [],
+              "name": "k8s_lbl_disk",
+              "placement": {
+                "height": 28,
+                "left": 517,
+                "top": 151,
+                "width": 55
+              },
+              "type": "text"
+            },
+            {
+              "background": {
+                "color": {
+                  "field": "k8s_Disk",
+                  "fixed": "#D9D9D9"
+                }
+              },
+              "border": {
+                "color": {
+                  "fixed": "dark-green"
+                }
+              },
+              "config": {
+                "align": "center",
+                "color": {
+                  "fixed": "yellow"
+                },
+                "size": 18,
+                "text": {
+                  "field": "k8s_Disk",
+                  "fixed": "",
+                  "mode": "field"
+                },
+                "valign": "middle"
+              },
+              "constraint": {
+                "horizontal": "left",
+                "vertical": "top"
+              },
+              "links": [],
+              "name": "k8s_disk_val",
+              "placement": {
+                "height": 28,
+                "left": 585,
+                "top": 151,
+                "width": 60
+              },
+              "type": "metric-value"
+            },
+            {
+              "background": {
+                "color": {
+                  "field": "k8s_Disk_total",
+                  "fixed": "#D9D9D9"
+                }
+              },
+              "border": {
+                "color": {
+                  "fixed": "dark-green"
+                }
+              },
+              "config": {
+                "align": "center",
+                "color": {
+                  "fixed": "#ffffff"
+                },
+                "size": 18,
+                "text": {
+                  "field": "k8s_Disk_total",
+                  "fixed": "",
+                  "mode": "field"
+                },
+                "valign": "middle"
+              },
+              "constraint": {
+                "horizontal": "left",
+                "vertical": "top"
+              },
+              "links": [],
+              "name": "k8s_disk_total",
+              "placement": {
+                "height": 27.998046875,
+                "left": 675,
+                "rotation": 0,
+                "top": 151,
+                "width": 60
+              },
+              "type": "metric-value"
+            },
+            {
+              "background": {
+                "color": {
+                  "fixed": "transparent"
+                },
+                "image": {
+                  "fixed": ""
+                }
+              },
+              "border": {
+                "color": {
+                  "fixed": "transparent"
+                }
+              },
+              "config": {
+                "align": "center",
+                "color": {
+                  "fixed": "rgb(204, 204, 220)"
+                },
+                "size": 16,
+                "text": {
+                  "fixed": "RabbitMQ (x",
+                  "mode": "fixed"
+                },
+                "valign": "middle"
+              },
+              "constraint": {
+                "horizontal": "left",
+                "vertical": "top"
+              },
+              "links": [],
+              "name": "lbl_rmq_title",
+              "placement": {
+                "height": 35,
+                "left": 846,
+                "top": 65,
+                "width": 125
+              },
+              "type": "text"
+            },
+            {
+              "background": {
+                "color": {
+                  "field": "rabbitmq_count",
+                  "fixed": "transparent"
+                }
+              },
+              "border": {
+                "color": {
+                  "fixed": "transparent"
+                }
+              },
+              "config": {
+                "align": "center",
+                "color": {
+                  "fixed": "rgb(204, 204, 220)"
+                },
+                "size": 16,
+                "text": {
+                  "field": "rabbitmq_count",
+                  "fixed": "",
+                  "mode": "field"
+                },
+                "valign": "middle"
+              },
+              "constraint": {
+                "horizontal": "left",
+                "vertical": "top"
+              },
+              "links": [],
+              "name": "rmq_count_badge",
+              "placement": {
+                "height": 35,
+                "left": 940,
+                "top": 65,
+                "width": 40
+              },
+              "type": "metric-value"
+            },
+            {
+              "background": {
+                "color": {
+                  "fixed": "transparent"
+                }
+              },
+              "border": {
+                "color": {
+                  "fixed": "transparent"
+                }
+              },
+              "config": {
+                "align": "center",
+                "color": {
+                  "fixed": "rgb(204, 204, 220)"
+                },
+                "size": 16,
+                "text": {
+                  "fixed": "server)",
+                  "mode": "fixed"
+                },
+                "valign": "middle"
+              },
+              "constraint": {
+                "horizontal": "left",
+                "vertical": "top"
+              },
+              "links": [],
+              "name": "lbl_rmq_suf",
+              "placement": {
+                "height": 35,
+                "left": 962,
+                "top": 65,
+                "width": 75
+              },
+              "type": "text"
+            },
+            {
+              "background": {
+                "color": {
+                  "fixed": "transparent"
+                }
+              },
+              "border": {
+                "color": {
+                  "fixed": "transparent"
+                }
+              },
+              "config": {
+                "align": "center",
+                "color": {
+                  "fixed": "rgb(204, 204, 220)"
+                },
+                "size": 14,
+                "text": {
+                  "fixed": "per node",
+                  "mode": "fixed"
+                },
+                "valign": "middle"
+              },
+              "constraint": {
+                "horizontal": "left",
+                "vertical": "top"
+              },
+              "links": [],
+              "name": "rmq_hdr_pn",
+              "placement": {
+                "height": 28,
+                "left": 997,
+                "top": 102,
+                "width": 75
+              },
+              "type": "text"
+            },
+            {
+              "background": {
+                "color": {
+                  "fixed": "transparent"
+                }
+              },
+              "border": {
+                "color": {
+                  "fixed": "transparent"
+                }
+              },
+              "config": {
+                "align": "center",
+                "color": {
+                  "fixed": "rgb(204, 204, 220)"
+                },
+                "size": 14,
+                "text": {
+                  "fixed": "total",
+                  "mode": "fixed"
+                },
+                "valign": "middle"
+              },
+              "constraint": {
+                "horizontal": "left",
+                "vertical": "top"
+              },
+              "links": [],
+              "name": "rmq_hdr_tot",
+              "placement": {
+                "height": 28,
+                "left": 1058,
+                "top": 101,
+                "width": 75
+              },
+              "type": "text"
+            },
+            {
+              "background": {
+                "color": {
+                  "fixed": "transparent"
+                }
+              },
+              "border": {
+                "color": {
+                  "fixed": "transparent"
+                }
+              },
+              "config": {
+                "align": "center",
+                "color": {
+                  "fixed": "rgb(204, 204, 220)"
+                },
+                "size": 14,
+                "text": {
+                  "fixed": "CPU",
+                  "mode": "fixed"
+                },
+                "valign": "middle"
+              },
+              "constraint": {
+                "horizontal": "left",
+                "vertical": "top"
+              },
+              "links": [],
+              "name": "rmq_lbl_cpu",
+              "placement": {
+                "height": 28,
+                "left": 967,
+                "top": 132,
+                "width": 55
+              },
+              "type": "text"
+            },
+            {
+              "background": {
+                "color": {
+                  "field": "rmq_CPU",
+                  "fixed": "#D9D9D9"
+                }
+              },
+              "border": {
+                "color": {
+                  "fixed": "dark-green"
+                }
+              },
+              "config": {
+                "align": "center",
+                "color": {
+                  "fixed": "yellow"
+                },
+                "size": 18,
+                "text": {
+                  "field": "rmq_CPU",
+                  "fixed": "",
+                  "mode": "field"
+                },
+                "valign": "middle"
+              },
+              "constraint": {
+                "horizontal": "left",
+                "vertical": "top"
+              },
+              "links": [],
+              "name": "rmq_cpu_val",
+              "placement": {
+                "height": 28,
+                "left": 1005,
+                "top": 132,
+                "width": 60
+              },
+              "type": "metric-value"
+            },
+            {
+              "background": {
+                "color": {
+                  "field": "rmq_CPU_total",
+                  "fixed": "#D9D9D9"
+                }
+              },
+              "border": {
+                "color": {
+                  "fixed": "dark-green"
+                }
+              },
+              "config": {
+                "align": "center",
+                "color": {
+                  "fixed": "#ffffff"
+                },
+                "size": 18,
+                "text": {
+                  "field": "rmq_CPU_total",
+                  "fixed": "",
+                  "mode": "field"
+                },
+                "valign": "middle"
+              },
+              "constraint": {
+                "horizontal": "left",
+                "vertical": "top"
+              },
+              "links": [],
+              "name": "rmq_cpu_total",
+              "placement": {
+                "height": 27.998046875,
+                "left": 1060,
+                "rotation": 0,
+                "top": 132,
+                "width": 60
+              },
+              "type": "metric-value"
+            },
+            {
+              "background": {
+                "color": {
+                  "fixed": "transparent"
+                }
+              },
+              "border": {
+                "color": {
+                  "fixed": "transparent"
+                }
+              },
+              "config": {
+                "align": "center",
+                "color": {
+                  "fixed": "rgb(204, 204, 220)"
+                },
+                "size": 14,
+                "text": {
+                  "fixed": "RAM",
+                  "mode": "fixed"
+                },
+                "valign": "middle"
+              },
+              "constraint": {
+                "horizontal": "left",
+                "vertical": "top"
+              },
+              "links": [],
+              "name": "rmq_lbl_ram",
+              "placement": {
+                "height": 28,
+                "left": 967,
+                "top": 164,
+                "width": 55
+              },
+              "type": "text"
+            },
+            {
+              "background": {
+                "color": {
+                  "field": "rmq_RAM",
+                  "fixed": "#D9D9D9"
+                }
+              },
+              "border": {
+                "color": {
+                  "fixed": "dark-green"
+                }
+              },
+              "config": {
+                "align": "center",
+                "color": {
+                  "fixed": "yellow"
+                },
+                "size": 18,
+                "text": {
+                  "field": "rmq_RAM",
+                  "fixed": "",
+                  "mode": "field"
+                },
+                "valign": "middle"
+              },
+              "constraint": {
+                "horizontal": "left",
+                "vertical": "top"
+              },
+              "links": [],
+              "name": "rmq_ram_val",
+              "placement": {
+                "height": 28,
+                "left": 1005,
+                "top": 164,
+                "width": 60
+              },
+              "type": "metric-value"
+            },
+            {
+              "background": {
+                "color": {
+                  "field": "rmq_RAM_total",
+                  "fixed": "#D9D9D9"
+                }
+              },
+              "border": {
+                "color": {
+                  "fixed": "dark-green"
+                }
+              },
+              "config": {
+                "align": "center",
+                "color": {
+                  "fixed": "#ffffff"
+                },
+                "size": 18,
+                "text": {
+                  "field": "rmq_RAM_total",
+                  "fixed": "",
+                  "mode": "field"
+                },
+                "valign": "middle"
+              },
+              "constraint": {
+                "horizontal": "left",
+                "vertical": "top"
+              },
+              "links": [],
+              "name": "rmq_ram_total",
+              "placement": {
+                "height": 27.998046875,
+                "left": 1063,
+                "rotation": 0,
+                "top": 164,
+                "width": 60
+              },
+              "type": "metric-value"
+            },
+            {
+              "background": {
+                "color": {
+                  "fixed": "transparent"
+                }
+              },
+              "border": {
+                "color": {
+                  "fixed": "transparent"
+                }
+              },
+              "config": {
+                "align": "center",
+                "color": {
+                  "fixed": "rgb(204, 204, 220)"
+                },
+                "size": 14,
+                "text": {
+                  "fixed": "Disk",
+                  "mode": "fixed"
+                },
+                "valign": "middle"
+              },
+              "constraint": {
+                "horizontal": "left",
+                "vertical": "top"
+              },
+              "links": [],
+              "name": "rmq_lbl_disk",
+              "placement": {
+                "height": 28,
+                "left": 967,
+                "top": 196,
+                "width": 55
+              },
+              "type": "text"
+            },
+            {
+              "background": {
+                "color": {
+                  "field": "rmq_Disk",
+                  "fixed": "#D9D9D9"
+                }
+              },
+              "border": {
+                "color": {
+                  "fixed": "dark-green"
+                }
+              },
+              "config": {
+                "align": "center",
+                "color": {
+                  "fixed": "yellow"
+                },
+                "size": 18,
+                "text": {
+                  "field": "rmq_Disk",
+                  "fixed": "",
+                  "mode": "field"
+                },
+                "valign": "middle"
+              },
+              "constraint": {
+                "horizontal": "left",
+                "vertical": "top"
+              },
+              "links": [],
+              "name": "rmq_disk_val",
+              "placement": {
+                "height": 28,
+                "left": 1005,
+                "top": 196,
+                "width": 60
+              },
+              "type": "metric-value"
+            },
+            {
+              "background": {
+                "color": {
+                  "field": "rmq_Disk_total",
+                  "fixed": "#D9D9D9"
+                }
+              },
+              "border": {
+                "color": {
+                  "fixed": "dark-green"
+                }
+              },
+              "config": {
+                "align": "center",
+                "color": {
+                  "fixed": "#ffffff"
+                },
+                "size": 18,
+                "text": {
+                  "field": "rmq_Disk_total",
+                  "fixed": "",
+                  "mode": "field"
+                },
+                "valign": "middle"
+              },
+              "constraint": {
+                "horizontal": "left",
+                "vertical": "top"
+              },
+              "links": [],
+              "name": "rmq_disk_total",
+              "placement": {
+                "height": 27.998046875,
+                "left": 1066,
+                "rotation": 0,
+                "top": 195,
+                "width": 60
+              },
+              "type": "metric-value"
+            },
+            {
+              "background": {
+                "color": {
+                  "fixed": "transparent"
+                },
+                "image": {
+                  "fixed": ""
+                }
+              },
+              "border": {
+                "color": {
+                  "fixed": "transparent"
+                }
+              },
+              "config": {
+                "align": "center",
+                "color": {
+                  "fixed": "rgb(204, 204, 220)"
+                },
+                "size": 16,
+                "text": {
+                  "fixed": "OPC (x",
+                  "mode": "fixed"
+                },
+                "valign": "middle"
+              },
+              "constraint": {
+                "horizontal": "left",
+                "vertical": "top"
+              },
+              "links": [],
+              "name": "lbl_opc_title",
+              "placement": {
+                "height": 35,
+                "left": 1215,
+                "top": 63,
+                "width": 80
+              },
+              "type": "text"
+            },
+            {
+              "background": {
+                "color": {
+                  "field": "OPC_count",
+                  "fixed": "transparent"
+                }
+              },
+              "border": {
+                "color": {
+                  "fixed": "transparent"
+                }
+              },
+              "config": {
+                "align": "center",
+                "color": {
+                  "fixed": "rgb(204, 204, 220)"
+                },
+                "size": 16,
+                "text": {
+                  "field": "OPC_count",
+                  "fixed": "",
+                  "mode": "field"
+                },
+                "valign": "middle"
+              },
+              "constraint": {
+                "horizontal": "left",
+                "vertical": "top"
+              },
+              "links": [],
+              "name": "opc_count_badge",
+              "placement": {
+                "height": 35,
+                "left": 1266,
+                "rotation": 0,
+                "top": 63,
+                "width": 40
+              },
+              "type": "metric-value"
+            },
+            {
+              "background": {
+                "color": {
+                  "fixed": "transparent"
+                }
+              },
+              "border": {
+                "color": {
+                  "fixed": "transparent"
+                }
+              },
+              "config": {
+                "align": "center",
+                "color": {
+                  "fixed": "rgb(204, 204, 220)"
+                },
+                "size": 16,
+                "text": {
+                  "fixed": "win server)",
+                  "mode": "fixed"
+                },
+                "valign": "middle"
+              },
+              "constraint": {
+                "horizontal": "left",
+                "vertical": "top"
+              },
+              "links": [],
+              "name": "lbl_opc_suf",
+              "placement": {
+                "height": 35,
+                "left": 1279,
+                "rotation": 0,
+                "top": 63,
+                "width": 120
+              },
+              "type": "text"
+            },
+            {
+              "background": {
+                "color": {
+                  "fixed": "transparent"
+                }
+              },
+              "border": {
+                "color": {
+                  "fixed": "transparent"
+                }
+              },
+              "config": {
+                "align": "center",
+                "color": {
+                  "fixed": "rgb(204, 204, 220)"
+                },
+                "size": 14,
+                "text": {
+                  "fixed": "CPU",
+                  "mode": "fixed"
+                },
+                "valign": "middle"
+              },
+              "constraint": {
+                "horizontal": "left",
+                "vertical": "top"
+              },
+              "links": [],
+              "name": "opc_lbl_cpu",
+              "placement": {
+                "height": 28,
+                "left": 1334,
+                "top": 115,
+                "width": 55
+              },
+              "type": "text"
+            },
+            {
+              "background": {
+                "color": {
+                  "field": "opc_CPU",
+                  "fixed": "#D9D9D9"
+                }
+              },
+              "border": {
+                "color": {
+                  "fixed": "dark-green"
+                }
+              },
+              "config": {
+                "align": "center",
+                "color": {
+                  "fixed": "#ffffff"
+                },
+                "size": 18,
+                "text": {
+                  "field": "opc_CPU",
+                  "fixed": "",
+                  "mode": "field"
+                },
+                "valign": "middle"
+              },
+              "constraint": {
+                "horizontal": "left",
+                "vertical": "top"
+              },
+              "links": [],
+              "name": "opc_cpu_val",
+              "placement": {
+                "height": 27.998046875,
+                "left": 1394,
+                "rotation": 0,
+                "top": 115,
+                "width": 60
+              },
+              "type": "metric-value"
+            },
+            {
+              "background": {
+                "color": {
+                  "fixed": "transparent"
+                }
+              },
+              "border": {
+                "color": {
+                  "fixed": "transparent"
+                }
+              },
+              "config": {
+                "align": "center",
+                "color": {
+                  "fixed": "rgb(204, 204, 220)"
+                },
+                "size": 14,
+                "text": {
+                  "fixed": "RAM",
+                  "mode": "fixed"
+                },
+                "valign": "middle"
+              },
+              "constraint": {
+                "horizontal": "left",
+                "vertical": "top"
+              },
+              "links": [],
+              "name": "opc_lbl_ram",
+              "placement": {
+                "height": 28,
+                "left": 1334,
+                "top": 147,
+                "width": 55
+              },
+              "type": "text"
+            },
+            {
+              "background": {
+                "color": {
+                  "field": "opc_RAM",
+                  "fixed": "#D9D9D9"
+                }
+              },
+              "border": {
+                "color": {
+                  "fixed": "dark-green"
+                }
+              },
+              "config": {
+                "align": "center",
+                "color": {
+                  "fixed": "#ffffff"
+                },
+                "size": 18,
+                "text": {
+                  "field": "opc_RAM",
+                  "fixed": "",
+                  "mode": "field"
+                },
+                "valign": "middle"
+              },
+              "constraint": {
+                "horizontal": "left",
+                "vertical": "top"
+              },
+              "links": [],
+              "name": "opc_ram_val",
+              "placement": {
+                "height": 27.998046875,
+                "left": 1394,
+                "rotation": 0,
+                "top": 147,
+                "width": 60
+              },
+              "type": "metric-value"
+            },
+            {
+              "background": {
+                "color": {
+                  "fixed": "transparent"
+                }
+              },
+              "border": {
+                "color": {
+                  "fixed": "transparent"
+                }
+              },
+              "config": {
+                "align": "center",
+                "color": {
+                  "fixed": "rgb(204, 204, 220)"
+                },
+                "size": 14,
+                "text": {
+                  "fixed": "Disk ",
+                  "mode": "fixed"
+                },
+                "valign": "middle"
+              },
+              "constraint": {
+                "horizontal": "left",
+                "vertical": "top"
+              },
+              "links": [],
+              "name": "opc_lbl_disk",
+              "placement": {
+                "height": 28,
+                "left": 1334,
+                "top": 179,
+                "width": 55
+              },
+              "type": "text"
+            },
+            {
+              "background": {
+                "color": {
+                  "field": "opc_Disk",
+                  "fixed": "#D9D9D9"
+                }
+              },
+              "border": {
+                "color": {
+                  "fixed": "dark-green"
+                }
+              },
+              "config": {
+                "align": "center",
+                "color": {
+                  "fixed": "#ffffff"
+                },
+                "size": 18,
+                "text": {
+                  "field": "opc_Disk",
+                  "fixed": "",
+                  "mode": "field"
+                },
+                "valign": "middle"
+              },
+              "constraint": {
+                "horizontal": "left",
+                "vertical": "top"
+              },
+              "links": [],
+              "name": "opc_disk_val",
+              "placement": {
+                "height": 27.998046875,
+                "left": 1394,
+                "rotation": 0,
+                "top": 179,
+                "width": 60
+              },
+              "type": "metric-value"
+            },
+            {
+              "background": {
+                "color": {
+                  "fixed": "transparent"
+                },
+                "image": {
+                  "fixed": ""
+                }
+              },
+              "border": {
+                "color": {
+                  "fixed": "transparent"
+                }
+              },
+              "config": {
+                "align": "center",
+                "color": {
+                  "fixed": "rgb(204, 204, 220)"
+                },
+                "size": 16,
+                "text": {
+                  "fixed": "PostgreSQL (x",
+                  "mode": "fixed"
+                },
+                "valign": "middle"
+              },
+              "constraint": {
+                "horizontal": "left",
+                "vertical": "top"
+              },
+              "links": [],
+              "name": "lbl_pg_title",
+              "placement": {
+                "height": 35,
+                "left": 6,
+                "top": 292,
+                "width": 145
+              },
+              "type": "text"
+            },
+            {
+              "background": {
+                "color": {
+                  "field": "pg_count",
+                  "fixed": "transparent"
+                }
+              },
+              "border": {
+                "color": {
+                  "fixed": "transparent"
+                }
+              },
+              "config": {
+                "align": "center",
+                "color": {
+                  "fixed": "rgb(204, 204, 220)"
+                },
+                "size": 16,
+                "text": {
+                  "field": "pg_count",
+                  "fixed": "",
+                  "mode": "field"
+                },
+                "valign": "middle"
+              },
+              "constraint": {
+                "horizontal": "left",
+                "vertical": "top"
+              },
+              "links": [],
+              "name": "pg_count_badge",
+              "placement": {
+                "height": 35,
+                "left": 120,
+                "top": 292,
+                "width": 40
+              },
+              "type": "metric-value"
+            },
+            {
+              "background": {
+                "color": {
+                  "fixed": "transparent"
+                }
+              },
+              "border": {
+                "color": {
+                  "fixed": "transparent"
+                }
+              },
+              "config": {
+                "align": "center",
+                "color": {
+                  "fixed": "rgb(204, 204, 220)"
+                },
+                "size": 16,
+                "text": {
+                  "fixed": "server)",
+                  "mode": "fixed"
+                },
+                "valign": "middle"
+              },
+              "constraint": {
+                "horizontal": "left",
+                "vertical": "top"
+              },
+              "links": [],
+              "name": "lbl_pg_suf",
+              "placement": {
+                "height": 35,
+                "left": 141,
+                "top": 292,
+                "width": 75
+              },
+              "type": "text"
+            },
+            {
+              "background": {
+                "color": {
+                  "fixed": "transparent"
+                }
+              },
+              "border": {
+                "color": {
+                  "fixed": "transparent"
+                }
+              },
+              "config": {
+                "align": "center",
+                "color": {
+                  "fixed": "rgb(204, 204, 220)"
+                },
+                "size": 14,
+                "text": {
+                  "fixed": "per node",
+                  "mode": "fixed"
+                },
+                "valign": "middle"
+              },
+              "constraint": {
+                "horizontal": "left",
+                "vertical": "top"
+              },
+              "links": [],
+              "name": "pg_hdr_pn",
+              "placement": {
+                "height": 28,
+                "left": 160,
+                "top": 327,
+                "width": 75
+              },
+              "type": "text"
+            },
+            {
+              "background": {
+                "color": {
+                  "fixed": "transparent"
+                }
+              },
+              "border": {
+                "color": {
+                  "fixed": "transparent"
+                }
+              },
+              "config": {
+                "align": "center",
+                "color": {
+                  "fixed": "rgb(204, 204, 220)"
+                },
+                "size": 14,
+                "text": {
+                  "fixed": "total",
+                  "mode": "fixed"
+                },
+                "valign": "middle"
+              },
+              "constraint": {
+                "horizontal": "left",
+                "vertical": "top"
+              },
+              "links": [],
+              "name": "pg_hdr_tot",
+              "placement": {
+                "height": 28,
+                "left": 250,
+                "top": 327,
+                "width": 75
+              },
+              "type": "text"
+            },
+            {
+              "background": {
+                "color": {
+                  "fixed": "transparent"
+                }
+              },
+              "border": {
+                "color": {
+                  "fixed": "transparent"
+                }
+              },
+              "config": {
+                "align": "center",
+                "color": {
+                  "fixed": "rgb(204, 204, 220)"
+                },
+                "size": 14,
+                "text": {
+                  "fixed": "CPU",
+                  "mode": "fixed"
+                },
+                "valign": "middle"
+              },
+              "constraint": {
+                "horizontal": "left",
+                "vertical": "top"
+              },
+              "links": [],
+              "name": "pg_lbl_cpu",
+              "placement": {
+                "height": 28,
+                "left": 125,
+                "top": 357,
+                "width": 55
+              },
+              "type": "text"
+            },
+            {
+              "background": {
+                "color": {
+                  "field": "pg_CPU",
+                  "fixed": "#D9D9D9"
+                }
+              },
+              "border": {
+                "color": {
+                  "fixed": "dark-green"
+                }
+              },
+              "config": {
+                "align": "center",
+                "color": {
+                  "fixed": "yellow"
+                },
+                "size": 18,
+                "text": {
+                  "field": "pg_CPU",
+                  "fixed": "",
+                  "mode": "field"
+                },
+                "valign": "middle"
+              },
+              "constraint": {
+                "horizontal": "left",
+                "vertical": "top"
+              },
+              "links": [],
+              "name": "pg_cpu_val",
+              "placement": {
+                "height": 28,
+                "left": 168,
+                "top": 357,
+                "width": 60
+              },
+              "type": "metric-value"
+            },
+            {
+              "background": {
+                "color": {
+                  "field": "pg_CPU_total",
+                  "fixed": "#D9D9D9"
+                }
+              },
+              "border": {
+                "color": {
+                  "fixed": "dark-green"
+                }
+              },
+              "config": {
+                "align": "center",
+                "color": {
+                  "fixed": "#ffffff"
+                },
+                "size": 18,
+                "text": {
+                  "field": "pg_CPU_total",
+                  "fixed": "",
+                  "mode": "field"
+                },
+                "valign": "middle"
+              },
+              "constraint": {
+                "horizontal": "left",
+                "vertical": "top"
+              },
+              "links": [],
+              "name": "pg_cpu_total",
+              "placement": {
+                "height": 27.998046875,
+                "left": 258,
+                "rotation": 0,
+                "top": 357,
+                "width": 60
+              },
+              "type": "metric-value"
+            },
+            {
+              "background": {
+                "color": {
+                  "fixed": "transparent"
+                }
+              },
+              "border": {
+                "color": {
+                  "fixed": "transparent"
+                }
+              },
+              "config": {
+                "align": "center",
+                "color": {
+                  "fixed": "rgb(204, 204, 220)"
+                },
+                "size": 14,
+                "text": {
+                  "fixed": "RAM",
+                  "mode": "fixed"
+                },
+                "valign": "middle"
+              },
+              "constraint": {
+                "horizontal": "left",
+                "vertical": "top"
+              },
+              "links": [],
+              "name": "pg_lbl_ram",
+              "placement": {
+                "height": 28,
+                "left": 125,
+                "top": 389,
+                "width": 55
+              },
+              "type": "text"
+            },
+            {
+              "background": {
+                "color": {
+                  "field": "pg_RAM",
+                  "fixed": "#D9D9D9"
+                }
+              },
+              "border": {
+                "color": {
+                  "fixed": "dark-green"
+                }
+              },
+              "config": {
+                "align": "center",
+                "color": {
+                  "fixed": "yellow"
+                },
+                "size": 18,
+                "text": {
+                  "field": "pg_RAM",
+                  "fixed": "",
+                  "mode": "field"
+                },
+                "valign": "middle"
+              },
+              "constraint": {
+                "horizontal": "left",
+                "vertical": "top"
+              },
+              "links": [],
+              "name": "pg_ram_val",
+              "placement": {
+                "height": 28,
+                "left": 168,
+                "top": 389,
+                "width": 60
+              },
+              "type": "metric-value"
+            },
+            {
+              "background": {
+                "color": {
+                  "field": "pg_RAM_total",
+                  "fixed": "#D9D9D9"
+                }
+              },
+              "border": {
+                "color": {
+                  "fixed": "dark-green"
+                }
+              },
+              "config": {
+                "align": "center",
+                "color": {
+                  "fixed": "#ffffff"
+                },
+                "size": 18,
+                "text": {
+                  "field": "pg_RAM_total",
+                  "fixed": "",
+                  "mode": "field"
+                },
+                "valign": "middle"
+              },
+              "constraint": {
+                "horizontal": "left",
+                "vertical": "top"
+              },
+              "links": [],
+              "name": "pg_ram_total",
+              "placement": {
+                "height": 27.998046875,
+                "left": 258,
+                "rotation": 0,
+                "top": 389,
+                "width": 60
+              },
+              "type": "metric-value"
+            },
+            {
+              "background": {
+                "color": {
+                  "fixed": "transparent"
+                }
+              },
+              "border": {
+                "color": {
+                  "fixed": "transparent"
+                }
+              },
+              "config": {
+                "align": "center",
+                "color": {
+                  "fixed": "rgb(204, 204, 220)"
+                },
+                "size": 14,
+                "text": {
+                  "fixed": "Disk",
+                  "mode": "fixed"
+                },
+                "valign": "middle"
+              },
+              "constraint": {
+                "horizontal": "left",
+                "vertical": "top"
+              },
+              "links": [],
+              "name": "pg_lbl_disk",
+              "placement": {
+                "height": 28,
+                "left": 125,
+                "top": 421,
+                "width": 55
+              },
+              "type": "text"
+            },
+            {
+              "background": {
+                "color": {
+                  "field": "pg_Disk",
+                  "fixed": "#D9D9D9"
+                }
+              },
+              "border": {
+                "color": {
+                  "fixed": "dark-green"
+                }
+              },
+              "config": {
+                "align": "center",
+                "color": {
+                  "fixed": "yellow"
+                },
+                "size": 18,
+                "text": {
+                  "field": "pg_Disk",
+                  "fixed": "",
+                  "mode": "field"
+                },
+                "valign": "middle"
+              },
+              "constraint": {
+                "horizontal": "left",
+                "vertical": "top"
+              },
+              "links": [],
+              "name": "pg_disk_val",
+              "placement": {
+                "height": 28,
+                "left": 168,
+                "top": 421,
+                "width": 60
+              },
+              "type": "metric-value"
+            },
+            {
+              "background": {
+                "color": {
+                  "field": "pg_Disk_total",
+                  "fixed": "#D9D9D9"
+                }
+              },
+              "border": {
+                "color": {
+                  "fixed": "dark-green"
+                }
+              },
+              "config": {
+                "align": "center",
+                "color": {
+                  "fixed": "#ffffff"
+                },
+                "size": 18,
+                "text": {
+                  "field": "pg_Disk_total",
+                  "fixed": "",
+                  "mode": "field"
+                },
+                "valign": "middle"
+              },
+              "constraint": {
+                "horizontal": "left",
+                "vertical": "top"
+              },
+              "links": [],
+              "name": "pg_disk_total",
+              "placement": {
+                "height": 27.998046875,
+                "left": 258,
+                "rotation": 0,
+                "top": 421,
+                "width": 60
+              },
+              "type": "metric-value"
+            },
+            {
+              "background": {
+                "color": {
+                  "fixed": "transparent"
+                },
+                "image": {
+                  "fixed": ""
+                }
+              },
+              "border": {
+                "color": {
+                  "fixed": "transparent"
+                }
+              },
+              "config": {
+                "align": "center",
+                "color": {
+                  "fixed": "rgb(204, 204, 220)"
+                },
+                "size": 16,
+                "text": {
+                  "fixed": "ElasticSearch (x",
+                  "mode": "fixed"
+                },
+                "valign": "middle"
+              },
+              "constraint": {
+                "horizontal": "left",
+                "vertical": "top"
+              },
+              "links": [],
+              "name": "lbl_es_title",
+              "placement": {
+                "height": 35,
+                "left": 417,
+                "top": 290,
+                "width": 155
+              },
+              "type": "text"
+            },
+            {
+              "background": {
+                "color": {
+                  "field": "es_count",
+                  "fixed": "transparent"
+                },
+                "image": {
+                  "fixed": "",
+                  "mode": "fixed"
+                }
+              },
+              "border": {
+                "color": {
+                  "fixed": "transparent"
+                }
+              },
+              "config": {
+                "align": "center",
+                "color": {
+                  "fixed": "rgb(204, 204, 220)"
+                },
+                "size": 16,
+                "text": {
+                  "field": "es_count",
+                  "fixed": "",
+                  "mode": "field"
+                },
+                "valign": "middle"
+              },
+              "constraint": {
+                "horizontal": "left",
+                "vertical": "top"
+              },
+              "links": [],
+              "name": "es_count_badge",
+              "placement": {
+                "height": 35,
+                "left": 541,
+                "top": 290,
+                "width": 40
+              },
+              "type": "metric-value"
+            },
+            {
+              "background": {
+                "color": {
+                  "fixed": "transparent"
+                }
+              },
+              "border": {
+                "color": {
+                  "fixed": "transparent"
+                }
+              },
+              "config": {
+                "align": "center",
+                "color": {
+                  "fixed": "rgb(204, 204, 220)"
+                },
+                "size": 16,
+                "text": {
+                  "fixed": "server)",
+                  "mode": "fixed"
+                },
+                "valign": "middle"
+              },
+              "constraint": {
+                "horizontal": "left",
+                "vertical": "top"
+              },
+              "links": [],
+              "name": "lbl_es_suf",
+              "placement": {
+                "height": 35,
+                "left": 563,
+                "top": 290,
+                "width": 75.00003814697266
+              },
+              "type": "text"
+            },
+            {
+              "background": {
+                "color": {
+                  "fixed": "transparent"
+                }
+              },
+              "border": {
+                "color": {
+                  "fixed": "transparent"
+                }
+              },
+              "config": {
+                "align": "center",
+                "color": {
+                  "fixed": "rgb(204, 204, 220)"
+                },
+                "size": 14,
+                "text": {
+                  "fixed": "per node",
+                  "mode": "fixed"
+                },
+                "valign": "middle"
+              },
+              "constraint": {
+                "horizontal": "left",
+                "vertical": "top"
+              },
+              "links": [],
+              "name": "es_hdr_pn",
+              "placement": {
+                "height": 27.998046875,
+                "left": 571,
+                "top": 325,
+                "width": 75.00003814697266
+              },
+              "type": "text"
+            },
+            {
+              "background": {
+                "color": {
+                  "fixed": "transparent"
+                }
+              },
+              "border": {
+                "color": {
+                  "fixed": "transparent"
+                }
+              },
+              "config": {
+                "align": "center",
+                "color": {
+                  "fixed": "rgb(204, 204, 220)"
+                },
+                "size": 14,
+                "text": {
+                  "fixed": "total",
+                  "mode": "fixed"
+                },
+                "valign": "middle"
+              },
+              "constraint": {
+                "horizontal": "left",
+                "vertical": "top"
+              },
+              "links": [],
+              "name": "es_hdr_tot",
+              "placement": {
+                "height": 27.998046875,
+                "left": 661,
+                "top": 325,
+                "width": 75
+              },
+              "type": "text"
+            },
+            {
+              "background": {
+                "color": {
+                  "fixed": "transparent"
+                }
+              },
+              "border": {
+                "color": {
+                  "fixed": "transparent"
+                }
+              },
+              "config": {
+                "align": "center",
+                "color": {
+                  "fixed": "rgb(204, 204, 220)"
+                },
+                "size": 14,
+                "text": {
+                  "fixed": "CPU",
+                  "mode": "fixed"
+                },
+                "valign": "middle"
+              },
+              "constraint": {
+                "horizontal": "left",
+                "vertical": "top"
+              },
+              "links": [],
+              "name": "es_lbl_cpu",
+              "placement": {
+                "height": 27.998046875,
+                "left": 536,
+                "top": 355,
+                "width": 55
+              },
+              "type": "text"
+            },
+            {
+              "background": {
+                "color": {
+                  "field": "es_CPU",
+                  "fixed": "#D9D9D9"
+                }
+              },
+              "border": {
+                "color": {
+                  "fixed": "dark-green"
+                }
+              },
+              "config": {
+                "align": "center",
+                "color": {
+                  "fixed": "yellow"
+                },
+                "size": 18,
+                "text": {
+                  "field": "es_CPU",
+                  "fixed": "",
+                  "mode": "field"
+                },
+                "valign": "middle"
+              },
+              "constraint": {
+                "horizontal": "left",
+                "vertical": "top"
+              },
+              "links": [],
+              "name": "es_cpu_val",
+              "placement": {
+                "height": 27.998046875,
+                "left": 579,
+                "top": 355,
+                "width": 60.000038146972656
+              },
+              "type": "metric-value"
+            },
+            {
+              "background": {
+                "color": {
+                  "field": "es_CPU_total",
+                  "fixed": "#D9D9D9"
+                }
+              },
+              "border": {
+                "color": {
+                  "fixed": "dark-green"
+                }
+              },
+              "config": {
+                "align": "center",
+                "color": {
+                  "fixed": "#ffffff"
+                },
+                "size": 18,
+                "text": {
+                  "field": "es_CPU_total",
+                  "fixed": "",
+                  "mode": "field"
+                },
+                "valign": "middle"
+              },
+              "constraint": {
+                "horizontal": "left",
+                "vertical": "top"
+              },
+              "links": [],
+              "name": "es_cpu_total",
+              "placement": {
+                "height": 27.998046875,
+                "left": 669,
+                "top": 355,
+                "width": 60
+              },
+              "type": "metric-value"
+            },
+            {
+              "background": {
+                "color": {
+                  "fixed": "transparent"
+                }
+              },
+              "border": {
+                "color": {
+                  "fixed": "transparent"
+                }
+              },
+              "config": {
+                "align": "center",
+                "color": {
+                  "fixed": "rgb(204, 204, 220)"
+                },
+                "size": 14,
+                "text": {
+                  "fixed": "RAM",
+                  "mode": "fixed"
+                },
+                "valign": "middle"
+              },
+              "constraint": {
+                "horizontal": "left",
+                "vertical": "top"
+              },
+              "links": [],
+              "name": "es_lbl_ram",
+              "placement": {
+                "height": 27.998046875,
+                "left": 536,
+                "top": 387,
+                "width": 55
+              },
+              "type": "text"
+            },
+            {
+              "background": {
+                "color": {
+                  "field": "es_RAM",
+                  "fixed": "#D9D9D9"
+                }
+              },
+              "border": {
+                "color": {
+                  "fixed": "dark-green"
+                }
+              },
+              "config": {
+                "align": "center",
+                "color": {
+                  "fixed": "yellow"
+                },
+                "size": 18,
+                "text": {
+                  "field": "es_RAM",
+                  "fixed": "",
+                  "mode": "field"
+                },
+                "valign": "middle"
+              },
+              "constraint": {
+                "horizontal": "left",
+                "vertical": "top"
+              },
+              "links": [],
+              "name": "es_ram_val",
+              "placement": {
+                "height": 27.998046875,
+                "left": 579,
+                "top": 387,
+                "width": 60.000038146972656
+              },
+              "type": "metric-value"
+            },
+            {
+              "background": {
+                "color": {
+                  "field": "es_RAM_total",
+                  "fixed": "#D9D9D9"
+                }
+              },
+              "border": {
+                "color": {
+                  "fixed": "dark-green"
+                }
+              },
+              "config": {
+                "align": "center",
+                "color": {
+                  "fixed": "#ffffff"
+                },
+                "size": 18,
+                "text": {
+                  "field": "es_RAM_total",
+                  "fixed": "",
+                  "mode": "field"
+                },
+                "valign": "middle"
+              },
+              "constraint": {
+                "horizontal": "left",
+                "vertical": "top"
+              },
+              "links": [],
+              "name": "es_ram_total",
+              "placement": {
+                "height": 27.998046875,
+                "left": 669,
+                "top": 387,
+                "width": 60
+              },
+              "type": "metric-value"
+            },
+            {
+              "background": {
+                "color": {
+                  "fixed": "transparent"
+                }
+              },
+              "border": {
+                "color": {
+                  "fixed": "transparent"
+                }
+              },
+              "config": {
+                "align": "center",
+                "color": {
+                  "fixed": "rgb(204, 204, 220)"
+                },
+                "size": 14,
+                "text": {
+                  "fixed": "Disk",
+                  "mode": "fixed"
+                },
+                "valign": "middle"
+              },
+              "constraint": {
+                "horizontal": "left",
+                "vertical": "top"
+              },
+              "links": [],
+              "name": "es_lbl_disk",
+              "placement": {
+                "height": 27.998046875,
+                "left": 536,
+                "top": 419,
+                "width": 55
+              },
+              "type": "text"
+            },
+            {
+              "background": {
+                "color": {
+                  "field": "es_Disk",
+                  "fixed": "#D9D9D9"
+                }
+              },
+              "border": {
+                "color": {
+                  "fixed": "dark-green"
+                }
+              },
+              "config": {
+                "align": "center",
+                "color": {
+                  "fixed": "yellow"
+                },
+                "size": 18,
+                "text": {
+                  "field": "es_Disk",
+                  "fixed": "",
+                  "mode": "field"
+                },
+                "valign": "middle"
+              },
+              "constraint": {
+                "horizontal": "left",
+                "vertical": "top"
+              },
+              "links": [],
+              "name": "es_disk_val",
+              "placement": {
+                "height": 27.998046875,
+                "left": 579,
+                "top": 419,
+                "width": 60.000038146972656
+              },
+              "type": "metric-value"
+            },
+            {
+              "background": {
+                "color": {
+                  "field": "es_Disk_total",
+                  "fixed": "#D9D9D9"
+                }
+              },
+              "border": {
+                "color": {
+                  "fixed": "dark-green"
+                }
+              },
+              "config": {
+                "align": "center",
+                "color": {
+                  "fixed": "#ffffff"
+                },
+                "size": 18,
+                "text": {
+                  "field": "es_Disk_total",
+                  "fixed": "",
+                  "mode": "field"
+                },
+                "valign": "middle"
+              },
+              "constraint": {
+                "horizontal": "left",
+                "vertical": "top"
+              },
+              "links": [],
+              "name": "es_disk_total",
+              "placement": {
+                "height": 27.998046875,
+                "left": 669,
+                "top": 419,
+                "width": 60
+              },
+              "type": "metric-value"
+            },
+            {
+              "background": {
+                "color": {
+                  "fixed": "transparent"
+                },
+                "image": {
+                  "fixed": ""
+                }
+              },
+              "border": {
+                "color": {
+                  "fixed": "transparent"
+                }
+              },
+              "config": {
+                "align": "center",
+                "color": {
+                  "fixed": "rgb(204, 204, 220)"
+                },
+                "size": 16,
+                "text": {
+                  "fixed": "Redis (x",
+                  "mode": "fixed"
+                },
+                "valign": "middle"
+              },
+              "constraint": {
+                "horizontal": "left",
+                "vertical": "top"
+              },
+              "links": [],
+              "name": "lbl_redis_title",
+              "placement": {
+                "height": 35,
+                "left": 818,
+                "top": 291,
+                "width": 100
+              },
+              "type": "text"
+            },
+            {
+              "background": {
+                "color": {
+                  "field": "redis_count",
+                  "fixed": "transparent"
+                }
+              },
+              "border": {
+                "color": {
+                  "fixed": "transparent"
+                }
+              },
+              "config": {
+                "align": "center",
+                "color": {
+                  "fixed": "rgb(204, 204, 220)"
+                },
+                "size": 16,
+                "text": {
+                  "field": "redis_count",
+                  "fixed": "",
+                  "mode": "field"
+                },
+                "valign": "middle"
+              },
+              "constraint": {
+                "horizontal": "left",
+                "vertical": "top"
+              },
+              "links": [],
+              "name": "redis_count_badge",
+              "placement": {
+                "height": 35,
+                "left": 884,
+                "rotation": 0,
+                "top": 291,
+                "width": 40
+              },
+              "type": "metric-value"
+            },
+            {
+              "background": {
+                "color": {
+                  "fixed": "transparent"
+                }
+              },
+              "border": {
+                "color": {
+                  "fixed": "transparent"
+                }
+              },
+              "config": {
+                "align": "center",
+                "color": {
+                  "fixed": "rgb(204, 204, 220)"
+                },
+                "size": 16,
+                "text": {
+                  "fixed": "server)",
+                  "mode": "fixed"
+                },
+                "valign": "middle"
+              },
+              "constraint": {
+                "horizontal": "left",
+                "vertical": "top"
+              },
+              "links": [],
+              "name": "lbl_redis_suf",
+              "placement": {
+                "height": 35,
+                "left": 905,
+                "rotation": 0,
+                "top": 291,
+                "width": 75
+              },
+              "type": "text"
+            },
+            {
+              "background": {
+                "color": {
+                  "fixed": "transparent"
+                }
+              },
+              "border": {
+                "color": {
+                  "fixed": "transparent"
+                }
+              },
+              "config": {
+                "align": "center",
+                "color": {
+                  "fixed": "rgb(204, 204, 220)"
+                },
+                "size": 14,
+                "text": {
+                  "fixed": "per node",
+                  "mode": "fixed"
+                },
+                "valign": "middle"
+              },
+              "constraint": {
+                "horizontal": "left",
+                "vertical": "top"
+              },
+              "links": [],
+              "name": "redis_hdr_pn",
+              "placement": {
+                "height": 28,
+                "left": 954,
+                "top": 326,
+                "width": 75
+              },
+              "type": "text"
+            },
+            {
+              "background": {
+                "color": {
+                  "fixed": "transparent"
+                }
+              },
+              "border": {
+                "color": {
+                  "fixed": "transparent"
+                }
+              },
+              "config": {
+                "align": "center",
+                "color": {
+                  "fixed": "rgb(204, 204, 220)"
+                },
+                "size": 14,
+                "text": {
+                  "fixed": "total",
+                  "mode": "fixed"
+                },
+                "valign": "middle"
+              },
+              "constraint": {
+                "horizontal": "left",
+                "vertical": "top"
+              },
+              "links": [],
+              "name": "redis_hdr_tot",
+              "placement": {
+                "height": 28,
+                "left": 1044,
+                "top": 326,
+                "width": 75
+              },
+              "type": "text"
+            },
+            {
+              "background": {
+                "color": {
+                  "fixed": "transparent"
+                }
+              },
+              "border": {
+                "color": {
+                  "fixed": "transparent"
+                }
+              },
+              "config": {
+                "align": "center",
+                "color": {
+                  "fixed": "rgb(204, 204, 220)"
+                },
+                "size": 14,
+                "text": {
+                  "fixed": "CPU",
+                  "mode": "fixed"
+                },
+                "valign": "middle"
+              },
+              "constraint": {
+                "horizontal": "left",
+                "vertical": "top"
+              },
+              "links": [],
+              "name": "redis_lbl_cpu",
+              "placement": {
+                "height": 28,
+                "left": 921,
+                "top": 356,
+                "width": 55
+              },
+              "type": "text"
+            },
+            {
+              "background": {
+                "color": {
+                  "field": "redis_CPU",
+                  "fixed": "#D9D9D9"
+                }
+              },
+              "border": {
+                "color": {
+                  "fixed": "dark-green"
+                }
+              },
+              "config": {
+                "align": "center",
+                "color": {
+                  "fixed": "yellow"
+                },
+                "size": 18,
+                "text": {
+                  "field": "redis_CPU",
+                  "fixed": "",
+                  "mode": "field"
+                },
+                "valign": "middle"
+              },
+              "constraint": {
+                "horizontal": "left",
+                "vertical": "top"
+              },
+              "links": [],
+              "name": "redis_cpu_val",
+              "placement": {
+                "height": 28,
+                "left": 962,
+                "top": 356,
+                "width": 60
+              },
+              "type": "metric-value"
+            },
+            {
+              "background": {
+                "color": {
+                  "field": "redis_CPU_total",
+                  "fixed": "#D9D9D9"
+                }
+              },
+              "border": {
+                "color": {
+                  "fixed": "dark-green"
+                }
+              },
+              "config": {
+                "align": "center",
+                "color": {
+                  "fixed": "#ffffff"
+                },
+                "size": 18,
+                "text": {
+                  "field": "redis_CPU_total",
+                  "fixed": "",
+                  "mode": "field"
+                },
+                "valign": "middle"
+              },
+              "constraint": {
+                "horizontal": "left",
+                "vertical": "top"
+              },
+              "links": [],
+              "name": "redis_cpu_total",
+              "placement": {
+                "height": 27.998046875,
+                "left": 1052,
+                "rotation": 0,
+                "top": 356,
+                "width": 60
+              },
+              "type": "metric-value"
+            },
+            {
+              "background": {
+                "color": {
+                  "fixed": "transparent"
+                }
+              },
+              "border": {
+                "color": {
+                  "fixed": "transparent"
+                }
+              },
+              "config": {
+                "align": "center",
+                "color": {
+                  "fixed": "rgb(204, 204, 220)"
+                },
+                "size": 14,
+                "text": {
+                  "fixed": "RAM",
+                  "mode": "fixed"
+                },
+                "valign": "middle"
+              },
+              "constraint": {
+                "horizontal": "left",
+                "vertical": "top"
+              },
+              "links": [],
+              "name": "redis_lbl_ram",
+              "placement": {
+                "height": 28,
+                "left": 921,
+                "top": 388,
+                "width": 55
+              },
+              "type": "text"
+            },
+            {
+              "background": {
+                "color": {
+                  "field": "redis_RAM",
+                  "fixed": "#D9D9D9"
+                }
+              },
+              "border": {
+                "color": {
+                  "fixed": "dark-green"
+                }
+              },
+              "config": {
+                "align": "center",
+                "color": {
+                  "fixed": "yellow"
+                },
+                "size": 18,
+                "text": {
+                  "field": "redis_RAM",
+                  "fixed": "",
+                  "mode": "field"
+                },
+                "valign": "middle"
+              },
+              "constraint": {
+                "horizontal": "left",
+                "vertical": "top"
+              },
+              "links": [],
+              "name": "redis_ram_val",
+              "placement": {
+                "height": 28,
+                "left": 962,
+                "top": 388,
+                "width": 60
+              },
+              "type": "metric-value"
+            },
+            {
+              "background": {
+                "color": {
+                  "field": "redis_RAM_total",
+                  "fixed": "#D9D9D9"
+                }
+              },
+              "border": {
+                "color": {
+                  "fixed": "dark-green"
+                }
+              },
+              "config": {
+                "align": "center",
+                "color": {
+                  "fixed": "#ffffff"
+                },
+                "size": 18,
+                "text": {
+                  "field": "redis_RAM_total",
+                  "fixed": "",
+                  "mode": "field"
+                },
+                "valign": "middle"
+              },
+              "constraint": {
+                "horizontal": "left",
+                "vertical": "top"
+              },
+              "links": [],
+              "name": "redis_ram_total",
+              "placement": {
+                "height": 27.998046875,
+                "left": 1052,
+                "rotation": 0,
+                "top": 388,
+                "width": 60
+              },
+              "type": "metric-value"
+            },
+            {
+              "background": {
+                "color": {
+                  "fixed": "transparent"
+                }
+              },
+              "border": {
+                "color": {
+                  "fixed": "transparent"
+                }
+              },
+              "config": {
+                "align": "center",
+                "color": {
+                  "fixed": "rgb(204, 204, 220)"
+                },
+                "size": 14,
+                "text": {
+                  "fixed": "Disk",
+                  "mode": "fixed"
+                },
+                "valign": "middle"
+              },
+              "constraint": {
+                "horizontal": "left",
+                "vertical": "top"
+              },
+              "links": [],
+              "name": "redis_lbl_disk",
+              "placement": {
+                "height": 28,
+                "left": 921,
+                "top": 420,
+                "width": 55
+              },
+              "type": "text"
+            },
+            {
+              "background": {
+                "color": {
+                  "field": "redis_Disk",
+                  "fixed": "#D9D9D9"
+                }
+              },
+              "border": {
+                "color": {
+                  "fixed": "dark-green"
+                }
+              },
+              "config": {
+                "align": "center",
+                "color": {
+                  "fixed": "yellow"
+                },
+                "size": 18,
+                "text": {
+                  "field": "redis_Disk",
+                  "fixed": "",
+                  "mode": "field"
+                },
+                "valign": "middle"
+              },
+              "constraint": {
+                "horizontal": "left",
+                "vertical": "top"
+              },
+              "links": [],
+              "name": "redis_disk_val",
+              "placement": {
+                "height": 28,
+                "left": 962,
+                "top": 420,
+                "width": 60
+              },
+              "type": "metric-value"
+            },
+            {
+              "background": {
+                "color": {
+                  "field": "redis_Disk_total",
+                  "fixed": "#D9D9D9"
+                }
+              },
+              "border": {
+                "color": {
+                  "fixed": "dark-green"
+                }
+              },
+              "config": {
+                "align": "center",
+                "color": {
+                  "fixed": "#ffffff"
+                },
+                "size": 18,
+                "text": {
+                  "field": "redis_Disk_total",
+                  "fixed": "",
+                  "mode": "field"
+                },
+                "valign": "middle"
+              },
+              "constraint": {
+                "horizontal": "left",
+                "vertical": "top"
+              },
+              "links": [],
+              "name": "redis_disk_total",
+              "placement": {
+                "height": 27.998046875,
+                "left": 1052,
+                "rotation": 0,
+                "top": 420,
+                "width": 60
+              },
+              "type": "metric-value"
+            },
+            {
+              "background": {
+                "color": {
+                  "fixed": "transparent"
+                }
+              },
+              "border": {
+                "color": {
+                  "fixed": "dark-purple"
+                },
+                "radius": 8,
+                "width": 4
+              },
+              "config": {
+                "align": "center",
+                "color": {
+                  "fixed": "#000000"
+                },
+                "valign": "middle"
+              },
+              "connections": [],
+              "constraint": {
+                "horizontal": "left",
+                "vertical": "top"
+              },
+              "links": [],
+              "name": "Element 26",
+              "placement": {
+                "height": 431,
+                "left": 1595,
+                "top": 3,
+                "width": 95
+              },
+              "type": "rectangle"
+            },
+            {
+              "background": {
+                "color": {
+                  "fixed": "transparent"
+                },
+                "size": "cover"
+              },
+              "border": {
+                "color": {
+                  "fixed": "dark-green"
+                },
+                "radius": 0,
+                "width": 0
+              },
+              "config": {
+                "fill": {
+                  "fixed": "#D9D9D9"
+                },
+                "path": {
+                  "fixed": "img/icons/unicons/temperature-plus.svg",
+                  "mode": "fixed"
+                }
+              },
+              "connections": [],
+              "constraint": {
+                "horizontal": "left",
+                "vertical": "top"
+              },
+              "links": [],
+              "name": "Element 27",
+              "placement": {
+                "height": 66.9921875,
+                "left": 1606,
+                "top": 22,
+                "width": 85
+              },
+              "type": "icon"
+            },
+            {
+              "background": {
+                "color": {
+                  "fixed": "transparent"
+                },
+                "size": "cover"
+              },
+              "border": {
+                "color": {
+                  "fixed": "dark-green"
+                },
+                "radius": 0,
+                "width": 0
+              },
+              "config": {
+                "fill": {
+                  "fixed": "#D9D9D9"
+                },
+                "path": {
+                  "fixed": "img/icons/unicons/building.svg",
+                  "mode": "fixed"
+                }
+              },
+              "constraint": {
+                "horizontal": "left",
+                "vertical": "top"
+              },
+              "links": [],
+              "name": "Element 28",
+              "placement": {
+                "height": 67,
+                "left": 1600,
+                "top": 101,
+                "width": 85
+              },
+              "type": "icon"
+            },
+            {
+              "background": {
+                "color": {
+                  "fixed": "transparent"
+                },
+                "size": "cover"
+              },
+              "border": {
+                "color": {
+                  "fixed": "dark-green"
+                },
+                "radius": 0,
+                "width": 0
+              },
+              "config": {
+                "fill": {
+                  "fixed": "#D9D9D9"
+                },
+                "path": {
+                  "fixed": "img/icons/unicons/chart-line.svg",
+                  "mode": "fixed"
+                }
+              },
+              "constraint": {
+                "horizontal": "left",
+                "vertical": "top"
+              },
+              "links": [],
+              "name": "Element 29",
+              "placement": {
+                "height": 67,
+                "left": 1600,
+                "top": 184,
+                "width": 85
+              },
+              "type": "icon"
+            },
+            {
+              "background": {
+                "color": {
+                  "fixed": "transparent"
+                },
+                "size": "cover"
+              },
+              "border": {
+                "color": {
+                  "fixed": "dark-green"
+                },
+                "radius": 0,
+                "width": 0
+              },
+              "config": {
+                "fill": {
+                  "fixed": "#D9D9D9"
+                },
+                "path": {
+                  "fixed": "img/icons/unicons/bus.svg",
+                  "mode": "fixed"
+                }
+              },
+              "constraint": {
+                "horizontal": "left",
+                "vertical": "top"
+              },
+              "links": [],
+              "name": "Element 30",
+              "placement": {
+                "height": 67,
+                "left": 1600,
+                "top": 268,
+                "width": 85
+              },
+              "type": "icon"
+            },
+            {
+              "background": {
+                "color": {
+                  "fixed": "transparent"
+                },
+                "size": "cover"
+              },
+              "border": {
+                "color": {
+                  "fixed": "dark-green"
+                },
+                "radius": 0,
+                "width": 0
+              },
+              "config": {
+                "fill": {
+                  "fixed": "#D9D9D9"
+                },
+                "path": {
+                  "fixed": "img/icons/unicons/constructor.svg",
+                  "mode": "fixed"
+                }
+              },
+              "connections": [],
+              "constraint": {
+                "horizontal": "left",
+                "vertical": "top"
+              },
+              "links": [],
+              "name": "Element 31",
+              "placement": {
+                "height": 67,
+                "left": 1599,
+                "top": 352,
+                "width": 85
+              },
+              "type": "icon"
+            },
+            {
+              "background": {
+                "color": {
+                  "fixed": "transparent"
+                },
+                "size": "cover"
+              },
+              "border": {
+                "color": {
+                  "fixed": "dark-green"
+                }
+              },
+              "config": {
+                "fill": {
+                  "fixed": "#D9D9D9"
+                },
+                "path": {
+                  "fixed": "img/icons/unicons/process.svg",
+                  "mode": "fixed"
+                }
+              },
+              "constraint": {
+                "horizontal": "left",
+                "vertical": "top"
+              },
+              "links": [],
+              "name": "Element 32",
+              "placement": {
+                "height": 89,
+                "left": 1488,
+                "top": 99,
+                "width": 93
+              },
+              "type": "icon"
+            },
+            {
+              "background": {
+                "color": {
+                  "fixed": "transparent"
+                },
+                "image": {
+                  "fixed": ""
+                }
+              },
+              "border": {
+                "color": {
+                  "fixed": "dark-green"
+                }
+              },
+              "config": {
+                "align": "center",
+                "color": {
+                  "fixed": "rgb(204, 204, 220)"
+                },
+                "size": 14,
+                "text": {
+                  "fixed": "IoT Devices, Solutions",
+                  "mode": "fixed"
+                },
+                "valign": "middle"
+              },
+              "connections": [],
+              "constraint": {
+                "horizontal": "left",
+                "vertical": "top"
+              },
+              "links": [],
+              "name": "Element 33",
+              "placement": {
+                "height": 49,
+                "left": 1592,
+                "top": 435,
+                "width": 103
+              },
+              "type": "text"
+            },
+            {
+              "background": {
+                "color": {
+                  "fixed": "transparent"
+                },
+                "image": {
+                  "fixed": ""
+                }
+              },
+              "border": {
+                "color": {
+                  "fixed": "dark-green"
+                },
+                "radius": 0,
+                "width": 0
+              },
+              "config": {
+                "blinkRate": {
+                  "mode": "mod"
+                },
+                "statusColor": {
+                  "fixed": "transparent"
+                },
+                "type": "Terminal"
+              },
+              "connections": [],
+              "constraint": {
+                "horizontal": "left",
+                "vertical": "top"
+              },
+              "links": [],
+              "name": "Element 68",
+              "placement": {
+                "height": 171.9921875,
+                "left": 88,
+                "rotation": 0,
+                "top": 38,
+                "width": 165
+              },
+              "type": "server"
+            },
+            {
+              "background": {
+                "color": {
+                  "fixed": "transparent"
+                }
+              },
+              "border": {
+                "color": {
+                  "fixed": "dark-green"
+                }
+              },
+              "config": {
+                "fill": {
+                  "fixed": "super-light-yellow"
+                },
+                "path": {
+                  "fixed": "img/icons/unicons/atom.svg",
+                  "mode": "fixed"
+                }
+              },
+              "constraint": {
+                "horizontal": "left",
+                "vertical": "top"
+              },
+              "links": [],
+              "name": "Element 69",
+              "placement": {
+                "height": 68,
+                "left": 127,
+                "top": 54,
+                "width": 80
+              },
+              "type": "icon"
+            },
+            {
+              "background": {
+                "color": {
+                  "fixed": "transparent"
+                }
+              },
+              "border": {
+                "color": {
+                  "fixed": "dark-green"
+                }
+              },
+              "config": {
+                "fill": {
+                  "fixed": "dark-yellow"
+                },
+                "path": {
+                  "fixed": "img/icons/unicons/arrows-h-alt.svg",
+                  "mode": "fixed"
+                }
+              },
+              "constraint": {
+                "horizontal": "left",
+                "vertical": "top"
+              },
+              "links": [],
+              "name": "Element 70",
+              "placement": {
+                "height": 86,
+                "left": 264,
+                "top": 63,
+                "width": 128
+              },
+              "type": "icon"
+            }
+          ],
+          "name": "Element 1740491800958",
+          "oneClickMode": "off",
+          "placement": {
+            "height": 100,
+            "left": 0,
+            "rotation": 0,
+            "top": 0,
+            "width": 100
+          },
+          "type": "frame"
+        },
+        "showAdvancedTypes": true,
+        "tooltip": {
+          "disableForOneClick": false,
+          "mode": "single"
+        },
+        "zoomToContent": false
+      },
+      "pluginVersion": "12.3.0",
+      "targets": [
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "${datasource}"
+          },
+          "editorMode": "code",
+          "expr": "count(up{job=~\"kubernetes-nodes\"})",
+          "hide": false,
+          "instant": true,
+          "legendFormat": "k8s_count",
+          "range": false,
+          "refId": "A"
+        },
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "${datasource}"
+          },
+          "editorMode": "code",
+          "expr": "count(up{job=~\"postgresql-nodes\"} == 1) or on() vector(0)",
+          "hide": false,
+          "instant": true,
+          "legendFormat": "pg_count",
+          "range": false,
+          "refId": "B"
+        },
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "${datasource}"
+          },
+          "editorMode": "code",
+          "expr": "count(up{job=\"es-nodes\"} == 1)\n  or on()\nmax(kube_statefulset_status_replicas_ready{statefulset=~\".*elasticsearch.*\"})",
+          "hide": false,
+          "instant": true,
+          "legendFormat": "es_count",
+          "range": false,
+          "refId": "C"
+        },
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "${datasource}"
+          },
+          "editorMode": "code",
+          "expr": "count(up{job=\"rabbitmq-nodes\"} == 1)\n  or on()\nmax(kube_statefulset_status_replicas_ready{statefulset=~\".*rabbitmq.*\"})",
+          "hide": false,
+          "instant": false,
+          "legendFormat": "rabbitmq_count",
+          "range": true,
+          "refId": "D"
+        },
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "${datasource}"
+          },
+          "editorMode": "code",
+          "expr": "count(up{job=\"redis-nodes\"} == 1)\n  or on()\nmax(kube_statefulset_status_replicas_ready{statefulset=~\".*redis.*\"})",
+          "hide": false,
+          "instant": false,
+          "legendFormat": "redis_count",
+          "range": true,
+          "refId": "E"
+        },
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "${datasource}"
+          },
+          "editorMode": "code",
+          "expr": "count(up{job=\"opc-server\"})",
+          "hide": false,
+          "instant": false,
+          "legendFormat": "OPC_count",
+          "range": true,
+          "refId": "L"
+        },
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "${datasource}"
+          },
+          "editorMode": "code",
+          "expr": "max(count by(instance)(node_cpu_seconds_total{mode=\"idle\",job=\"kubernetes-service-endpoints\"}))",
+          "hide": false,
+          "instant": false,
+          "legendFormat": "k8s_CPU",
+          "range": true,
+          "refId": "G"
+        },
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "${datasource}"
+          },
+          "editorMode": "code",
+          "expr": "sum(count by(instance)(node_cpu_seconds_total{mode=\"idle\",job=\"kubernetes-service-endpoints\"}))",
+          "hide": false,
+          "instant": false,
+          "legendFormat": "k8s_CPU_total",
+          "range": true,
+          "refId": "F"
+        },
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "${datasource}"
+          },
+          "editorMode": "code",
+          "expr": "max(ceil(node_memory_MemTotal_bytes{job=\"kubernetes-service-endpoints\"} / 1024 / 1024 / 1024))",
+          "hide": false,
+          "instant": false,
+          "legendFormat": "k8s_RAM",
+          "range": true,
+          "refId": "H"
+        },
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "${datasource}"
+          },
+          "editorMode": "code",
+          "expr": "sum(ceil(node_memory_MemTotal_bytes{job=\"kubernetes-service-endpoints\"} / 1024 / 1024 / 1024))",
+          "hide": false,
+          "instant": false,
+          "legendFormat": "k8s_RAM_total",
+          "range": true,
+          "refId": "I"
+        },
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "${datasource}"
+          },
+          "editorMode": "code",
+          "expr": "max(round(ceil(node_filesystem_size_bytes{job=\"kubernetes-service-endpoints\", mountpoint=\"/data\"} / 1024 / 1024 / 1024), 10))",
+          "hide": false,
+          "instant": false,
+          "legendFormat": "k8s_Disk",
+          "range": true,
+          "refId": "K"
+        },
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "${datasource}"
+          },
+          "editorMode": "code",
+          "expr": "sum(round(ceil(node_filesystem_size_bytes{job=\"kubernetes-service-endpoints\", mountpoint=\"/data\"} / 1024 / 1024 / 1024), 10))",
+          "hide": false,
+          "instant": false,
+          "legendFormat": "k8s_Disk_total",
+          "range": true,
+          "refId": "J"
+        },
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "${datasource}"
+          },
+          "editorMode": "code",
+          "expr": "max(count by(instance)(node_cpu_seconds_total{mode=\"idle\",job=\"postgresql-nodes\"}))\n  or on()\nmax(kube_pod_container_resource_limits{resource=\"cpu\", pod=~\".*postgres.*\"})",
+          "hide": false,
+          "instant": false,
+          "legendFormat": "pg_CPU",
+          "range": true,
+          "refId": "M"
+        },
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "${datasource}"
+          },
+          "editorMode": "code",
+          "expr": "sum(count by(instance)(node_cpu_seconds_total{mode=\"idle\",job=\"postgresql-nodes\"}))\n  or on()\nsum(kube_pod_container_resource_limits{resource=\"cpu\", pod=~\".*postgres.*\"})",
+          "hide": false,
+          "instant": false,
+          "legendFormat": "pg_CPU_total",
+          "range": true,
+          "refId": "N"
+        },
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "${datasource}"
+          },
+          "editorMode": "code",
+          "expr": "max(ceil(node_memory_MemTotal_bytes{job=\"postgresql-nodes\"} / 1024 / 1024 / 1024))\n  or on()\nmax(ceil(kube_pod_container_resource_limits{resource=\"memory\", pod=~\".*postgres.*\"} / 1024 / 1024 / 1024))",
+          "hide": false,
+          "instant": false,
+          "legendFormat": "pg_RAM",
+          "range": true,
+          "refId": "O"
+        },
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "${datasource}"
+          },
+          "editorMode": "code",
+          "expr": "sum(ceil(node_memory_MemTotal_bytes{job=\"postgresql-nodes\"} / 1024 / 1024 / 1024))\n  or on()\nsum(ceil(kube_pod_container_resource_limits{resource=\"memory\", pod=~\".*postgres.*\"} / 1024 / 1024 / 1024))",
+          "hide": false,
+          "instant": false,
+          "legendFormat": "pg_RAM_total",
+          "range": true,
+          "refId": "P"
+        },
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "${datasource}"
+          },
+          "editorMode": "code",
+          "expr": "max(round(ceil(node_filesystem_size_bytes{job=\"postgresql-nodes\", mountpoint=\"/data\"} / 1024 / 1024 / 1024), 10))\n  or on()\nmax(ceil(kubelet_volume_stats_capacity_bytes{persistentvolumeclaim=~\".*postgres.*\"} / 1024 / 1024 / 1024))",
+          "hide": false,
+          "instant": false,
+          "legendFormat": "pg_Disk",
+          "range": true,
+          "refId": "Q"
+        },
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "${datasource}"
+          },
+          "editorMode": "code",
+          "expr": "sum(round(ceil(node_filesystem_size_bytes{job=\"postgresql-nodes\", mountpoint=\"/data\"} / 1024 / 1024 / 1024), 10))\n  or on()\nsum(ceil(kubelet_volume_stats_capacity_bytes{persistentvolumeclaim=~\".*postgres.*\"} / 1024 / 1024 / 1024))",
+          "hide": false,
+          "instant": false,
+          "legendFormat": "pg_Disk_total",
+          "range": true,
+          "refId": "R"
+        },
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "${datasource}"
+          },
+          "editorMode": "code",
+          "expr": "max(count by(instance)(node_cpu_seconds_total{mode=\"idle\",job=\"es-nodes\"}))\n  or on()\nmax(kube_pod_container_resource_limits{resource=\"cpu\", pod=~\".*elasticsearch.*\"})",
+          "hide": false,
+          "instant": false,
+          "legendFormat": "es_CPU",
+          "range": true,
+          "refId": "S"
+        },
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "${datasource}"
+          },
+          "editorMode": "code",
+          "expr": "sum(count by(instance)(node_cpu_seconds_total{mode=\"idle\",job=\"es-nodes\"}))\n  or on()\nsum(kube_pod_container_resource_limits{resource=\"cpu\", pod=~\".*elasticsearch.*\"})",
+          "hide": false,
+          "instant": false,
+          "legendFormat": "es_CPU_total",
+          "range": true,
+          "refId": "T"
+        },
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "${datasource}"
+          },
+          "editorMode": "code",
+          "expr": "max(ceil(node_memory_MemTotal_bytes{job=\"es-nodes\"} / 1024 / 1024 / 1024))\n  or on()\nmax(ceil(kube_pod_container_resource_limits{resource=\"memory\", pod=~\".*elasticsearch.*\"} / 1024 / 1024 / 1024))",
+          "hide": false,
+          "instant": false,
+          "legendFormat": "es_RAM",
+          "range": true,
+          "refId": "U"
+        },
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "${datasource}"
+          },
+          "editorMode": "code",
+          "expr": "sum(ceil(node_memory_MemTotal_bytes{job=\"es-nodes\"} / 1024 / 1024 / 1024))\n  or on()\nsum(ceil(kube_pod_container_resource_limits{resource=\"memory\", pod=~\".*elasticsearch.*\"} / 1024 / 1024 / 1024))",
+          "hide": false,
+          "instant": false,
+          "legendFormat": "es_RAM_total",
+          "range": true,
+          "refId": "V"
+        },
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "${datasource}"
+          },
+          "editorMode": "code",
+          "expr": "max(round(ceil(node_filesystem_size_bytes{job=\"es-nodes\", mountpoint=\"/data\"} / 1024 / 1024 / 1024), 10))\n  or on()\nmax(ceil(kubelet_volume_stats_capacity_bytes{persistentvolumeclaim=~\".*elasticsearch.*\"} / 1024 / 1024 / 1024))",
+          "hide": false,
+          "instant": false,
+          "legendFormat": "es_Disk",
+          "range": true,
+          "refId": "W"
+        },
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "${datasource}"
+          },
+          "editorMode": "code",
+          "expr": "sum(round(ceil(node_filesystem_size_bytes{job=\"es-nodes\", mountpoint=\"/data\"} / 1024 / 1024 / 1024), 10))\n  or on()\nsum(ceil(kubelet_volume_stats_capacity_bytes{persistentvolumeclaim=~\".*elasticsearch.*\"} / 1024 / 1024 / 1024))",
+          "hide": false,
+          "instant": false,
+          "legendFormat": "es_Disk_total",
+          "range": true,
+          "refId": "X"
+        },
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "${datasource}"
+          },
+          "editorMode": "code",
+          "expr": "max(count by(instance)(node_cpu_seconds_total{mode=\"idle\",job=\"redis-nodes\"}))\n  or on()\nmax(kube_pod_container_resource_limits{resource=\"cpu\", pod=~\".*redis.*\"})",
+          "hide": false,
+          "instant": false,
+          "legendFormat": "redis_CPU",
+          "range": true,
+          "refId": "Y"
+        },
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "${datasource}"
+          },
+          "editorMode": "code",
+          "expr": "sum(count by(instance)(node_cpu_seconds_total{mode=\"idle\",job=\"redis-nodes\"}))\n  or on()\nsum(kube_pod_container_resource_limits{resource=\"cpu\", pod=~\".*redis.*\"})",
+          "hide": false,
+          "instant": false,
+          "legendFormat": "redis_CPU_total",
+          "range": true,
+          "refId": "Z"
+        },
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "${datasource}"
+          },
+          "editorMode": "code",
+          "expr": "max(ceil(node_memory_MemTotal_bytes{job=\"redis-nodes\"} / 1024 / 1024 / 1024))\n  or on()\nmax(ceil(kube_pod_container_resource_limits{resource=\"memory\", pod=~\".*redis.*\"} / 1024 / 1024 / 1024))",
+          "hide": false,
+          "instant": false,
+          "legendFormat": "redis_RAM",
+          "range": true,
+          "refId": "AA"
+        },
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "${datasource}"
+          },
+          "editorMode": "code",
+          "expr": "sum(ceil(node_memory_MemTotal_bytes{job=\"redis-nodes\"} / 1024 / 1024 / 1024))\n  or on()\nsum(ceil(kube_pod_container_resource_limits{resource=\"memory\", pod=~\".*redis.*\"} / 1024 / 1024 / 1024))",
+          "hide": false,
+          "instant": false,
+          "legendFormat": "redis_RAM_total",
+          "range": true,
+          "refId": "AB"
+        },
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "${datasource}"
+          },
+          "editorMode": "code",
+          "expr": "max(round(ceil(node_filesystem_size_bytes{job=\"redis-nodes\", mountpoint=\"/data\"} / 1024 / 1024 / 1024), 10))\n  or on()\nmax(ceil(kubelet_volume_stats_capacity_bytes{persistentvolumeclaim=~\".*redis.*\"} / 1024 / 1024 / 1024))",
+          "hide": false,
+          "instant": false,
+          "legendFormat": "redis_Disk",
+          "range": true,
+          "refId": "AC"
+        },
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "${datasource}"
+          },
+          "editorMode": "code",
+          "expr": "sum(round(ceil(node_filesystem_size_bytes{job=\"redis-nodes\", mountpoint=\"/data\"} / 1024 / 1024 / 1024), 10))\n  or on()\nsum(ceil(kubelet_volume_stats_capacity_bytes{persistentvolumeclaim=~\".*redis.*\"} / 1024 / 1024 / 1024))",
+          "hide": false,
+          "instant": false,
+          "legendFormat": "redis_Disk_total",
+          "range": true,
+          "refId": "AD"
+        },
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "${datasource}"
+          },
+          "editorMode": "code",
+          "expr": "max(count by(instance)(node_cpu_seconds_total{mode=\"idle\",job=\"rabbitmq-nodes\"}))\n  or on()\nmax(kube_pod_container_resource_limits{resource=\"cpu\", pod=~\".*rabbitmq.*\"})",
+          "hide": false,
+          "instant": false,
+          "legendFormat": "rmq_CPU",
+          "range": true,
+          "refId": "AE"
+        },
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "${datasource}"
+          },
+          "editorMode": "code",
+          "expr": "sum(count by(instance)(node_cpu_seconds_total{mode=\"idle\",job=\"rabbitmq-nodes\"}))\n  or on()\nsum(kube_pod_container_resource_limits{resource=\"cpu\", pod=~\".*rabbitmq.*\"})",
+          "hide": false,
+          "instant": false,
+          "legendFormat": "rmq_CPU_total",
+          "range": true,
+          "refId": "AF"
+        },
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "${datasource}"
+          },
+          "editorMode": "code",
+          "expr": "max(ceil(node_memory_MemTotal_bytes{job=\"rabbitmq-nodes\"} / 1024 / 1024 / 1024))\n  or on()\nmax(ceil(kube_pod_container_resource_limits{resource=\"memory\", pod=~\".*rabbitmq.*\"} / 1024 / 1024 / 1024))",
+          "hide": false,
+          "instant": false,
+          "legendFormat": "rmq_RAM",
+          "range": true,
+          "refId": "AG"
+        },
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "${datasource}"
+          },
+          "editorMode": "code",
+          "expr": "sum(ceil(node_memory_MemTotal_bytes{job=\"rabbitmq-nodes\"} / 1024 / 1024 / 1024))\n  or on()\nsum(ceil(kube_pod_container_resource_limits{resource=\"memory\", pod=~\".*rabbitmq.*\"} / 1024 / 1024 / 1024))",
+          "hide": false,
+          "instant": false,
+          "legendFormat": "rmq_RAM_total",
+          "range": true,
+          "refId": "AH"
+        },
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "${datasource}"
+          },
+          "editorMode": "code",
+          "expr": "max(round(ceil(node_filesystem_size_bytes{job=\"rabbitmq-nodes\", mountpoint=\"/data\"} / 1024 / 1024 / 1024), 10))\n  or on()\nmax(ceil(kubelet_volume_stats_capacity_bytes{persistentvolumeclaim=~\".*rabbitmq.*\"} / 1024 / 1024 / 1024))",
+          "hide": false,
+          "instant": false,
+          "legendFormat": "rmq_Disk",
+          "range": true,
+          "refId": "AI"
+        },
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "${datasource}"
+          },
+          "editorMode": "code",
+          "expr": "sum(round(ceil(node_filesystem_size_bytes{job=\"rabbitmq-nodes\", mountpoint=\"/data\"} / 1024 / 1024 / 1024), 10))\n  or on()\nsum(ceil(kubelet_volume_stats_capacity_bytes{persistentvolumeclaim=~\".*rabbitmq.*\"} / 1024 / 1024 / 1024))",
+          "hide": false,
+          "instant": false,
+          "legendFormat": "rmq_Disk_total",
+          "range": true,
+          "refId": "AJ"
+        },
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "${datasource}"
+          },
+          "editorMode": "code",
+          "expr": "max(windows_cs_logical_processors{job=\"opc-server\"})",
+          "hide": false,
+          "instant": false,
+          "legendFormat": "opc_CPU",
+          "range": true,
+          "refId": "AK"
+        },
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "${datasource}"
+          },
+          "editorMode": "code",
+          "expr": "max(ceil(windows_cs_physical_memory_bytes{job=\"opc-server\"} / 1024 / 1024 / 1024))",
+          "hide": false,
+          "instant": false,
+          "legendFormat": "opc_RAM",
+          "range": true,
+          "refId": "AL"
+        },
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "${datasource}"
+          },
+          "editorMode": "code",
+          "expr": "max(ceil(windows_logical_disk_size_bytes{job=\"opc-server\", volume=\"C:\"} / 1024 / 1024 / 1024))",
+          "hide": false,
+          "instant": false,
+          "legendFormat": "opc_Disk",
+          "range": true,
+          "refId": "AM"
+        }
+      ],
+      "title": "",
+      "transparent": true,
+      "type": "canvas"
+    }
+  ],
+  "preload": false,
+  "refresh": "",
+  "schemaVersion": 42,
+  "tags": [
+    "platform360",
+    "architecture",
+    "autodiscovery"
+  ],
+  "templating": {
+    "list": [
+      {
+        "current": {
+          "text": "prometheus",
+          "value": "df92unvhhnev4b"
+        },
+        "includeAll": false,
+        "label": "Datasource",
+        "name": "datasource",
+        "options": [],
+        "query": "prometheus",
+        "refresh": 1,
+        "type": "datasource"
+      }
+    ]
+  },
+  "time": {
+    "from": "now-5m",
+    "to": "now"
+  },
+  "timepicker": {},
+  "timezone": "browser",
+  "title": "P360 Architecture",
+  "uid": "p360-arch",
+  "version": 12
+}
