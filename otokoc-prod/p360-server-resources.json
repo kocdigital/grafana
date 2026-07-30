@@ -1,1 +1,704 @@
 
+{
+  "annotations": {
+    "list": [
+      {
+        "builtIn": 1,
+        "datasource": {
+          "type": "grafana",
+          "uid": "-- Grafana --"
+        },
+        "enable": true,
+        "hide": true,
+        "iconColor": "rgba(0, 211, 255, 1)",
+        "name": "Annotations & Alerts",
+        "type": "dashboard"
+      }
+    ]
+  },
+  "editable": true,
+  "fiscalYearStartMonth": 0,
+  "graphTooltip": 1,
+  "id": 0,
+  "links": [],
+  "panels": [
+    {
+      "datasource": {
+        "type": "prometheus",
+        "uid": "${datasource}"
+      },
+      "description": "All servers with hostname, IP, and resource usage sparklines. Linux uses /data mountpoint, Windows uses C: volume.",
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "continuous-BlYlRd"
+          },
+          "custom": {
+            "align": "auto",
+            "cellOptions": {
+              "type": "auto"
+            },
+            "filterable": true,
+            "footer": {
+              "reducers": []
+            },
+            "inspect": false,
+            "minWidth": 100,
+            "wrapHeaderText": false,
+            "wrapText": false
+          },
+          "mappings": [],
+          "max": 100,
+          "min": 0,
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": 0
+              },
+              {
+                "color": "yellow",
+                "value": 70
+              },
+              {
+                "color": "red",
+                "value": 85
+              }
+            ]
+          }
+        },
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "nodename"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "Hostname"
+              },
+              {
+                "id": "custom.width",
+                "value": 180
+              },
+              {
+                "id": "custom.cellOptions",
+                "value": {
+                  "type": "auto"
+                }
+              },
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "text",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "instance"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "IP"
+              },
+              {
+                "id": "custom.width",
+                "value": 160
+              },
+              {
+                "id": "custom.cellOptions",
+                "value": {
+                  "type": "auto"
+                }
+              },
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "text",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "job"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "Usage"
+              },
+              {
+                "id": "custom.width",
+                "value": 160
+              },
+              {
+                "id": "custom.cellOptions",
+                "value": {
+                  "type": "auto"
+                }
+              },
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "text",
+                  "mode": "fixed"
+                }
+              },
+              {
+                "id": "mappings",
+                "value": [
+                  {
+                    "options": {
+                      "kubernetes-service-endpoints": {
+                        "index": 0,
+                        "text": "k8s-nodes"
+                      }
+                    },
+                    "type": "value"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "Trend #A"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "CPU Avg %"
+              },
+              {
+                "id": "custom.cellOptions",
+                "value": {
+                  "drawStyle": "line",
+                  "fillOpacity": 25,
+                  "gradientMode": "hue",
+                  "lineInterpolation": "smooth",
+                  "lineStyle": {
+                    "dash": [
+                      0,
+                      10
+                    ],
+                    "fill": "solid"
+                  },
+                  "lineWidth": 1,
+                  "pointSize": 0,
+                  "spanNulls": false,
+                  "type": "sparkline"
+                }
+              },
+              {
+                "id": "custom.width",
+                "value": 180
+              },
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "super-light-red",
+                  "mode": "fixed"
+                }
+              },
+              {
+                "id": "min",
+                "value": 0
+              },
+              {
+                "id": "max",
+                "value": 100
+              },
+              {
+                "id": "unit",
+                "value": "percent"
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "Trend #D"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "CPU Max %"
+              },
+              {
+                "id": "custom.cellOptions",
+                "value": {
+                  "drawStyle": "line",
+                  "fillOpacity": 15,
+                  "gradientMode": "hue",
+                  "lineInterpolation": "smooth",
+                  "lineWidth": 1,
+                  "pointSize": 0,
+                  "type": "sparkline"
+                }
+              },
+              {
+                "id": "custom.width",
+                "value": 180
+              },
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "red",
+                  "mode": "fixed"
+                }
+              },
+              {
+                "id": "min",
+                "value": 0
+              },
+              {
+                "id": "max",
+                "value": 100
+              },
+              {
+                "id": "unit",
+                "value": "percent"
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "Trend #B"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "Mem Avg %"
+              },
+              {
+                "id": "custom.cellOptions",
+                "value": {
+                  "drawStyle": "line",
+                  "fillOpacity": 15,
+                  "gradientMode": "hue",
+                  "lineInterpolation": "smooth",
+                  "lineWidth": 1,
+                  "pointSize": 0,
+                  "type": "sparkline"
+                }
+              },
+              {
+                "id": "custom.width",
+                "value": 180
+              },
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "light-green",
+                  "mode": "fixed"
+                }
+              },
+              {
+                "id": "min",
+                "value": 0
+              },
+              {
+                "id": "max",
+                "value": 100
+              },
+              {
+                "id": "unit",
+                "value": "percent"
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "Trend #E"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "Mem Max %"
+              },
+              {
+                "id": "custom.cellOptions",
+                "value": {
+                  "drawStyle": "line",
+                  "fillOpacity": 15,
+                  "gradientMode": "hue",
+                  "lineInterpolation": "smooth",
+                  "lineWidth": 1,
+                  "pointSize": 0,
+                  "type": "sparkline"
+                }
+              },
+              {
+                "id": "custom.width",
+                "value": 180
+              },
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#41da2c",
+                  "mode": "fixed"
+                }
+              },
+              {
+                "id": "min",
+                "value": 0
+              },
+              {
+                "id": "max",
+                "value": 100
+              },
+              {
+                "id": "unit",
+                "value": "percent"
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "Value #A"
+            },
+            "properties": []
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "Value #B"
+            },
+            "properties": []
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "Value #C"
+            },
+            "properties": []
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "Value #D"
+            },
+            "properties": []
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "Value #E"
+            },
+            "properties": []
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "Value #F"
+            },
+            "properties": []
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "Trend #C"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "Disk Avg %"
+              },
+              {
+                "id": "custom.cellOptions",
+                "value": {
+                  "drawStyle": "line",
+                  "fillOpacity": 25,
+                  "gradientMode": "opacity",
+                  "lineInterpolation": "smooth",
+                  "lineWidth": 1,
+                  "pointSize": 0,
+                  "type": "sparkline"
+                }
+              },
+              {
+                "id": "custom.width",
+                "value": 180
+              },
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#00d1fa",
+                  "mode": "fixed"
+                }
+              },
+              {
+                "id": "min",
+                "value": 0
+              },
+              {
+                "id": "max",
+                "value": 100
+              },
+              {
+                "id": "unit",
+                "value": "percent"
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "Trend #F"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "Disk Max %"
+              },
+              {
+                "id": "custom.cellOptions",
+                "value": {
+                  "drawStyle": "line",
+                  "fillOpacity": 15,
+                  "gradientMode": "opacity",
+                  "lineInterpolation": "smooth",
+                  "lineWidth": 1,
+                  "pointSize": 0,
+                  "type": "sparkline"
+                }
+              },
+              {
+                "id": "custom.width",
+                "value": 180
+              },
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#5794F2",
+                  "mode": "fixed"
+                }
+              },
+              {
+                "id": "min",
+                "value": 0
+              },
+              {
+                "id": "max",
+                "value": 100
+              },
+              {
+                "id": "unit",
+                "value": "percent"
+              }
+            ]
+          }
+        ]
+      },
+      "gridPos": {
+        "h": 25,
+        "w": 24,
+        "x": 0,
+        "y": 0
+      },
+      "id": 1,
+      "options": {
+        "cellHeight": "md",
+        "enablePagination": false,
+        "footer": {
+          "countRows": false,
+          "reducer": [
+            "sum"
+          ],
+          "show": false
+        },
+        "showHeader": true,
+        "sortBy": [
+          {
+            "desc": true,
+            "displayName": "CPU Max %"
+          }
+        ]
+      },
+      "pluginVersion": "12.3.0",
+      "targets": [
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "${datasource}"
+          },
+          "editorMode": "code",
+          "expr": "(\n  (1 - avg by(instance, job)(rate(node_cpu_seconds_total{mode=\"idle\"}[5m]))) * 100\n  + on(instance, job) group_left(nodename) (0 * max by(instance, job, nodename)(node_uname_info))\n)\nor\n(\n  (1 - avg by(instance, job)(rate(windows_cpu_time_total{mode=\"idle\"}[5m]))) * 100\n  + on(instance, job) group_left(nodename) (0 * label_replace(max by(instance, job, hostname)(windows_cs_hostname), \"nodename\", \"$1\", \"hostname\", \"(.+)\"))\n)",
+          "hide": false,
+          "instant": false,
+          "legendFormat": "__auto",
+          "range": true,
+          "refId": "A"
+        },
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "${datasource}"
+          },
+          "editorMode": "code",
+          "expr": "(\n  max by(instance, job)((1 - node_memory_MemAvailable_bytes / node_memory_MemTotal_bytes) * 100)\n  + on(instance, job) group_left(nodename) (0 * max by(instance, job, nodename)(node_uname_info))\n)\nor\n(\n  max by(instance, job)((1 - windows_os_physical_memory_free_bytes / windows_cs_physical_memory_bytes) * 100)\n  + on(instance, job) group_left(nodename) (0 * label_replace(max by(instance, job, hostname)(windows_cs_hostname), \"nodename\", \"$1\", \"hostname\", \"(.+)\"))\n)",
+          "hide": false,
+          "instant": false,
+          "legendFormat": "__auto",
+          "range": true,
+          "refId": "B"
+        },
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "${datasource}"
+          },
+          "editorMode": "code",
+          "expr": "(\n  max by(instance, job)((1 - node_filesystem_avail_bytes{mountpoint=\"/data\"} / node_filesystem_size_bytes{mountpoint=\"/data\"}) * 100)\n  + on(instance, job) group_left(nodename) (0 * max by(instance, job, nodename)(node_uname_info))\n)\nor\n(\n  max by(instance, job)((1 - windows_logical_disk_free_bytes{volume=\"C:\"} / windows_logical_disk_size_bytes{volume=\"C:\"}) * 100)\n  + on(instance, job) group_left(nodename) (0 * label_replace(max by(instance, job, hostname)(windows_cs_hostname), \"nodename\", \"$1\", \"hostname\", \"(.+)\"))\n)",
+          "hide": false,
+          "instant": false,
+          "legendFormat": "__auto",
+          "range": true,
+          "refId": "C"
+        },
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "${datasource}"
+          },
+          "editorMode": "code",
+          "expr": "(\n  (1 - avg by(instance, job)(rate(node_cpu_seconds_total{mode=\"idle\"}[5m]))) * 100\n  + on(instance, job) group_left(nodename) (0 * max by(instance, job, nodename)(node_uname_info))\n)\nor\n(\n  (1 - avg by(instance, job)(rate(windows_cpu_time_total{mode=\"idle\"}[5m]))) * 100\n  + on(instance, job) group_left(nodename) (0 * label_replace(max by(instance, job, hostname)(windows_cs_hostname), \"nodename\", \"$1\", \"hostname\", \"(.+)\"))\n)",
+          "hide": false,
+          "instant": false,
+          "legendFormat": "__auto",
+          "range": true,
+          "refId": "D"
+        },
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "${datasource}"
+          },
+          "editorMode": "code",
+          "expr": "(\n  max by(instance, job)((1 - node_memory_MemAvailable_bytes / node_memory_MemTotal_bytes) * 100)\n  + on(instance, job) group_left(nodename) (0 * max by(instance, job, nodename)(node_uname_info))\n)\nor\n(\n  max by(instance, job)((1 - windows_os_physical_memory_free_bytes / windows_cs_physical_memory_bytes) * 100)\n  + on(instance, job) group_left(nodename) (0 * label_replace(max by(instance, job, hostname)(windows_cs_hostname), \"nodename\", \"$1\", \"hostname\", \"(.+)\"))\n)",
+          "hide": false,
+          "instant": false,
+          "legendFormat": "__auto",
+          "range": true,
+          "refId": "E"
+        },
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "${datasource}"
+          },
+          "editorMode": "code",
+          "expr": "(\n  max by(instance, job)((1 - node_filesystem_avail_bytes{mountpoint=\"/data\"} / node_filesystem_size_bytes{mountpoint=\"/data\"}) * 100)\n  + on(instance, job) group_left(nodename) (0 * max by(instance, job, nodename)(node_uname_info))\n)\nor\n(\n  max by(instance, job)((1 - windows_logical_disk_free_bytes{volume=\"C:\"} / windows_logical_disk_size_bytes{volume=\"C:\"}) * 100)\n  + on(instance, job) group_left(nodename) (0 * label_replace(max by(instance, job, hostname)(windows_cs_hostname), \"nodename\", \"$1\", \"hostname\", \"(.+)\"))\n)",
+          "hide": false,
+          "instant": false,
+          "legendFormat": "__auto",
+          "range": true,
+          "refId": "F"
+        }
+      ],
+      "title": "",
+      "transformations": [
+        {
+          "id": "timeSeriesTable",
+          "options": {
+            "A": {
+              "stat": "mean"
+            },
+            "B": {
+              "stat": "mean"
+            },
+            "C": {
+              "stat": "mean"
+            },
+            "D": {
+              "stat": "max"
+            },
+            "E": {
+              "stat": "max"
+            },
+            "F": {
+              "stat": "max"
+            }
+          }
+        },
+        {
+          "id": "merge",
+          "options": {}
+        },
+        {
+          "id": "organize",
+          "options": {
+            "excludeByName": {},
+            "indexByName": {
+              "Trend #A": 3,
+              "Trend #B": 5,
+              "Trend #C": 7,
+              "Trend #D": 4,
+              "Trend #E": 6,
+              "Trend #F": 8,
+              "Value #A": 9,
+              "Value #B": 11,
+              "Value #C": 13,
+              "Value #D": 10,
+              "Value #E": 12,
+              "Value #F": 14,
+              "instance": 1,
+              "job": 2,
+              "nodename": 0
+            },
+            "renameByName": {}
+          }
+        }
+      ],
+      "type": "table"
+    }
+  ],
+  "preload": false,
+  "refresh": "",
+  "schemaVersion": 42,
+  "tags": [
+    "platform360",
+    "servers",
+    "resources"
+  ],
+  "templating": {
+    "list": [
+      {
+        "current": {
+          "text": "prometheus",
+          "value": "df92unvhhnev4b"
+        },
+        "includeAll": false,
+        "label": "Datasource",
+        "name": "datasource",
+        "options": [],
+        "query": "prometheus",
+        "refresh": 1,
+        "type": "datasource"
+      }
+    ]
+  },
+  "time": {
+    "from": "now-7d",
+    "to": "now"
+  },
+  "timepicker": {},
+  "timezone": "browser",
+  "title": "P360 Server Resources",
+  "uid": "p360-server-resources",
+  "version": 2
+}
